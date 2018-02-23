@@ -16,3 +16,10 @@ Bu level için bizden beklenen flag00 kullanıcısına ait, suid bitine sahip ol
     /bin/.../flag00
     /rofs/bin.../flag00
 {% endraw %}
+
+
+{% highlight css %}
+    level00@nebula:~$ find / -type f -user flag00 -perm -u=s 2>/dev/null
+    /bin/.../flag00
+    /rofs/bin.../flag00
+{% endhighlight %
