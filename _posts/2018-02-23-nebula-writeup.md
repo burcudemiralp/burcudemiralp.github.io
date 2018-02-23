@@ -4,10 +4,5 @@ title: "Nebula Write Up"
 date: 2018-02-23
 comments: false
 ---
-
-
-### Fenced Code Blocks
-
   Nebula, Linux Exploitation üzerine pratik yapma imkanı sunan zafiyetli bir sanal makinadır. Hakkında daha ayrıntılı bilgiye
 [buradan] (https://exploit-exercises.com/nebula/) ulaşabilirsiniz.
-Consult [Jekyll's documentation](http://jekyllrb.com/docs/configuration/) for more information.
