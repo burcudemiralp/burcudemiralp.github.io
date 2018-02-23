@@ -16,10 +16,17 @@ Bu level için bizden beklenen flag00 kullanıcısına ait, suid bitine sahip ol
     /bin/.../flag00
     /rofs/bin.../flag00
 {% endraw %}
-Dosyayı incelediğimizde ELF türünde bir dosya olduğunu görüyoruz. Çalıştırdığımızda,
+Dosyaları incelediğimizde ELF türünde olduklarını görüyoruz. Dosyalardan birini çalıştırdığımızda,
 {% raw %}
     level00@nebula:~$ /bin/.../flag00
     Congrats, now run getflag to get your flag !
     flag00@nebula:~$
 {% endraw %}
-flag değerini elde edebilmek için `getflag` dosyasını çalıştırmamız gerektiğini görüyoruz. Dosyanın yerini bulabilmek için,
+flag değerini elde edebilmek için `getflag` dosyasını çalıştırmamız gerektiği bilgisine erişiyoruz. Dosyanın yerini bulduktan sonra çalıştırarak flag değerine ulaşıyoruz.
+{% raw %}
+    flag00@nebula:~$ find / -name getflag
+    /bin/getflag
+    /rofs/bin/getflag
+    flag00@nebula:~$ /bin/getflag
+    You have successfully executed getflag on a target account.
+{% endraw %}
