@@ -22,11 +22,11 @@ Dosyaları incelediğimizde ELF türünde olduklarını görüyoruz. Dosyalardan
     Congrats, now run getflag to get your flag !
     flag00@nebula:~$
 {% endraw %}
-flag değerini elde edebilmek için `getflag` dosyasını çalıştırmamız gerektiği bilgisine erişiyoruz. Dosyanın yerini bulduktan sonra çalıştırarak flag değerine ulaşıyoruz.
+flag değerini elde edebilmek için `getflag` dosyasını çalıştırmamız gerektiği bilgisine erişiyoruz.
 {% raw %}
     flag00@nebula:~$ find / -name getflag
     /bin/getflag
     /rofs/bin/getflag
     flag00@nebula:~$ /bin/getflag
-    You have successfully executed getflag on a target account.
+    You have successfully executed getflag on a target account
 {% endraw %}
