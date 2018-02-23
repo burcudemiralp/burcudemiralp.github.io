@@ -7,4 +7,6 @@ comments: false
   Nebula, Linux Exploitation üzerine pratik yapma imkanı sunan zafiyetli bir sanal makinadır. Daha ayrıntılı bilgiye
 [ buradan ](https://exploit-exercises.com/nebula/) ulaşabilirsiniz.
 
-###Level 00
+### Level 00
+
+Bu level için bizden beklenen flag00 kullanıcısına ait, suid bitine sahip olan çalıştırılabilir bir dosya bulmamız. 
