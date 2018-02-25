@@ -77,5 +77,7 @@ Aşina olmadığımız fonksiyonlar hakkında fikir sahibi olduktan sonra, asıl
     and now what?
 {% endraw %}
 Bazı argümanlarla birlikte programı çalıştırmayı denesekte, bu yolla bir şey elde edemiyoruz. Manipüle edilebilir gibi görünen system() fonksiyonu üzerinden yürümeyi deniyoruz.Burada dikkatimizi çeken echo komutunun önünde bulunan /usr/bin/env komutu.
-> `/usr/bin/env` komutu, programı değiştirilmiş bir ortamda çalıştırmayı sağlar. Bunun için PATH değişkeninde bulunan dizinlere sırası ile bakılır. Çalıştırılmak istenen program ilk hangi dizinde bulunursa, o program çalıştırılır.
+> `/usr/bin/env` komutu, programı değiştirilmiş bir ortamda çalıştırmayı sağlar. Bunun için PATH değişkeninde bulunan dizinlere sırası ile bakılır. Çalıştırılmak istenen program ilk hangi dizinde bulunursa, o dizindeki program çalıştırılır.
+
+> `PATH değişkeni`, sistemin çalıştırılabilir dosyaları bulmak için nerelere bakması gerektiğini tanımlar.
 
