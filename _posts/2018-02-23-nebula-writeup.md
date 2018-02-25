@@ -90,3 +90,37 @@ Bizde PATH değişkenine yeni bir dizin ekleyip,eklediğimiz dizinin PATH deği�
     level01@nebula:/home/flag01$ ./flag01
     You have successfully executed getflag on a target account
 {% endraw %}
+
+### Level 02
+Bu bölüm de bir önceki ile benzer olup, bizden beklenen /home/flag02 dizininde bulunan programda,istenilen programın çalıştırılmasına sebebiyet veren zafiyeti bulmak.Programa ait kaynak kod da aşağıdaki gibi.
+
+{% highlight c %}
+{% raw %}
+    #include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
+#include <stdio.h>
+
+int main(int argc, char **argv, char **envp)
+{
+  char *buffer;
+
+  gid_t gid;
+  uid_t uid;
+
+  gid = getegid();
+  uid = geteuid();
+
+  setresgid(gid, gid, gid);
+  setresuid(uid, uid, uid);
+
+  buffer = NULL;
+
+  asprintf(&buffer, "/bin/echo %s is cool", getenv("USER"));
+  printf("about to call system(\"%s\")\n", buffer);
+  
+  system(buffer);
+}
+{% endraw %}
+{% endhighlight %}
