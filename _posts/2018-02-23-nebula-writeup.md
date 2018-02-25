@@ -73,9 +73,7 @@ Programın işleyişini daha iyi anlayabilmek adına, kaynak kodda bulunan bazı
 
 Aşina olmadığımız fonksiyonlar hakkında fikir sahibi olduktan sonra, asıl meseleye geri dönelim.Programı çalıştırdığımızda beklenen üzere bu şekilde bir çıktı elde ediyoruz.
 {% highlight sh %}
-{% raw %}
     level01@nebula:/home/flag01$ ./flag01
     and now what?
-{% endraw %}
 {% endhighlight %}
 
