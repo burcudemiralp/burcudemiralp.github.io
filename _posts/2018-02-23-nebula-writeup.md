@@ -59,12 +59,12 @@ Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında
 {% endhighlight %}
 Kaynak kodu daha iyi anlayabilmek adına, programda bulunan bazı fonksiyonlara bakalım :+1:
 
-> **gid_t getegid(void);** // çağırılan processin effective group-id değerini döndürüyor.
+> **gid_t getegid(void);** /* çağırılan processin effective group-id değerini döndürüyor. */
 
-> **uid_t geteuid(void);** // çağırılan processin effective user-id değerini döndürüyor.
+> **uid_t geteuid(void);** /* çağırılan processin effective user-id değerini döndürüyor. */
 
-> **int setresgid(gid_t rgid,gid_t egid,git_t sgid);** // çağırılan processin real,effective,saved  group-id değerlerini set ediyor.
+> **int setresgid(gid_t rgid,gid_t egid,git_t sgid);** /* çağırılan processin real,effective,saved  group-id değerlerini set ediyor. */
 
-> **int setresuid(uid_t ruid,uid_t euid,uid_t suid);** // çağırılan 
+> **int setresuid(uid_t ruid,uid_t euid,uid_t suid);** /* çağırılan processin real,effective,saved user-id değerlerini set ediyor. */
 
 
