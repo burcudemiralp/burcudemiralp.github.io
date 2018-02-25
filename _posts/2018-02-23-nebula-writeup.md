@@ -30,3 +30,30 @@ flag değerini elde edebilmek için `getflag` dosyasını çalıştırmamız ger
     flag00@nebula:~$ /bin/getflag
     You have successfully executed getflag on a target account
 {% endraw %}
+
+### Level 01
+
+Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında ,istenilen programın çalıştırılmasına sebebiyet veren zafiyeti bulmamız.Programa ait kaynak kod da aşağıdaki gibi.
+
+{% highlight html %}
+{% raw %}
+    #include <stdlib.h>
+    #include <unistd.h>
+    #include <string.h>
+    #include <sys/types.h>
+    #include <stdio.h>
+
+    int main(int argc, char **argv, char **envp)
+    {
+     gid_t gid;
+    uid_t uid;
+     gid = getegid();
+     uid = geteuid();
+
+     setresgid(gid, gid, gid);
+     setresuid(uid, uid, uid);
+
+     system("/usr/bin/env echo and now what?");
+    }
+{% endraw %}
+{% endhighlight %}
