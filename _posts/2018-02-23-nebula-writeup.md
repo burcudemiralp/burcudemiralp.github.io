@@ -67,5 +67,5 @@ Kaynak kodu daha iyi anlayabilmek adına, programda bulunan bazı fonksiyonlara 
 
 > **int setresuid(uid_t ruid,uid_t euid,uid_t suid);**  çağırılan processin real,effective,saved user-id değerlerini set ediyor. 
 
-`Effective uid/gid` ve `real uid/gid``kavramları arasındaki farkı da şu şekilde özetleyebiliriz:
+`Effective uid/gid` ve `real uid/gid` kavramları arasındaki farkı da şu şekilde özetleyebiliriz:
 >
