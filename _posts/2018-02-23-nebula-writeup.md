@@ -35,13 +35,13 @@ flag değerini elde edebilmek için `getflag` dosyasını çalıştırmamız ger
 
 Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında, istenilen programın çalıştırılmasına sebebiyet veren zafiyeti bulmamız.Programa ait kaynak kod da aşağıdaki gibi.
 
-{% highlight html %}
+{% highlight c %}
 {% raw %}
-    #include <stdlib\.h>
-    #include <unistd\.h>
-    #include <string\.h>
-    #include <sys\/types\.h>
-    #include <stdio\.h>
+    #include <stdlib.h>
+    #include <unistd.h>
+    #include <string.h>
+    #include <sys/types.h>
+    #include <stdio.h>
 
     int main(int argc, char **argv, char **envp)
     {
