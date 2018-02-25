@@ -57,3 +57,9 @@ Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında
     }
 {% endraw %}
 {% endhighlight %}
+Kaynak kodu daha iyi anlayabilmek adına, programda bulunan bazı fonksiyonlara bakalım.
+
+## Notices
+**gid_t getegid(void);** // çağırılan processin effective group-id değerini döndürüyor.
+**uid_t geteuid(void);** // çağırılan processin effective user-id değerini döndürüyor.
+**int setresgid(gid_t rgid,gid_t egid,git_t sgid);** // çağırılan processin real,effective,saved  group-id 
