@@ -72,7 +72,7 @@ Programın işleyişini daha iyi anlayabilmek adına, kaynak kodda bulunan bazı
 > Shell login işlemi gerçekleştiğinde real uid/gid  ile effective uid/gid değerleri aynıdır, ve processi yaratan kullanıcının uid/gid'sine karşılık gelir. Effective uid/gid değeri; suid bitine sahip olan bir dosya çalıştırıldığında ve dosya sahibi ile dosyayı çalıştıran kullanıcı farklı olduğu durumlarda değişir. Dosya sahibinin uid/gid'sine karşılık gelir. Özet olarak real uid/gid processi yaratan kullanıcının uid/gid değerine eşitken, effective uid/gid dosya sahibinin uid/gid değerine eşit olur.
 
 Aşina olmadığımız fonksiyonlar hakkında fikir sahibi olduktan sonra, asıl meseleye geri dönelim.Programı çalıştırdığımızda beklenen üzere bu şekilde bir çıktı elde ediyoruz.
-{% highlight bash %}
+{% highlight sh %}
 {% raw %}
     level01@nebula:/home/flag01$ ./flag01
     and now what?
