@@ -57,7 +57,8 @@ Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında
     }
 {% endraw %}
 {% endhighlight %}
-Kaynak kodu daha iyi anlayabilmek adına, programda bulunan bazı fonksiyonlara bakalım:+1:
+
+Programın işleyişini daha iyi anlayabilmek adına, kaynak kodda bulunan bazı fonksiyonlara bakalım.
 
 > **gid_t getegid(void);**  çağırılan processin effective group-id değerini döndürüyor. 
 
@@ -69,4 +70,12 @@ Kaynak kodu daha iyi anlayabilmek adına, programda bulunan bazı fonksiyonlara 
 
 `Effective uid/gid` ve `real uid/gid` kavramları arasındaki farkı da şu şekilde özetleyebiliriz:
 > Shell login işlemi gerçekleştiğinde real uid/gid  ile effective uid/gid değerleri aynıdır, ve processi yaratan kullanıcının uid/gid'sine karşılık gelir. Effective uid/gid değeri; suid bitine sahip olan bir dosya çalıştırıldığında ve dosya sahibi ile dosyayı çalıştıran kullanıcı farklı olduğu durumlarda değişir. Dosya sahibinin uid/gid'sine karşılık gelir. Özet olarak real uid/gid processi yaratan kullanıcının uid/gid değerine eşitken, effective uid/gid dosya sahibinin uid/gid değerine eşit olur.
+
+Aşina olmadığımız fonksiyonlar hakkında fikir sahibi olduktan sonra, asıl meseleye geri dönelim.Programı çalıştırdığımızda beklenen üzere bu şekilde bir çıktı elde ediyoruz.
+{% highlight bash %}
+{% raw %}
+    level01@nebula:/home/flag01$ ./flag01
+    and now what?
+{% endraw %}
+{% endhighlight %}
 
