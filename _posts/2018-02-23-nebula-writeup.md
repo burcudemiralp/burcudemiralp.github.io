@@ -37,11 +37,11 @@ Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında
 
 {% highlight html %}
 {% raw %}
-    #include <stdlib.h>
-    #include <unistd.h>
-    #include <string.h>
-    #include <sys/types.h>
-    #include <stdio.h>
+    #include <stdlib\.h>
+    #include <unistd\.h>
+    #include <string\.h>
+    #include <sys\/types\.h>
+    #include <stdio\.h>
 
     int main(int argc, char **argv, char **envp)
     {
