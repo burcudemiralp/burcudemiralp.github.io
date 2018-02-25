@@ -46,7 +46,7 @@ Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında
     int main(int argc, char **argv, char **envp)
     {
      gid_t gid;
-    uid_t uid;
+     uid_t uid;
      gid = getegid();
      uid = geteuid();
 
