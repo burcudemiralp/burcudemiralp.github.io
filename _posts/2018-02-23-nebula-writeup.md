@@ -76,4 +76,5 @@ Aşina olmadığımız fonksiyonlar hakkında fikir sahibi olduktan sonra, asıl
     level01@nebula:/home/flag01$ ./flag01
     and now what?
 {% endraw %}
-Programı çalıştırırken bazı argümanlar 
+Bazı argümanlarla birlikte programı çalıştırmayı denesekte, bu yolla bir şey elde edemiyoruz. Manipüle edilebilir gibi görünen system() fonksiyonu üzerinden yürümeyi deniyoruz.
+
