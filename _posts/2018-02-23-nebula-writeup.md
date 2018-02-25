@@ -124,7 +124,7 @@ int main(int argc, char **argv, char **envp)
 }
 {% endraw %}
 {% endhighlight %}
-Programı çalıştırmadan önce kaynak kodu inceliyoruz.getenv("USER") fonksiyonu ile çağırılan processe ait USER çevresel değişkeni öğreniliyor.Değer asprintf() fonksiyonunda ikinci parametrede yerine konuluyor. Ardından bu string buffer değişkenine atanıyor.Daha sonra bu buffer değişkeni system() fonksiyonuna parametre olarak veriliyor.
+Programı çalıştırmadan önce kaynak kodu inceliyoruz.getenv("USER") fonksiyonu ile çağırılan processe ait USER çevresel değişkeni öğreniliyor.Değer asprintf() fonksiyonunda ikinci parametrede yerine konuluyor. Ardından bu string buffer değişkenine atanıyor.Daha sonra buffer değişkeni system() fonksiyonuna parametre olarak veriliyor.
 {% raw %}
     level02@nebula:/home/flag02$ ./flag02
     about to call system ("/bin/echo level02 is cool")
