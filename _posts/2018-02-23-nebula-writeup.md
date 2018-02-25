@@ -22,7 +22,7 @@ Dosyaları incelediğimizde ELF türünde olduklarını görüyoruz. Dosyalardan
     Congrats, now run getflag to get your flag !
     flag00@nebula:~$
 {% endraw %}
-flag değerini elde edebilmek için `getflag` dosyasını çalıştırmamız gerektiği bilgisine erişiyoruz.
+flag değerini elde edebilmek için getflag dosyasını çalıştırmamız gerektiği bilgisine erişiyoruz.
 {% raw %}
     flag00@nebula:~$ find / -name getflag
     /bin/getflag
@@ -80,4 +80,6 @@ Bazı argümanlarla birlikte programı çalıştırmayı denesekte, bu yolla bir
 > `/usr/bin/env` komutu, programı değiştirilmiş bir ortamda çalıştırmayı sağlar. Bunun için PATH değişkeninde bulunan dizinlere sırası ile bakılır. Çalıştırılmak istenen program ilk hangi dizinde bulunursa, o dizindeki program çalıştırılır.
 
 > `PATH değişkeni`, sistemin çalıştırılabilir dosyaları bulmak için nerelere bakması gerektiğini tanımlar.
+
+Yani bizde PATH değişkenine yeni bir dizin eklesek,eklediğimiz dizinin PATH değişkenindeki sırası önemli, ve çalıştırmak istediğimiz dosyayı o dizine echo ismiyle kaydetsek, env komutu ilk bizim echo programımız ile karşılaşacağı için onu çalıştıracaktır.
 
