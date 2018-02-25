@@ -81,7 +81,7 @@ Bazı argümanlarla birlikte programı çalıştırmayı denesekte, bu yolla bir
 
 > `PATH değişkeni`, sistemin çalıştırılabilir dosyaları bulmak için nerelere bakması gerektiğini tanımlar.
 
-Yani bizde PATH değişkenine yeni bir dizin eklesek,eklediğimiz dizinin PATH değişkeninde ki sırası önemli, ve çalıştırmak istediğimiz dosyayı o dizine echo ismiyle kaydetsek, env komutu ilk bizim echo programımız ile karşılaşacağı için onu çalıştıracaktır.
+Bizde PATH değişkenine yeni bir dizin ekleyip,eklediğimiz dizinin PATH değişkeninde ki sırası önemli, çalıştırmak istediğimiz dosyayı o dizine echo ismiyle kaydettiğimizde, env komutu ilk bizim echo programımız ile karşılaşacağı için onu çalıştıracaktır.
 {% raw %}
     level01@nebula:/home/flag01$ PATH=/tmp:$PATH
     level01@nebula:/home/flag01$ echo $PATH
