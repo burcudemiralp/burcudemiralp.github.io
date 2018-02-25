@@ -33,7 +33,7 @@ flag değerini elde edebilmek için `getflag` dosyasını çalıştırmamız ger
 
 ### Level 01
 
-Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında ,istenilen programın çalıştırılmasına sebebiyet veren zafiyeti bulmamız.Programa ait kaynak kod da aşağıdaki gibi.
+Bu bölümde bizden beklenen /home/flag01 dizini altında bulunan c programında, istenilen programın çalıştırılmasına sebebiyet veren zafiyeti bulmamız.Programa ait kaynak kod da aşağıdaki gibi.
 
 {% highlight html %}
 {% raw %}
