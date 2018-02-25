@@ -76,5 +76,6 @@ Aşina olmadığımız fonksiyonlar hakkında fikir sahibi olduktan sonra, asıl
     level01@nebula:/home/flag01$ ./flag01
     and now what?
 {% endraw %}
-Bazı argümanlarla birlikte programı çalıştırmayı denesekte, bu yolla bir şey elde edemiyoruz. Manipüle edilebilir gibi görünen system() fonksiyonu üzerinden yürümeyi deniyoruz.
+Bazı argümanlarla birlikte programı çalıştırmayı denesekte, bu yolla bir şey elde edemiyoruz. Manipüle edilebilir gibi görünen system() fonksiyonu üzerinden yürümeyi deniyoruz.Burada dikkatimizi çeken echo komutunun önünde bulunan /usr/bin/env komutu.
+> `/usr/bin/env` komutu, programı değiştirilmiş bir ortamda çalıştırmayı sağlar. Bunun için PATH değişkeninde bulunan dizinlere sırası ile bakılır. Çalıştırılmak istenen program ilk hangi dizinde bulunursa, o program çalıştırılır.
 
