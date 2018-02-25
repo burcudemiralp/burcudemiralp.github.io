@@ -124,3 +124,9 @@ int main(int argc, char **argv, char **envp)
 }
 {% endraw %}
 {% endhighlight %}
+Programı çalıştırmadan önce kaynak kodu inceliyoruz.getenv("USER") fonksiyonu ile çağırılan processe ait USER çevresel değişkeni öğreniliyor.Değer asprintf fonksiyonunda 2. parametrede yerine konuluyor. Ardından bu string buffer değişkenine atanıyor.Daha sonra bu buffer değişkeni system() fonksiyonuna parametre olarak veriliyor.
+{% raw %}
+    level02@nebula:/home/flag01$ ./flag02
+    about to call system ("/bin/echo level02 is cool")
+    level02 is cool.
+{% endraw %}
