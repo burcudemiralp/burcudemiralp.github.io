@@ -2,7 +2,7 @@
 layout: post
 title: "Nebula Write Up-1"
 date: 2018-02-23
-excerpt: "Level 00-Level 04"
+excerpt: "[Level 00-Level 04]"
 comments: false
 ---
   Nebula, Linux Exploitation üzerine pratik yapma imkanı sunan zafiyetli bir sanal makinadır. Daha ayrıntılı bilgiye
