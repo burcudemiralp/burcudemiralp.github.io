@@ -174,12 +174,14 @@ Cronun hangi kullanıcı için yazıldığını öğrenmeye çalışıyoruz.
 Farklı bir yol deneyip, /tmp dizini içerisinde dosya oluşturan bir script yazıyoruz. Cron çalıştıktan sonra  /tmp dizininde oluşan dosyanın sahibini kontrol ediyoruz. 
 {% raw %}
      level03@nebula:/home/flag03/writable.d$ echo "touch /tmp/test" > test.sh
+     level03@nebula:/home/flag03/writable.d$ cd /tmp
      level03@nebula:/tmp$ ls -l
      -rwxrwxr-x 2 flag03 flag03 40 2018-02-26 14:18 test
 {% endraw %}
-Böylece cronun flag03 kullanıcısı için yazıldığını görmüş oluyoruz. Şimdi yapmamız gereken getflag dosyasını çalıştıracak bir script yazmamız. Çalışıp çalışmadığını kontrol edebilmek için, çıktısını /tmp dizinine yönlendiriyoruz.
+Böylece cronun flag03 kullanıcısı için yazıldığını görmüş oluyoruz. Şimdi yapmamız gereken getflag dosyasını çalıştıracak bir script yazmamız. 
 {% raw %}
      level03@nebula:/home/flag03/writable.d$ echo "/bin/getflag > /tmp/output " > getflag.sh
+     level03@nebula:/home/flag03/writable.d$ cd /tmp
      level03@nebula:/tmp$ ls
      output test
      level03@nebula:/tmp$ cat output
