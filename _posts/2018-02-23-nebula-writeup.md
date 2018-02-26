@@ -171,7 +171,7 @@ Cronun hangi kullanıcı için yazıldığını öğrenmeye çalışıyoruz.
      level03@nebula:/home/flag03$ crontab -u flag03 
      must be privileged to use -u
 {% endraw %}
-Farklı bir yol deneyip, /tmp dizini içerisinde dosya oluşturan bir script yazıyoruz. Cron çalıştıktan sonra dosya /tmp dizininde oluşan dosyanın sahibini kontrol ediyoruz. 
+Farklı bir yol deneyip, /tmp dizini içerisinde dosya oluşturan bir script yazıyoruz. Cron çalıştıktan sonra  /tmp dizininde oluşan dosyanın sahibini kontrol ediyoruz. 
 {% raw %}
      level03@nebula:/home/flag03/writable.d$ echo "touch /tmp/test" > test.sh
      level03@nebula:/tmp$ ls -l
