@@ -147,7 +147,7 @@ Böylece buffer değişkeninin içeriği "/bin/echo level02; /bin/getflag ; echo
 {% endraw %}
 
 ### Level 03
-/home/flag03 dizininde birtakım dosyaların var olduğu ve her iki dakikada bir çağırılan bir crontab bulunduğu bilgisi verilmiş.
+/home/flag03 dizininde birtakım dosyaların var olduğu ve her iki dakikada bir çağırılan bir crontab bulunduğu bilgisi verilmiş.Leveli tamamlayabilmek için flag03 kullanıcısı ile getflag dosyasının çalıştırılması gerektiğini biliyoruz.
 {% raw %}
 ,    level03@nebula:/home/flag03$ file *
     writable.d: directory
