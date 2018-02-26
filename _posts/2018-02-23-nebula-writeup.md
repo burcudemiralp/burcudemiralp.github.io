@@ -147,9 +147,9 @@ Böylece buffer değişkeninin içeriği "/bin/echo level02; /bin/getflag ; echo
 {% endraw %}
 
 ### Level 03
-/home/flag03 dizininde birtakım dosyaların bulunduğu ve her iki dakikada bir çağırılan bir crontab bulunduğu bilgisi verilmiş.
+/home/flag03 dizininde birtakım dosyaların var olduğu ve her iki dakikada bir çağırılan bir crontab bulunduğu bilgisi verilmiş.
 {% raw %}
-    level03@nebula:/home/flag03$ file *
+,    level03@nebula:/home/flag03$ file *
     writable.d: directory
     writable.sh: POSIX shell script text executable
     level03@nebula:/home/flag03$ cat writable.sh
@@ -160,3 +160,6 @@ Böylece buffer değişkeninin içeriği "/bin/echo level02; /bin/getflag ; echo
         rm -f "$i"
     done
 {% endraw %}
+Script özetle ,writable.d dizininde bulunan bash script dosyalarını çalıştırıp ardından siliyor.
+> `ulimit` komutu, sistem kaynaklarının hangi ölçülerde kullanıldığının istatistiğini verir ve bunları sınırlamayı sağlar.
+-t parametresi ile de kaynağın, her bir process tarafından kullanılabileceği saniye sayısı belirtilmiş.
