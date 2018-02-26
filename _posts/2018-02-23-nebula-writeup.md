@@ -149,7 +149,7 @@ Böylece buffer değişkeninin içeriği "/bin/echo level02; /bin/getflag ; echo
 ### Level 03
 /home/flag03 dizininde birtakım dosyaların var olduğu ve her iki dakikada bir çağırılan bir crontab bulunduğu bilgisi verilmiş.Leveli tamamlayabilmek için flag03 kullanıcısı ile getflag dosyasının çalıştırılması gerektiğini biliyoruz.
 {% raw %}
-,    level03@nebula:/home/flag03$ file *
+    level03@nebula:/home/flag03$ file *
     writable.d: directory
     writable.sh: POSIX shell script text executable
     level03@nebula:/home/flag03$ cat writable.sh
@@ -160,6 +160,20 @@ Böylece buffer değişkeninin içeriği "/bin/echo level02; /bin/getflag ; echo
         rm -f "$i"
     done
 {% endraw %}
-Script özetle ,writable.d dizininde bulunan bash script dosyalarını çalıştırıp ardından siliyor.
+Script özetle, writable.d dizininde bulunan bash script dosyalarını çalıştırıp ardından siliyor.
 > `ulimit` komutu, sistem kaynaklarının hangi ölçülerde kullanıldığının istatistiğini verir ve bunları sınırlamayı sağlar.
 -t parametresi ile de kaynağın, her bir process tarafından kullanılabileceği saniye sayısı belirtilmiş.
+
+Cronun hangi kullanıcı için yazıldığını öğrenmeye çalışıyoruz.
+{% raw %}
+     level03@nebula:/home/flag03$ crontab -l
+     no crontab for level03
+     level03@nebula:/home/flag03$ crontab -u flag03 
+     must be privileged to use -u
+{% endraw %}
+Farklı bir yol deneyip, /tmp dizini içerisinde dosya oluşturan bir script yazıyoruz. Cron çalıştıktan sonra dosya /tmp dizininde oluşan dosyanın sahibini kontrol ediyoruz. 
+{% raw %}
+     level03@nebula:/home/flag03/writable.d$ echo "touch /tmp/test" > test.sh
+     level03@nebula:/tmp$ ls -l
+     -rwxrwxr-x 2 flag03 flag03 40 2018-02-26 14:18 test
+{% endraw %}
