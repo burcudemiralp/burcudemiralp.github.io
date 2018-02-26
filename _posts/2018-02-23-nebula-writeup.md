@@ -145,3 +145,18 @@ Böylece buffer değişkeninin içeriği "/bin/echo level02; /bin/getflag ; echo
     You have successfully executed getflag on a target account
     is cool
 {% endraw %}
+
+### Level 03
+/home/flag03 dizininde birtakım dosyaların bulunduğu ve her iki dakikada bir çağırılan bir crontab bulunduğu bilgisi verilmiş.
+{% raw %}
+    level03@nebula:/home/flag03$ file *
+    writable.d: directory
+    writable.sh: POSIX shell script text executable
+    level03@nebula:/home/flag03$ cat writable.sh
+    #!/bin/bash
+     
+    for i in /home/flag03/writable.d/* ; do
+        (ulimit -t 5 ; bash -x "$i")
+        rm -f "$i"
+    done
+{% endraw %}
