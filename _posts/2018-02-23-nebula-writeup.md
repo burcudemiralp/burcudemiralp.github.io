@@ -230,10 +230,7 @@ int main(int argc, char **argv, char **envp)
 {% endhighlight %}
 Programı daha iyi yorumlayabilmek adına bazı noktalara değinelim.
 > Main çalıştırılan ilk fonksiyondur. Bu fonksiyona verilecek parametreler program çalıştırılmadan önce dışarıdan gönderilir.
-
 `int argc` toplam parametre sayısını tutar.
-
 ` char **argv ` string değişkenlerini tutar.argv[0], programın adıdır.
-
-./flag04 token örneğinde argc değişkeninin değeri 2, argv[0] flag04 , argv[1] token olur.
+"./flag04 token" örneğinde argc değişkeninin değeri 2, argv[0] flag04 , argv[1] token olur.
 Konumuzla çok alakalı olmasa
