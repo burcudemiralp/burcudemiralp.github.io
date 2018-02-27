@@ -236,5 +236,11 @@ Programı daha iyi yorumlayabilmek adına bazı noktalara değinelim.
 
 > Extra olarak; `char` değişken türü bir karakter tutar.`char *` ard arda bulunan karakterlerin başlangıç adresini işaret eder, yani bir stringi. `(char *)*` ise, ard arda bulunan stringlerin başlangıç adresini işaret eder.Yani bir string dizisini. 
 
-Açıklama da bahsedilen token dosyanın okunmasının engellenmesi ikinci if koşulu ile sağlanmış. strstr fonksiyonu ile "token" stringi verdiğimiz parametre içerisinde aranıyor. Eğer ki bulunursa, dönüş değeri bulunan yeri adresi oluyor. Aksi taktirde fonksiyon NULL döndürüyor. 
+Açıklama da bahsedilen token dosyasının okunmasının engellenmesi ikinci if koşulu ile sağlanmış. strstr fonksiyonu ile "token" stringi verdiğimiz parametre içerisinde aranıyor. Eğer ki bulunursa, dönüş değeri bulunan yerin adresi oluyor. Aksi taktirde fonksiyon NULL döndürüyor. 
 
+Bypass etmemiz gereken kısım burası, dosyayı farklı bir şekilde adlandırmamız gerekiyor. Dosya üzerinde izinlerimiz kısıtlı olması sebebiyle cp,mv komutlarını kullanamıyoruz.Bunun yerine bir soft link yaratıyoruz.
+{% raw %}
+     level04@nebula:/home/flag04$ ln -s token /tmp/getflag
+     level04@nebula:/home/flag04$ ./flag04 /tmp/getflag
+     06508b5e-8909-4f38-b630-fdb148a848a2
+{% endraw %}
