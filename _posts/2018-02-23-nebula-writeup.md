@@ -235,3 +235,6 @@ Programı daha iyi yorumlayabilmek adına bazı noktalara değinelim.
 "./flag04 token" örneğinde argc değişkeninin değeri 2, argv[0] flag04 , argv[1] token olur.
 
 > Extra olarak; `char` değişken türü bir karakter tutar.`char *` ard arda bulunan karakterlerin başlangıç adresini işaret eder, yani bir stringi. `(char *)*` ise, ard arda bulunan stringlerin başlangıç adresini işaret eder.Yani bir string dizisini. 
+
+Açıklama da bahsedilen token dosyanın okunmasının engellenmesi ikinci if koşulu ile sağlanmış. strstr fonksiyonu ile "token" stringi verdiğimiz parametre içerisinde aranıyor. Eğer ki bulunursa, dönüş değeri bulunan yeri adresi oluyor. Aksi taktirde fonksiyon NULL döndürüyor. 
+
