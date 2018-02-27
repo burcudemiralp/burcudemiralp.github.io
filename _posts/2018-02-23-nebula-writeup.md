@@ -233,4 +233,5 @@ Programı daha iyi yorumlayabilmek adına bazı noktalara değinelim.
 `int argc` toplam parametre sayısını tutar.
 `char **argv` string değişkenlerini tutar.argv[0], programın adıdır.
 "./flag04 token" örneğinde argc değişkeninin değeri 2, argv[0] flag04 , argv[1] token olur.
-Konumuzla çok alakalı olmasa
+
+> Extra olarak; `char` değişken türü bir karakter tutar.`char *` ard arda bulunan karakterlerin başlangıç adresini işaret eder, yani bir stringi. `(char *)*` ise, ard arda bulunan stringlerin başlangıç adresini işaret eder.Yani bir string dizisini. 
