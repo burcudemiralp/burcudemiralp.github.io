@@ -188,7 +188,7 @@ Böylece cronun flag03 kullanıcısı için yazıldığını görmüş oluyoruz.
      You have successfully executed getflag on a target account
 {% endraw %}
 ### Level 04
-/home/flag04 dizininde kaynak kodu aşağıdaki gibi olan bir c programı ve okumamız gereken token dosyası bulunuyor.
+/home/flag04 dizininde kaynak kodu aşağıdaki gibi olan bir c programı ve okumamız gereken token dosyası bulunuyor. 
 {% highlight c %}
 {% raw %}
 #include <stdlib.h>
@@ -228,3 +228,8 @@ int main(int argc, char **argv, char **envp)
 }
 {% endraw %}
 {% endhighlight %}
+Programı daha iyi yorumlayabilmek adına bazı noktalara değinelim.
+> Main çalıştırılan ilk fonksiyondur. Bu fonksiyona verilecek parametreler program çalıştırılmadan önce dışarıdan gönderilir.
+`int argc` toplam parametre sayısını tutar.
+` char **argv` string değişkenlerini tutar.argv[0], programın adıdır.
+./flag04 token örneğinde argc değişkeninin değeri 2, argv[0] flag04 , argv[1] token olur.
