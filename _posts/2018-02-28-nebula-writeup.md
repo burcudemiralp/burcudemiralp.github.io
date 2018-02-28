@@ -32,6 +32,8 @@ Yeterli izinlerimizin olmaması sebebiyle tar dosyasını bulunduğumuz yerde a�
 {% raw %}
     level05@nebula:/home/flag05/.backup$ cp backup-19072011.tgz /tmp
     level05@nebula:/home/flag05/.backup$ cd /tmp
+    level05@nebula:/tmp$ ls -l
+    -rw-rw-r-- 1 level05 level05   1826  2011-11-20 20:13 backup-19072011.tgz
     level05@nebula:/tmp$ tar -xvf backup-19072011.tgz
     .ssh/
     .ssh/id_rsa.pub
