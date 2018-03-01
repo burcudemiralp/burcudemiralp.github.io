@@ -91,7 +91,7 @@ flag06 kullanıcına ait bilgilerin eski bir unix sistemden geldiği bilgisi ver
     level06@nebula:~$ cat /etc/passwd | grep flag06
     flag06:ueqwOCnSGdsuM:993:993::/home/flag06:/bin/sh
 {% endraw %}
-> /etc/passwd dosyası tüm kullanıcılar tarafından okunabildiği için, şifrelenmiş parolalar bu dosyada gösterilmez.Bunun yerine x ile temsil edilir. Parolalar şifrelenmiş bile olsa parola-kırma araçlarıyla bu parolaları kırmak mümkün olabilir.
+> /etc/passwd dosyası tüm kullanıcılar tarafından okunabildiği için, şifrelenmiş parolalar bu dosyada gösterilmez.Parolalar şifrelenmiş bile olsa parola-kırma araçlarıyla bu parolaları kırmak mümkün olabilir.Bu nedenle parolalar x ile temsil edilir. 
 
 
 Burda ise şifrelenmişde olsa flag06 kullanıcısına ait parola, tüm kullanıcılar tarafından okunabilir olan /etc/passwd dosyasında gösterilmiş. 
