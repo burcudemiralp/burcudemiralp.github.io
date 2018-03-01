@@ -85,3 +85,18 @@ Tar dosyasından çıkan anahtarların hangi kullanıcı tarafından oluşturuld
     flag05@nebula:~$ /bin/getflag  
     You have successfully executed getflag on a target account  
 {% endraw %}
+### Level 06
+flag06 kullanıcına ait bilgilerin eski bir unix sistemden geldiği bilgisi verilmiş. Credentials kelimesi ilk olarak /etc/passwd ve /etc/shadow dosyalarını hatırlatıyor. Fakat /etc/shadow dosyasını okumak için gerekli izinlerimiz bulunmadığı için /etc/passwd dosyasını kurcalıyoruz.
+{% raw %}
+    level06@nebula:~$ cat /etc/passwd | grep flag06
+    flag06:ueqwOCnSGdsuM:993:993::/home/flag06:/bin/sh
+{% endraw %}
+> /etc/passwd dosyası tüm kullanıcılar tarafından okunabildiği için, şifrelenmiş parolalar bu dosyada gösterilmez.Bunun yerine x ile temsil edilir. Parolalar şifrelenmiş bile olsa parola-kırma araçlarıyla bu parolaları kırmak mümkün olabilir.
+Burda ise şifrelenmişde olsa flag06 kullanıcısına ait parola, tüm kullanıcılar tarafından okunabilir olan /etc/passwd dosyasında gösterilmiş. 
+> John The Ripper en çok bilinen parola kırma araçlarından biridir.Kali Linux, Parrot gibi güvenlik dağıtımlarında hazır olarak bulunmaktadır.
+
+{% highlight html %}
+<figure >
+	<img src="/assets/img/xx.png">
+</figure>
+{% endhighlight %}
