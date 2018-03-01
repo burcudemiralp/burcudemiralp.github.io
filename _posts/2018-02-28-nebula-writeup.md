@@ -97,7 +97,7 @@ flag06 kullanıcına ait bilgilerin eski bir unix sistemden geldiği bilgisi ver
 Burda ise şifrelenmişde olsa flag06 kullanıcısına ait parola, tüm kullanıcılar tarafından okunabilir olan /etc/passwd dosyasında gösterilmiş. 
 
 
-> John The Ripper en çok bilinen parola kırma araçlarından biridir.Kali Linux, Parrot gibi güvenlik dağıtımlarında hazır olarak bulunmaktadır.
+> John The Ripper Kali Linux, Parrot gibi güvenlik dağıtımlarında hazır olarak gelen ve en çok bilinen parola kırma araçlarından biridir
 <figure >
 	<a href="/assets/img/xx.png"><img src="/assets/img/xx.png"></a>
 	
