@@ -102,3 +102,10 @@ Burda ise şifrelenmişde olsa flag06 kullanıcısına ait parola, tüm kullanı
 	<a href="/assets/img/xx.png"><img src="/assets/img/xx.png"></a>
 	
 </figure>
+Böylece flag06 kullanıcısına ait parolanın "hello" olduğunu öğrendik.
+{% raw %}
+    level06@nebula:~$ su flag06
+    Password: //hello
+    flag06@nebula:/home/level06$ /bin/getflag
+     You have successfully executed getflag on a target account  
+{% endraw %}
