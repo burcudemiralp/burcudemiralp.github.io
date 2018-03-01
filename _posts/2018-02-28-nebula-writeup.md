@@ -98,7 +98,7 @@ Burda ise şifrelenmişde olsa flag06 kullanıcısına ait parola, tüm kullanı
 
 
 > John The Ripper en çok bilinen parola kırma araçlarından biridir.Kali Linux, Parrot gibi güvenlik dağıtımlarında hazır olarak bulunmaktadır.
-<figure class="half">
+<figure >
 	<a href="/assets/img/xx.png"><img src="/assets/img/xx.png"></a>
 	
 </figure>
