@@ -94,9 +94,7 @@ flag06 kullanıcına ait bilgilerin eski bir unix sistemden geldiği bilgisi ver
 > /etc/passwd dosyası tüm kullanıcılar tarafından okunabildiği için, şifrelenmiş parolalar bu dosyada gösterilmez.Bunun yerine x ile temsil edilir. Parolalar şifrelenmiş bile olsa parola-kırma araçlarıyla bu parolaları kırmak mümkün olabilir.
 Burda ise şifrelenmişde olsa flag06 kullanıcısına ait parola, tüm kullanıcılar tarafından okunabilir olan /etc/passwd dosyasında gösterilmiş. 
 > John The Ripper en çok bilinen parola kırma araçlarından biridir.Kali Linux, Parrot gibi güvenlik dağıtımlarında hazır olarak bulunmaktadır.
-
-{% highlight html %}
-<figure >
+<figure class="third">
 	<img src="/assets/img/xx.png">
 </figure>
-{% endhighlight %}
+
