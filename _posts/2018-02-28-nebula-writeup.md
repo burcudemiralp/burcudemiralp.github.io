@@ -50,7 +50,7 @@ Tar dosyasından çıkan anahtarların hangi kullanıcı tarafından oluşturuld
     Are you sure you want to continue connecting (yes/no)? yes  
     Warning: Permanently added 'nebula' (ECDSA) to the list of known hosts.
 
-         _   __     __          __
+          _   __     __          __
          / | / /__  / /_  __  __/ /___ _
         /  |/ / _ \/ __ \/ / / / / __ `/
       / /|  /  __/ /_/ / /_/ / / /_/ /
