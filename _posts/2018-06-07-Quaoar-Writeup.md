@@ -18,7 +18,7 @@ Basit bir nmap taraması ile açık portları ve çalışan servisleri öğreniy
 Tabi ki ilk yöneldiğmiz web servisi  oluyor. Ziyaret ettiğimizde oldukça basit bir sayfa bizi karşılıyor. Kaynak kodunda da dikkatimizi çeken herhangi bir şey yok.
 Nikto ile yaptığımız tarama sonucu , robots.txt nin varlığını ve wordpress kurulu olduğunu öğrenmiş oluyoruz.
 192.168.1.50/robots.txt adresini ziyaret ettiğimizde iki entry ile karşılaşıyoruz , wordpress in varlığını zaten biliyorduk. Wordpress dizinine gittiğimizde bizi bir blog karşılıyor. Manuel olarak bir keşif yapmadan  wpscan ile tema ve pluginlerin barındarabileceği zafiyetleri kontrol ediyoruz. 
->  wpscan --url http://192.168.1.46/wordpress/ --enumerate vp  
+# wpscan --url http://192.168.1.46/wordpress/ --enumerate vp  
 
 
 Tarama sonucu, zafiyetli iki plugin olduğunu görüyoruz.
