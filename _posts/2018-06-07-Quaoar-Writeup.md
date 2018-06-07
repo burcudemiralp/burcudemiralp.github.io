@@ -54,9 +54,10 @@ Bir dinleme başlatıp, kendi php kodumuzu eklemiş olduğumuz sayfayı tarayıc
 <figure >
     <img src="/assets/img/quaorashell.png">
 </figure>
-Aldığımız shell i etkileşimli  hale getirdikten sonra wpadmin kullanıcının home dizininde ilk flag ile karşılaşıyoruz.
+Aldığımız shell i etkileşimli  hale getirdikten sonra wpadmin kullanıcısının home dizininde ilk flag ile karşılaşıyoruz.
 <figure >
     <img src="/assets/img/quaoraspawn.png">
 </figure>
 Flag değerini md5 decode ediyoruz:QuaoarWordpress
-Ardında sistem üzerinde bilgi toplamak için [github adresindeki](https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py) scripti çalıştırıyoruz.
+
+Ardından sistem üzerinde bilgi toplamak için [github adresindeki](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh) scripti çalıştırıyoruz.
