@@ -31,7 +31,6 @@ http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/e
     <img src="/assets/img/quaoralfi.png">
 </figure>
 /etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarayabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor.wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
-
 İkinci plugin de XSS zafiyeti barındırıyor.
 <figure >
     <img src="/assets/img/quaorawpscan2.png">
@@ -44,7 +43,6 @@ Zafiyetli herhangi bir tema bulunmadığını da böylece görmüş oluyoruz.Ard
     <img src="/assets/img/quaorawpscan3.png">
 </figure>
 admin ve wpadmin şeklinde iki kullanıcının bulunduğunu görüyoruz. Hemen altında da admin default username inin hala kullanıldığını söylüyor. Aslında burda aklıma gelen ilk şeyin admin:admin ,admin:123456 gibi ikilileri denemek olması gerekirdi. Bunun yerine bilgisayarıma işkence etmeyip seçip, brufe force ile admin:admin credential ını elde ettim.
-
 #### hydra -l admin -P rockyou.txt -vV -f -t 2 192.168.1.50 http-post-form "/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:login_error"
 <figure >
     <img src="/assets/img/giphy.gif">
@@ -59,7 +57,6 @@ Aldığımız shell i etkileşimli  hale getirdikten sonra wpadmin kullanıcıs�
     <img src="/assets/img/quaoraspawn.png">
 </figure>
 Flag değerini md5 decode ediyoruz:QuaoarWordpress
-
 Ardından sistem üzerinde bilgi toplamak için [github adresindeki](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh) scripti çalıştırıyoruz.
 İlk olarak bu çekirdek versiyonu için local bir exploit olup olmadığını araştırıyoruz. C ile yazılmış birden fazla local exploit bulunmasına rağmen, içeride gcc bulunmaması sebebiyle işimize yaramıyor.
 <figure >
