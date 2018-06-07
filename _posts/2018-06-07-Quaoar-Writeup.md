@@ -61,16 +61,15 @@ Aldığımız shell i etkileşimli  hale getirdikten sonra wpadmin kullanıcıs�
 Flag değerini md5 decode ediyoruz:QuaoarWordpress
 
 Ardından sistem üzerinde bilgi toplamak için [github adresindeki](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh) scripti çalıştırıyoruz.
-
+İlk olarak bu çekirdek versiyonu için local bir exploit olup olmadığını araştırıyoruz. C ile yazılmış birden fazla local exploit bulunmasına rağmen, içeride gcc bulunmaması sebebiyle işimize yaramıyor.
 <figure >
     <img src="/assets/img/quaoarsystem.png">
 </figure>
-
-İlk olarak bu çekirdek versiyonu için local bir exploit olup olmadığını araştırıyoruz. C ile yazılmış birden fazla local exploit bulunmasına rağmen, içeride gcc bulunmaması sebebiyle işimize yaramıyor.
+Cron dosyalarının sahibi root fakat bizim yazma iznimiz yok,dolayısıyla çok manipüle edilebilir bir durum yok ortada.
 <figure >
     <img src="/assets/img/quaoracron.png">
 </figure>
-Cron dosyalarının sahibi root fakat bizim yazma iznimiz yok,dolayısıyla çok manipüle edilebilir bir durum yok ortada. Yine de dosyaları okuyoruz.
+Yine de dosyaları okuyoruz.
 <figure >
     <img src="/assets/img/quaoracron2.png">
 </figure>
