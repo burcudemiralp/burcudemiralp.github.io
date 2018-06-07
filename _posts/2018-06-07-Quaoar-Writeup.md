@@ -59,3 +59,4 @@ Aldığımız shell i etkileşimli  hale getirdikten sonra wpadmin kullanıcın�
     <img src="/assets/img/quaoraspawn.png">
 </figure>
 Flag değerini md5 decode ediyoruz:QuaoarWordpress
+Ardında sistem üzerinde bilgi toplamak için [github adresindeki](https://github.com/sleventyeleven/linuxprivchecker/blob/master/linuxprivchecker.py) scripti çalıştırıyoruz.
