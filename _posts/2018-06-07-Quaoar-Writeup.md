@@ -44,6 +44,9 @@ Zafiyetli herhangi bir tema bulunmadığını da böylece görmüş oluyoruz.Ard
     <img src="/assets/img/quaorawpscan3.png">
 </figure>
 admin ve wpadmin şeklinde iki kullanıcının bulunduğunu görüyoruz. Hemen altında da admin default username in hala kullanıldığını söylüyor. Aslında burda aklıma gelen ilk şeyin admin:admin ,admin:123456 gibi ikilileri denemek olması gerekirdi. Bunun yerine bilgisayarıma işkence etmeyip seçip, brufe force ile admin:admin credential ını elde ettim.
+####hydra -l admin -P rockyou.txt -vV -f -t 2 192.168.1.46 http-post-form "/wordpress/wp
+####-login.php:log=^USER^&pwd=^PASS^:login_error"
 <figure >
     <img src="/assets/img/giphy.gif">
 </figure>
+
