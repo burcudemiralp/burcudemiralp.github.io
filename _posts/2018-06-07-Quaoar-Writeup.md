@@ -31,10 +31,16 @@ http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/e
     <img src="/assets/img/quaoralfi.png">
 </figure>
 /etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor.wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
+
 İkinci plugin de XSS zafiyeti barındırıyor.
 <figure >
     <img src="/assets/img/quaorawpscan2.png">
 </figure>
 Fakat zafiyet barındıran sayfa silinmiş. Buradan da çok bir şey elde edemeyip, temaları tarıyoruz. 
 #### wpscan --url http://192.168.1.50/wordpress/ --enumerate vt
-Zafiyetli herhangi bir tema bulunmadığını da böylece görmüş oluyoruz.
+Zafiyetli herhangi bir tema bulunmadığını da böylece görmüş oluyoruz.Ardından mevcut kullanıcıları öğrenebilmek için yine bir tarama yapıyoruz. 
+#### wpscan --url http://192.168.1.50/wordpress/ --enumerate u
+<figure >
+    <img src="/assets/img/quaorawpscan3.png">
+</figure>
+
