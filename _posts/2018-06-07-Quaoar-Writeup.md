@@ -54,3 +54,8 @@ Bir dinleme başlatıp, kendi php kodumuzu eklemiş olduğumuz sayfayı tarayıc
 <figure >
     <img src="/assets/img/quaorashell.png">
 </figure>
+Aldığımız shell i etkileşimli  hale getirdikten sonra wpadmin kullanıcının home dizininde ilk flag ile karşılaşıyoruz.
+<figure >
+    <img src="/assets/img/quaoraspawn.png">
+</figure>
+Flag değerini md5 decode ediyoruz:QuaoarWordpress
