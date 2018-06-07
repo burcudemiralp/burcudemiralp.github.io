@@ -67,3 +67,6 @@ Ardından sistem üzerinde bilgi toplamak için [github adresindeki](https://git
 </figure>
 
 İlk olarak bu çekirdek versiyonu için local bir exploit olup olmadığını araştırıyoruz. C ile yazılmış birden fazla local exploit bulunmasına rağmen, içeride gcc bulunmaması sebebiyle işimize yaramıyor.
+<figure >
+    <img src="/assets/img/quaoracron.png">
+</figure>
