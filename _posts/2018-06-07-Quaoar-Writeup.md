@@ -19,9 +19,8 @@ Tabi ki ilk yöneldiğmiz web servisi  oluyor. Ziyaret ettiğimizde oldukça bas
 Nikto ile yaptığımız tarama sonucu , robots.txt nin varlığını ve wordpress kurulu olduğunu öğrenmiş oluyoruz.
 192.168.1.50/robots.txt adresini ziyaret ettiğimizde iki entry ile karşılaşıyoruz , wordpress in varlığını zaten biliyorduk. Wordpress dizinine gittiğimizde bizi bir blog karşılıyor. Manuel olarak bir keşif yapmadan  wpscan ile tema ve pluginlerin barındarabileceği zafiyetleri kontrol ediyoruz. 
 # wpscan --url http://192.168.1.46/wordpress/ --enumerate vp  
-
-
 Tarama sonucu, zafiyetli iki plugin olduğunu görüyoruz.
 <figure >
     <img src="/assets/img/quaorawpscan.png">
 </figure>
+Sql injection zafiyeti için [exploit-db](https://www.exploit-db.com/exploits/41438/) üzerinden daha ayrıntılı bir araştırma yaptığımızda zafiyet barındıran sayfaların silinmiş olduğunu görüyoruz.
