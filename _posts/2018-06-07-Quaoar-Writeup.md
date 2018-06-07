@@ -9,5 +9,5 @@ Quaroa isimli zafiyetli makinada root yetkilerini elde etmemiz ve bu süreçte(g
 
 Öncelikle netdiscover ile bulunduğumuz ağı tarayıp, makinaya ait ip adresini öğreniyoruz.
 <figure >
-    <a href="/assets/img/quaoraip.png"><img src="/assets/img/quaoraip.png"></a>
+    <img src="/assets/img/quaoraip.png"></a>
 </figure>
