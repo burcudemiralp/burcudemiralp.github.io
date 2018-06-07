@@ -61,3 +61,7 @@ Aldığımız shell i etkileşimli  hale getirdikten sonra wpadmin kullanıcıs�
 Flag değerini md5 decode ediyoruz:QuaoarWordpress
 
 Ardından sistem üzerinde bilgi toplamak için [github adresindeki](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh) scripti çalıştırıyoruz.
+
+<figure >
+    <img src="/assets/img/quaorasystem.png">
+</figure>
