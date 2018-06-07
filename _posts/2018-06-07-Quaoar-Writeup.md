@@ -82,3 +82,7 @@ Dosyayı okuduğumuzda database bağlantısının gerçekleştiğini ve database
 <figure >
     <img src="/assets/img/quaorafind.png">
 </figure>
+Database için kullanılan parolanın başka yerlerdede kullabileceğini düşünerek şansımızı deniyoruz.
+<figure >
+    <img src="/assets/img/quaoraroot.png">
+</figure>
