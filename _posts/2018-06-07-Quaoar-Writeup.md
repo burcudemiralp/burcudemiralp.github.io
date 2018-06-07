@@ -74,3 +74,7 @@ Cron dosyalarının sahibi root fakat bizim yazma iznimiz yok,dolayısıyla çok
 <figure >
     <img src="/assets/img/quaoracron2.png">
 </figure>
+İkinci flagi de böylece elde etmiş oluyoruz. Sistem üzerinde biraz daha gezindikten sonra,en başta ulaşmaya çalıştığımız wp-config dosyasının yerini arıyoruz.
+<figure >
+    <img src="/assets/img/quaorafind.png">
+</figure>
