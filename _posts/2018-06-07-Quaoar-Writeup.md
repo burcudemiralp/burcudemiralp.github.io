@@ -78,3 +78,7 @@ Cron dosyalarının sahibi root fakat bizim yazma iznimiz yok,dolayısıyla çok
 <figure >
     <img src="/assets/img/quaorafind.png">
 </figure>
+Dosyayı okuduğumuzda database bağlantısının gerçekleştiğini ve database için root:rootpassword! credential ını öğrenmiş oluyoruz.
+<figure >
+    <img src="/assets/img/quaorafind.png">
+</figure>
