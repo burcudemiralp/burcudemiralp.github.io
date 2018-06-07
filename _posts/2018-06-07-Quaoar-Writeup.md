@@ -24,9 +24,9 @@ Tarama sonucu, zafiyetli iki plugin olduğunu görüyoruz.
     <img src="/assets/img/quaorawpscan.png">
 </figure>
 Sql injection zafiyeti için [exploit-db](https://www.exploit-db.com/exploits/41438/) üzerinden daha ayrıntılı bir araştırma yaptığımızda zafiyet barındıran sayfaların silinmiş olduğunu görüyoruz.
-LFI zafiyeti için yine [exploit-db](https://www.exploit-db.com/exploits/40290/) üzerinden bir araştırma yapıyoruz. Payload şu şekilde:
-http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd.
+LFI zafiyeti için yine [exploit-db](https://www.exploit-db.com/exploits/40290/) üzerinden bir araştırma yapıyoruz.
+Payload şu şekilde: `http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd.`
 <figure >
     <img src="/assets/img/quaoralfi.png">
 </figure>
-/etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor. wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
+/etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor.wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
