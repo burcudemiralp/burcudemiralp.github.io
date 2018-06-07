@@ -29,4 +29,4 @@ http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/e
 <figure >
     <img src="/assets/img/quaoralfi.png">
 </figure>
-/etc/passwd dosyasından wpadmin kullanıcısı öğrenmiş oluyoruz.Bunun dışında [github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor. wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
+/etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor. wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
