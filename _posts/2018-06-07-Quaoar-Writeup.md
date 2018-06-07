@@ -63,7 +63,7 @@ Flag değerini md5 decode ediyoruz:QuaoarWordpress
 Ardından sistem üzerinde bilgi toplamak için [github adresindeki](https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh) scripti çalıştırıyoruz.
 
 <figure >
-    <img src="/assets/img/quaorasystem.png">
+    <img src="/assets/img/quaoarsystem.png">
 </figure>
 
 İlk olarak bu çekirdek versiyonu için local bir exploit olup olmadığını araştırıyoruz. C ile yazılmış birden fazla local exploit bulunmasına rağmen, içeride gcc bulunmaması sebebiyle işimize yaramıyor.
