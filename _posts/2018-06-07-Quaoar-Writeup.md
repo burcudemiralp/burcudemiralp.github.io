@@ -26,7 +26,8 @@ Tarama sonucu, zafiyetli iki plugin olduğunu görüyoruz.
 Sql injection zafiyeti için [exploit-db](https://www.exploit-db.com/exploits/41438/) üzerinden daha ayrıntılı bir araştırma yaptığımızda zafiyet barındıran sayfaların silinmiş olduğunu görüyoruz.
 LFI zafiyeti için yine [exploit-db](https://www.exploit-db.com/exploits/40290/) üzerinden bir araştırma yapıyoruz.
 Payload şu şekilde:
-`http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd.`
+
+http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd.
 <figure >
     <img src="/assets/img/quaoralfi.png">
 </figure>
