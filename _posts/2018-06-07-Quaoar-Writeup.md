@@ -80,7 +80,7 @@ Cron dosyalarının sahibi root fakat bizim yazma iznimiz yok,dolayısıyla çok
 </figure>
 Dosyayı okuduğumuzda database bağlantısının gerçekleştiğini ve database için root:rootpassword! credential ını öğrenmiş oluyoruz.
 <figure >
-    <img src="/assets/img/quaorafind.png">
+    <img src="/assets/img/quaoracrential.png">
 </figure>
 Database için kullanılan parolanın başka yerlerdede kullabileceğini düşünerek şansımızı deniyoruz.
 <figure >
