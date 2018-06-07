@@ -86,3 +86,7 @@ Database için kullanılan parolanın başka yerlerdede kullabileceğini düşü
 <figure >
     <img src="/assets/img/quaoraroot.png">
 </figure>
+Böylece root yetkileriyle birlikte 3. flagi de elde etmiş oluyoruz. 
+<figure >
+    <img src="/assets/img/happy.gif">
+</figure>
