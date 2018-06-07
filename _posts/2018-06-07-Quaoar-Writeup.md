@@ -2,7 +2,7 @@
 layout: post
 title: "Quaoar Writeup"
 date: 2018-06-07
-excerpt: ""
+excerpt: "07 Jun 2018"
 comments: false
 ---
 Quaoar isimli zafiyetli makinada root yetkilerini elde etmemiz ve bu süreçte 3 flag bulmamız isteniyor. Başlangıç seviyesi olarak kategorize edilmiş.Daha ayrıntılı bilgiye [buradan](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/) ulaşabilirsiniz.
