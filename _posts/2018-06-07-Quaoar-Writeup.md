@@ -70,7 +70,7 @@ Ardından sistem üzerinde bilgi toplamak için [github adresindeki](https://git
 <figure >
     <img src="/assets/img/quaoracron.png">
 </figure>
-Cron dosyalarının sahibi root fakat bizim yazma iznimiz yok,dolayısıyla çok manipüle edilebilir bir durum yok ortada. Yinede dosyaları okuyoruz.
+Cron dosyalarının sahibi root fakat bizim yazma iznimiz yok,dolayısıyla çok manipüle edilebilir bir durum yok ortada. Yine de dosyaları okuyoruz.
 <figure >
     <img src="/assets/img/quaoracron2.png">
 </figure>
