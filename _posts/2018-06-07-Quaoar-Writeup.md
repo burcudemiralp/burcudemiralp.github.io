@@ -16,8 +16,8 @@ Basit bir nmap taraması ile açık portları ve çalışan servisleri öğreniy
     <img src="/assets/img/quaoranmap.png">
 </figure>
 Tabi ki ilk yöneldiğimiz web servisi  oluyor. Ziyaret ettiğimizde oldukça basit bir sayfa bizi karşılıyor. Kaynak kodunda da dikkatimizi çeken herhangi bir şey yok.
-Nikto ile yaptığımız tarama sonucu , robots.txt nin varlığını ve wordpress kurulu olduğunu öğrenmiş oluyoruz.
-192.168.1.50/robots.txt adresini ziyaret ettiğimizde iki entry ile karşılaşıyoruz , wordpress in varlığını zaten biliyorduk. Wordpress dizinine gittiğimizde bizi bir blog karşılıyor. Manuel olarak bir keşif yapmadan  wpscan ile tema ve pluginlerin barındarabileceği zafiyetleri kontrol ediyoruz. 
+Nikto ile yaptığımız tarama sonucu , robots.txt nin varlığını ve wordpress kurulu olduğunu öğreniyoruz.
+192.168.1.50/robots.txt adresini ziyaret ettiğimizde iki entry ile karşılaşıyoruz , wordpress in varlığını zaten biliyorduk. Wordpress dizinine gittiğimizde bizi bir blog karşılıyor. Manuel olarak bir keşif yapmadan  wpscan ile tema ve pluginlerin barındarabileceği zafiyetlere bakıyoruz. 
 #### wpscan --url http://192.168.1.50/wordpress/ --enumerate vp  
 Tarama sonucu, zafiyetli iki plugin olduğunu görüyoruz.
 <figure >
@@ -30,7 +30,7 @@ http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/e
 <figure >
     <img src="/assets/img/quaoralfi.png">
 </figure>
-/etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor.wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
+/etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarayabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor.wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
 
 İkinci plugin de XSS zafiyeti barındırıyor.
 <figure >
