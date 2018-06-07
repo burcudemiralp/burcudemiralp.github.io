@@ -43,4 +43,4 @@ Zafiyetli herhangi bir tema bulunmadığını da böylece görmüş oluyoruz.Ard
 <figure >
     <img src="/assets/img/quaorawpscan3.png">
 </figure>
-
+admin ve wpadmin şeklinde iki kullanıcının bulunduğunu görüyoruz. Hemen altında da admin default username nin hala kullanıldığını söylüyor. Aslında burda aklımıza gelen ilk şeyin admin:admin ,admin:123456 gibi ikilileri denemek olması gerekirdi. Fakat ben bunu yapmayıp brufe force ile bilgisayarıma işkence ederek doğru credential ın admin:admin olduğunu öğrendim :( . 
