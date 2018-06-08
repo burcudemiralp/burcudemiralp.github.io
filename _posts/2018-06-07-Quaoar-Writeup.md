@@ -63,11 +63,10 @@ Ardından sistem üzerinde bilgi toplamak için [github adresindeki](https://git
 <figure >
     <img src="/assets/img/quaoarsystem.png">
 </figure>
-Cron dosyalarının sahibi root fakat bizim yazma iznimiz yok,dolayısıyla çok manipüle edilebilir bir durum yok ortada.
+Post exploitation için best practice olarak kabul edilen şeylerden birini yapıp, var olan cron dosyalarını inceliyoruz.
 <figure >
     <img src="/assets/img/quaoracron.png">
 </figure>
-Yine de dosyaları okuyoruz.
 <figure >
     <img src="/assets/img/quaoracron2.png">
 </figure>
