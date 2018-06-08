@@ -47,7 +47,7 @@ admin ve wpadmin şeklinde iki kullanıcının bulunduğunu görüyoruz. Hemen a
 <figure >
     <img src="/assets/img/giphy.gif">
 </figure>
-wp-admin paneline eriştikten sonra, ilk işimiz reverse shell yüklemek oluyor.Bunun için appearance>editor kısmından bir temayı seçip,herhangi bir template e bize revese shell verecek olan [php kodumuzu](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) ekliyoruz. 
+wp-admin paneline eriştikten sonra, ilk işimiz reverse shell yüklemek oluyor.Bunun için appearance>editor kısmından bir temayı seçip,herhangi bir template e bize reverse shell verecek olan [php kodumuzu](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) ekliyoruz. 
 Bir dinleme başlatıp, kendi php kodumuzu eklemiş olduğumuz sayfayı tarayıcıdan çağırdığımızda www-data kullanıcısı ile shell elde etmiş oluyoruz.
 <figure >
     <img src="/assets/img/quaorashell.png">
