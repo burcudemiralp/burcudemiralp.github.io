@@ -48,19 +48,19 @@ wpscan --url http://192.168.1.50/wordpress/ --enumerate u
 <figure >
     <img src="/assets/img/quaorawpscan3.png">
 </figure>
-Admin ve wpadmin şeklinde iki kullanıcının bulunduğunu görüyoruz. Hemen altında da admin default kullanıcı adının hala kullanıldığını söylüyor. Aslında burda aklımıza gelen ilk şeyin admin:admin,admin:123456 gibi ikilileri denemek olması gerekirdi. Bunun yerine bilgisayarıma işkence etmeyip seçip, brufe force ile admin:admin credential ını elde ettim.
+Admin ve wpadmin şeklinde iki kullanıcının bulunduğunu görüyoruz. Hemen altında da admin default username'inin hala kullanıldığını söylüyor. Aslında burda aklımıza gelen ilk şeyin admin:admin,admin:123456 gibi ikilileri denemek olması gerekirdi. Bunun yerine bilgisayarıma işkence etmeyip seçip, brufe force ile admin:admin ikilisini elde ettim.
 ```
 hydra -l admin -P rockyou.txt -vV -f -t 2 192.168.1.50 http-post-form "/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:login_error"
 ```
 <figure >
     <img src="/assets/img/giphy.gif">
 </figure>
-Wp-admin paneline eriştikten sonra, ilk işimiz reverse shell yüklemek oluyor.Bunun için appearance>editor kısmından bir temayı seçip,herhangi bir template e bize reverse shell verecek olan [php kodumuzu](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) ekliyoruz. 
+Wp-admin paneline eriştikten sonra, ilk işimiz reverse shell yüklemek oluyor.Bunun için appearance>editor kısmından bir temayı seçip,herhangi bir template'e bize reverse shell verecek olan [php kodumuzu](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) ekliyoruz. 
 Bir dinleme başlatıp, kendi php kodumuzu eklemiş olduğumuz sayfayı tarayıcıdan çağırdığımızda www-data kullanıcısı ile shell elde etmiş oluyoruz.
 <figure >
     <img src="/assets/img/quaorashell.png">
 </figure>
-Aldığımız shell i etkileşimli  hale getirdikten sonra wpadmin kullanıcısının home dizininde ilk flag ile karşılaşıyoruz.
+Aldığımız shell'i etkileşimli  hale getirdikten sonra wpadmin kullanıcısının home dizininde ilk flag ile karşılaşıyoruz.
 <figure >
     <img src="/assets/img/quaoraspawn.png">
 </figure>
