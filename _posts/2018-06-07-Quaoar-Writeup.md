@@ -32,7 +32,7 @@ Payload şu şekilde:
 <figure >
     <img src="/assets/img/quaoralfi.png">
 </figure>
-/etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarayabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor.wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
+/etc/passwd dosyasından wpadmin kullanıcısını öğrenmiş oluyoruz.Bunun dışında [bu github hesabından](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/File%20Inclusion%20-%20Path%20Traversal) ulaştığımız , işimize yarayabilecek payloadlar deniyoruz. Fakat işimize yarar pek bir şey çıkmıyor. Wp-config.php sayfası için birkaç deneme yapıyoruz fakat muhtemelen /wordpress dizininden başka bir yere taşınmış.
 İkinci plugin de XSS zafiyeti barındırıyor.
 <figure >
     <img src="/assets/img/quaorawpscan2.png">
