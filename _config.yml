@@ -63,6 +63,8 @@ instagram:          _demiralpburcu
 #hackernews:        username
 
 # Gems
+plugins:
+  - jekyll-seo-tag
 gems:
   - jekyll-mentions
   - jekyll-feed
