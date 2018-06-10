@@ -26,7 +26,7 @@ Tarama sonucu, zafiyetli iki plugin olduğunu görüyoruz.
 Sql injection zafiyeti için [exploit-db](https://www.exploit-db.com/exploits/41438/) üzerinden daha ayrıntılı bir araştırma yaptığımızda zafiyet barındıran sayfaların silinmiş olduğunu görüyoruz.
 LFI zafiyeti için yine [exploit-db](https://www.exploit-db.com/exploits/40290/) üzerinden bir araştırma yapıyoruz.
 Payload şu şekilde:
-http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd.
+"http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/etc/passwd".
 <figure >
     <img src="/assets/img/quaoralfi.png">
 </figure>
@@ -36,18 +36,24 @@ http://server/wp-content/plugins/mail-masta/inc/campaign/count_of_send.php?pl=/e
     <img src="/assets/img/quaorawpscan2.png">
 </figure>
 Fakat zafiyet barındıran sayfa silinmiş. Buradan da çok bir şey elde edemeyip, temaları tarıyoruz. 
-#### wpscan --url http://192.168.1.50/wordpress/ --enumerate vt
+```
+wpscan --url http://192.168.1.50/wordpress/ --enumerate vt
+```
 Zafiyetli herhangi bir tema bulunmadığını da böylece görmüş oluyoruz.Ardından mevcut kullanıcıları öğrenebilmek için yine bir tarama yapıyoruz. 
-#### wpscan --url http://192.168.1.50/wordpress/ --enumerate u
+```
+wpscan --url http://192.168.1.50/wordpress/ --enumerate u
+```
 <figure >
     <img src="/assets/img/quaorawpscan3.png">
 </figure>
-admin ve wpadmin şeklinde iki kullanıcının bulunduğunu görüyoruz. Hemen altında da admin default username inin hala kullanıldığını söylüyor. Aslında burda aklımıza gelen ilk şeyin admin:admin ,admin:123456 gibi ikilileri denemek olması gerekirdi. Bunun yerine bilgisayarıma işkence etmeyip seçip, brufe force ile admin:admin credential ını elde ettim.
-#### hydra -l admin -P rockyou.txt -vV -f -t 2 192.168.1.50 http-post-form "/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:login_error"
+Admin ve wpadmin şeklinde iki kullanıcının bulunduğunu görüyoruz. Hemen altında da admin default kullanıcı adının hala kullanıldığını söylüyor. Aslında burda aklımıza gelen ilk şeyin admin:admin,admin:123456 gibi ikilileri denemek olması gerekirdi. Bunun yerine bilgisayarıma işkence etmeyip seçip, brufe force ile admin:admin credential ını elde ettim.
+```
+hydra -l admin -P rockyou.txt -vV -f -t 2 192.168.1.50 http-post-form "/wordpress/wp-login.php:log=^USER^&pwd=^PASS^:login_error"
+```
 <figure >
     <img src="/assets/img/giphy.gif">
 </figure>
-wp-admin paneline eriştikten sonra, ilk işimiz reverse shell yüklemek oluyor.Bunun için appearance>editor kısmından bir temayı seçip,herhangi bir template e bize reverse shell verecek olan [php kodumuzu](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) ekliyoruz. 
+Wp-admin paneline eriştikten sonra, ilk işimiz reverse shell yüklemek oluyor.Bunun için appearance>editor kısmından bir temayı seçip,herhangi bir template e bize reverse shell verecek olan [php kodumuzu](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) ekliyoruz. 
 Bir dinleme başlatıp, kendi php kodumuzu eklemiş olduğumuz sayfayı tarayıcıdan çağırdığımızda www-data kullanıcısı ile shell elde etmiş oluyoruz.
 <figure >
     <img src="/assets/img/quaorashell.png">
@@ -74,7 +80,7 @@ Post exploitation için best practice olarak kabul edilen şeylerden birini yap�
 <figure >
     <img src="/assets/img/quaorafind.png">
 </figure>
-Dosyayı okuduğumuzda database bağlantısının gerçekleştiğini ve database için root:rootpassword! credential ını öğrenmiş oluyoruz.
+Dosyayı okuduğumuzda database bağlantısının gerçekleştiğini ve database için root:rootpassword! ikilisini öğrenmiş oluyoruz.
 <figure >
     <img src="/assets/img/quaoracrential.png">
 </figure>
