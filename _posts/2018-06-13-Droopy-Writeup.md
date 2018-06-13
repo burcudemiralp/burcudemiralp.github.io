@@ -30,7 +30,7 @@ Sisteme ait versiyon bilgisini öğrenebilmek için robots.txt de bulunan dosyal
 </figure>
 Drupal 7.30 için exploit araştırdığımızda Drupal 7.X versiyonlarına ait bir SQLi zafiyetinin bulunduğu, ve bu zafiyet sayesinde admin kullanıcısının parolasını değiştirmek mümkün oluyor.[Bu github adresinde ki](https://gist.github.com/milankragujevic/61eb72df71b69df80e86) php kodunu çalıştırıyoruz.
 <figure >
-    <img src="/assets/img/droopy/droopexploit.png">
+    <img src="/assets/img/droopy/droopyexploit.png">
 </figure>
 Admin kullanıcısına ait parola "admin" olarak değiştirilmiş oldu.Böylece admin:admin ikilisi ile giriş yapabiliyoruz.
 Drupal servisinin PHP tabanlı çalıştığını biliyoruz. Bize reverse shell vereceh PHP kodunu ekleyecek uygun bir yer arıyoruz.Dizin yapısını bilmememiz  sebebiyle kısa bir araştırma yapıyoruz. 
