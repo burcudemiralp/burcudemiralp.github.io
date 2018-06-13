@@ -48,3 +48,6 @@ Böylece root yetkilerine erişmiş oluyoruz.
 <figure >
     <img src="/assets/img/droopy/droopyroot.png">
 </figure>
+<figure >
+    <img src="/assets/img/droopy/hellogif.png">
+</figure>
