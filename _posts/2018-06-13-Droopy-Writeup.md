@@ -37,11 +37,11 @@ Drupal servisinin PHP tabanlı çalıştığını biliyoruz. Bize reverse shell 
 Öncelikle Modules kısmından PHP Filter modülünü etkinleştiriyoruz.
 Ardından Content>Add Content>Article kısmından, [adresindeki](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) php reverse shell kodunu ekliyoruz.Text formatını PHP Code olarak değiştiriyoruz.Değişikleri kaydettiğimizde www-data kullanıcısı ile bağlantı elde etmiş oluyoruz.
 <figure >
-    <img src="/assets/img/droopy/droopshell.png">
+    <img src="/assets/img/droopy/droopyshell.png">
 </figure>
 Çekirdek versiyonunu öğrendikten sonra, bu versiyon için local exploit araştırıyoruz.
 <figure >
-    <img src="/assets/img/droopy/droopshell.png">
+    <img src="/assets/img/droopy/droopyversion.png">
 </figure>
 3.13 çekirdek versiyonu için "CVE-2015-1328 Overlayfs Privilege Escalation" exploit mevcut. [Github adresinde ki](https://github.com/lucyoa/kernel-exploits/tree/master/overlayfs) exploitini çalıştırıyoruz.
 Böylece root yetkilerine erişmiş oluyoruz.
