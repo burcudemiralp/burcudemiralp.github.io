@@ -50,5 +50,5 @@ Böylece root yetkilerine erişmiş oluyoruz.
     <img src="/assets/img/droopy/droopyroot.png">
 </figure>
 <figure >
-    <img src="/assets/img/droopy/hellogif.png">
+    <img src="/assets/img/droopy/hello.gif">
 </figure>
