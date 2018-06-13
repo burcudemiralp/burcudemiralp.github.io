@@ -22,7 +22,7 @@ Daha fazla bilgi toplayabilir miyiz düşüncesiyle fuzzing yapıyoruz.
 İlk ziyaret ettiğimiz /robots.txt oluyor.Birden fazla entry ile karşılaşıyoruz. Dizinleri ziyaret ettiğimizde ilk etapta çok işe yarar bir şey yok gibi görünüyor.
 Anasayfada ve dizinlerde karşımıza çıkan Drupal üzerine kısa bir araştırma yapıyoruz.
 ```
-Drupal ücretsiz, açık kaynaklı bir içerik yönetim sistemi ya da içerik yönetim'e odaklı bir altyapı yazılımıdır.
+Drupal ücretsiz, açık kaynaklı bir içerik yönetim sistemi ya da içerik yönetime odaklı bir altyapı yazılımıdır.
 ```
 Sisteme ait versiyon bilgisini öğrenebilmek için robots.txt de bulunan dosyalardan bazılarını tekrar gözden geçiriyoruz.http://192.168.1.48/CHANGELOG.txt adresini ziyaret ettiğimizde versiyon bilgisi hakkında bilgi sahibi oluyoruz.
 <figure >
@@ -32,6 +32,7 @@ Drupal 7.30 için exploit araştırdığımızda Drupal 7.X versiyonlarına ait 
 <figure >
     <img src="/assets/img/droopy/droopyexploit.png">
 </figure>
+// Yeni IP adresi: 192.168.1.49
 Admin kullanıcısına ait parola "admin" olarak değiştirilmiş oldu.Böylece admin:admin ikilisi ile giriş yapabiliyoruz.
 Drupal servisinin PHP tabanlı çalıştığını biliyoruz. Bize reverse shell vereceh PHP kodunu ekleyecek uygun bir yer arıyoruz.Dizin yapısını bilmememiz  sebebiyle kısa bir araştırma yapıyoruz. 
 Öncelikle Modules kısmından PHP Filter modülünü etkinleştiriyoruz.
