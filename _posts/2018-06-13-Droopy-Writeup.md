@@ -8,7 +8,7 @@ comments: false
 Droopy imajını indirmek/daha ayrıntılı bilgiye ulaşmak için [bu](https://www.vulnhub.com/entry/droopy-v02,143/) linki kullanabilirsiniz.
 Netdiscover ile bulunduğumuz ağı tarayarak makinaya ait ip adresini 192.168.1.48 olarak buluyoruz.
 <figure >
-    <img src="/assets/img/droopy/droopyip.png">
+    <img src="/assets/img/droopy/droopip.png">
 </figure>
 Nmap taraması ile açık portları ve üzerinde çalışan servisleri öğreniyoruz.Makina üzerinde yalnızca web servisi çalışıyor.
 <figure >
