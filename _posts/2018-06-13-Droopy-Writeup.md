@@ -46,5 +46,5 @@ Ardından Content>Add Content>Article kısmından, [adresindeki](http://pentestm
 3.13 çekirdek versiyonu için "CVE-2015-1328 Overlayfs Privilege Escalation" exploit mevcut. [Github adresinde ki](https://github.com/lucyoa/kernel-exploits/tree/master/overlayfs) exploitini çalıştırıyoruz.
 Böylece root yetkilerine erişmiş oluyoruz.
 <figure >
-    <img src="/assets/img/droopy/drooproot.png">
+    <img src="/assets/img/droopy/droopyroot.png">
 </figure>
