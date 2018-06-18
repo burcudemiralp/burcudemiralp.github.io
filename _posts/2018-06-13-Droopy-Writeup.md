@@ -33,7 +33,7 @@ Drupal 7.30 için exploit araştırdığımızda Drupal 7.X versiyonlarına ait 
     <img src="/assets/img/droopy/droopyexploit.png"><p>Yeni IP adresi: 192.168.1.49</p>
 </figure>
 Admin kullanıcısına ait parola "admin" olarak değiştirilmiş oldu.Böylece admin:admin ikilisi ile giriş yapabiliyoruz.
-Drupal servisinin PHP tabanlı çalıştığını biliyoruz. Bize reverse shell vereceh PHP kodunu ekleyecek uygun bir yer arıyoruz.Dizin yapısını bilmememiz  sebebiyle kısa bir araştırma yapıyoruz. 
+Drupal servisinin PHP tabanlı çalıştığını biliyoruz. Bize reverse shell verecek PHP kodunu ekleyecek uygun bir yer arıyoruz.Dizin yapısını bilmememiz  sebebiyle kısa bir araştırma yapıyoruz. 
 Öncelikle Modules kısmından PHP Filter modülünü etkinleştiriyoruz.
 Ardından Content>Add Content>Article kısmından, [adresindeki](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) php reverse shell kodunu ekliyoruz.Text formatını PHP Code olarak değiştiriyoruz.Değişikleri kaydettiğimizde www-data kullanıcısı ile bağlantı elde etmiş oluyoruz.
 <figure >
