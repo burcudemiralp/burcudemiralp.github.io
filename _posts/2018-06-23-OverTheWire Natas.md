@@ -220,6 +220,7 @@ Her şey iyi hoş fakat şifrelemede kullanılan keyi bilmiyoruz.Biraz araştır
 Burada plaintext'i "array( "showpassword"=>"no", "bgcolor"=>"#ffffff")" ve ciphertext'i yani cookie değerini biliyoruz.İki değeri xor_encyrpt() fonksiyonu ile şifrelediğimizde keyi elde etmiş olacağız.
 
 {% highlight php %}
+
     <?php
      $key = json_encode(array( "showpassword"=>"no", "bgcolor"=>"#ffffff"));
      $text = base64_decode('ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=');
@@ -231,6 +232,7 @@ Burada plaintext'i "array( "showpassword"=>"no", "bgcolor"=>"#ffffff")" ve ciphe
              }
      echo $outText;
     ?>
+    
  {% endhighlight %}
  
  Burdan "qw8J" keyine ulaşıyoruz. Geriye istediğimiz cookie değerini bu key ile şifrelemek kalıyor.
