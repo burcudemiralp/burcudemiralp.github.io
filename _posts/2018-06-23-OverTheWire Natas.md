@@ -27,12 +27,11 @@ Yine "There is nothing on this page" şeklinde bir hint verilmiş. Kaynak kodunu
 >> natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
 
 #### Level 4
-" Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/" ".
+"Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/" ".
 
 Bu açıklamadan TTP headerları ile ilgilenmemiz gerektiğini anlıyoruz.İsteği burp ile daha ayrıntılı incelediğimizde referrer başlığının http://natas4.natas.labs.overthewire.org/ şeklinde düzenlendiğini görüyoruz.Soruda bizden istenen şekilde düzenlediğimizde level 5 için parolayı elde ediyoruz.
-<figure >
-    <img src="/assets/img/natas/natas4.png">
-</figure>
+<img src="/assets/img/natas/natas4.png">
+
 >>natas5:iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
 
-####Level 5
+#### Level 5
