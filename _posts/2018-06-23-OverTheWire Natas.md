@@ -30,8 +30,12 @@ Yine "There is nothing on this page" şeklinde bir hint verilmiş. Kaynak kodunu
 "Access disallowed. You are visiting from "" while authorized users should come only from "http://natas5.natas.labs.overthewire.org/" ".
 
 Bu açıklamadan HTTP headerları ile ilgilenmemiz gerektiğini anlıyoruz."Refresh page" linkine tıkladığımızda isteğe "referrer" başlığı ekleniyor.Bu başlık değerini soruda bizden istenen şekilde düzenlediğimizde level 5 için parolayı elde ediyoruz.
+<figure>
 <img src="/assets/img/natas/natas41.png">
-
+</figure>
+<figure>
+<img src="/assets/img/natas/natas42.png">
+</figure>
 >>natas5:iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
 
 #### Level 5
@@ -44,6 +48,8 @@ Burp ile isteği daha ayrıntılı incelediğimizde cookie başlığında buluna
 <img src="/assets/img/natas/natas52.png">
 </figure>
 >>natas6:aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
+
+#### Level 6
 
 
 
