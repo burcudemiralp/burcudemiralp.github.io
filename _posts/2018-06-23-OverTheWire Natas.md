@@ -43,7 +43,7 @@ Burp ile isteği daha ayrıntılı incelediğimizde cookie başlığında buluna
 <figure>
 <img src="/assets/img/natas/natas52.png">
 </figure>
->>natas6:iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
+>>natas6:aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
 
 
 
