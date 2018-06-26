@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Droopy Writeup"
-date: 2018-06-13
-excerpt: "13 Jun 2018"
+title: "OverTheWire Natas"
+date: 2018-06-26
+excerpt: "26 Jun 2018"
 comments: false
 ---
 Droopy imajını indirmek/daha ayrıntılı bilgiye ulaşmak için [bu](https://www.vulnhub.com/entry/droopy-v02,143/) linki kullanabilirsiniz.
