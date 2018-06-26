@@ -202,3 +202,9 @@ Cookie yapısını biliyoruz : array( "showpassword"=>"no", "bgcolor"=>"#ffffff"
     return $outText;
 }
 {% endhighlight %
+Her şey iyi hoş fakat şifrelemede kullanılan keyi bilmiyoruz.Biraz araştırma sonucu aşağıdaki denkleme ulaşıyoruz.
+
+``` 
+    plaintext XOR key        = ciphertext
+    plaintext XOR ciphertext = plaintext
+```
