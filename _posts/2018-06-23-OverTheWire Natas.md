@@ -148,14 +148,15 @@ Linux sistemler için iki komutu birbirinden ayırabilecek ";","|" gibi karakter
 <figure>
 <img src="/assets/img/natas/natas111.png">
 </figure>
-Genel bir fikir sahibi olmak adına fonksiyonlar inceliyoruz.
+Genel bir fikir sahibi olmak adına fonksiyonları inceliyoruz.
 <figure>
 <img src="/assets/img/natas/natas112.png">
 </figure>
-İlk olarak loadDat fonksiyonu çağırılıyor.
- {% highlight php %}
+İlk olarak loadData fonksiyonu çağırılıyor.
 
-function loadData($def) {
+ {% highlight php %}
+ 
+  function loadData($def) {
     global $_COOKIE;
     $mydata = $def;
     if(array_key_exists("data", $_COOKIE)) {
@@ -169,5 +170,35 @@ function loadData($def) {
     }
     return $mydata;
 }
-
 {% endhighlight %}
+
+Eğer cookie başlığında "data"  mevcut ise, bu değer base64_decode(),xor_encyrpt(),json_decode() işlemlerinden geçtikten sonra $data değişkenine atanıyor. Data değerinin bulunmaması durumunda  $defaultdata kullanılmaya devam ediyor.
+
+Daha sonra çağırılan saveData fonksiyonunda;
+ {% highlight php %}
+    function saveData($d) {
+    setcookie("data", base64_encode(xor_encrypt(json_encode($d))));
+}
+{% endhighlight %}
+Data değişkeni json_encode(),xor_encrypt() ve base64_encode() işlemlerinden geçtikten sonra cookie başlığına ekleniyor.
+
+Bizi ilgilendiren kısım ise burası.
+<figure>
+<img src="/assets/img/natas/natas113.png">
+</figure>
+Data değişkeninde "showpassword" değeri "yes" e eşitse, level 12 için parola ekrana bastırılıyor.Yapmamız gereken cookie değerini düzenleyip "showpassword" değerini "yes" e eşitlemek.
+Cookie yapısını biliyoruz : array( "showpassword"=>"no", "bgcolor"=>"#ffffff"). Bu yapıyı gerektiği gibi encode edebilirsek istediğimizi elde etmiş olacağız.Bunun için saveData fonksiyonunda ki sıralamayı takip etmemiz gerekiyor.xor_encrypt fonksiyonu nasıl çalışıyor buna bakıyoruz.
+ {% highlight php %}
+    function xor_encrypt($in) {
+    $key = '<censored>';
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i<strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+{% endhighlight %
