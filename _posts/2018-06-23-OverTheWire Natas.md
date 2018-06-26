@@ -18,8 +18,7 @@ Natas, sunucu taraflı web güvenlik temellerini öğretmek amacıyla hazırlanm
 
 [Level 8](#level-8)|[Level 9](#level-9)
 
-[Level 10](#level10)
-
+[Level 10](#level-10)|[Level 11](#level-11)
 #### Level 0
 natas0:natas0 username passwordü ile giriş yapıyoruz.Bize verilen hint "You can find the password for the next level on this page." şeklinde.Kaynak kodu inceliyoruz.
 
@@ -144,4 +143,31 @@ Linux sistemler için iki komutu birbirinden ayırabilecek ";","|" gibi karakter
 "grep -i a /etc/natas_webpass/natas11 # dictionary.txt" şeklini alıyor.Yani /etc/natas_webpass/natas11 dosyasında içerisinde a veya A harfi geçen satırları getiriyor.Parola içerisinde a harfi mevcutsa, parolaya ulaşmış olacağız. A için başarısız oluyor, c harfi için aynı payloadı yazdığımızda level 11 için parolayı elde ediyoruz.
 >> natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
 
+#### Level 11
 
+<figure>
+<img src="/assets/img/natas/natas111.png">
+</figure>
+Genel bir fikir sahibi olmak adına fonksiyonlar inceliyoruz.
+<figure>
+<img src="/assets/img/natas/natas112.png">
+</figure>
+İlk olarak loadDat fonksiyonu çağırılıyor.
+ {% highlight php %}
+
+function loadData($def) {
+    global $_COOKIE;
+    $mydata = $def;
+    if(array_key_exists("data", $_COOKIE)) {
+    $tempdata = json_decode(xor_encrypt(base64_decode($_COOKIE["data"])), true);
+    if(is_array($tempdata) && array_key_exists("showpassword", $tempdata) && array_key_exists("bgcolor", $tempdata)) {
+        if (preg_match('/^#(?:[a-f\d]{6})$/i', $tempdata['bgcolor'])) {
+        $mydata['showpassword'] = $tempdata['showpassword'];
+        $mydata['bgcolor'] = $tempdata['bgcolor'];
+        }
+    }
+    }
+    return $mydata;
+}
+
+{% endhighlight %}
