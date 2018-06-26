@@ -8,7 +8,7 @@ comments: false
 
 Natas, sunucu taraflı web güvenlik temellerini öğretmek amacıyla hazırlanmış, basit düzeyden baya ileriye kadar seviyelendirilmiş bir challenge diyebiliriz.Toplamda 32 bölümden oluşuyor ve her bölüme bu url "http://natasX.natas.labs.overthewire.org" üzerinden erişiyoruz.Daha ayrıntılı bilgiye [buradan](http://overthewire.org/wargames/natas/) ulaşabilirsiniz.
 
-[Level 1](#level1)
+[Level 10](#level10)
 
 #### Level 0
 natas0:natas0 username passwordü ile giriş yapıyoruz.Bize verilen hint "You can find the password for the next level on this page." şeklinde.Kaynak kodu inceliyoruz.
@@ -110,7 +110,8 @@ if($key != "") {
  >> natas:nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
 
 
-    
+     <a name=”level10”> 
+     
  #### Level 10
 
  Level 9 ile çok benzer bir senaryo.Fakat "For security reasons, we now filter on certain characters" şeklinde bir mesaj bırakılmış.
@@ -136,3 +137,4 @@ Linux sistemler için iki komutu birbirinden ayırabilecek ";","|" gibi karakter
 "grep -i a /etc/natas_webpass/natas11 # dictionary.txt" şeklini alıyor.Yani /etc/natas_webpass/natas11 dosyasında içerisinde a veya A harfi geçen satırları getiriyor.Parola içerisinde a harfi mevcutsa, parolaya ulaşmış olacağız. A için başarısız oluyor, c harfi için aynı payloadı yazdığımızda level 11 için parolayı elde ediyoruz.
 >> natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
 
+</a>
