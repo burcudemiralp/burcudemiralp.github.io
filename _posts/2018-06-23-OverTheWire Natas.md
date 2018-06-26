@@ -133,3 +133,4 @@ Linux sistemler için iki komutu birbirinden ayırabilecek ";","|" gibi karakter
 "a /etc/natas_webpass/natas11 #" şeklinde bir input girdiğimizde, passthru fonksiyonu içerisinde ki ifade
 "grep -i a /etc/natas_webpass/natas11 # dictionary.txt" şeklini alıyor.Yani /etc/natas_webpass/natas11 dosyasında içerisinde a veya A harfi geçen satırları getiriyor.Parola içerisinde a harfi mevcutsa, parolaya ulaşmış olacağız. A için başarısız oluyor, c harfi için aynı payloadı yazdığımızda level 11 için parolayı elde ediyoruz.
 >> natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
+</a>
