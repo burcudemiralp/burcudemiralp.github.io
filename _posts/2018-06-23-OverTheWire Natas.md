@@ -201,7 +201,7 @@ Cookie yapısını biliyoruz : array( "showpassword"=>"no", "bgcolor"=>"#ffffff"
 
     return $outText;
 }
-{% endhighlight %
+{% endhighlight % }
 Her şey iyi hoş fakat şifrelemede kullanılan keyi bilmiyoruz.Biraz araştırma sonucu aşağıdaki denkleme ulaşıyoruz.
 
 ``` 
@@ -223,7 +223,7 @@ Burada plaintext'i "array( "showpassword"=>"no", "bgcolor"=>"#ffffff")" ve ciphe
 ?>
 {% endhighlight %}
 Burdan "qw8J" keyine ulaşıyoruz. Geriye istediğimiz cookie değerini bu key ile şifrelemek kalıyor.
-{% highlight php %
+{% highlight php % }
 <?php
 
 
