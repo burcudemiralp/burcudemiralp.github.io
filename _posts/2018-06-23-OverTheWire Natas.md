@@ -50,6 +50,8 @@ Burp ile isteği daha ayrıntılı incelediğimizde cookie başlığında buluna
 >>natas6:aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
 
 #### Level 6
+Basit bir form bizi karşılıyor.Önceki levellerden farklı olarak server tarafında çalışan kodları da görmemiz mümkün. Kodu incelediğimizde include komutu ile includes/secret.inc sayfasının bu koda dahil edildiğini görüyoruz.Sayfaya gittiğimizde secret değişkeninin burada tanımlanmış olduğunu görüyoruz.Değişkenin değerini input olarak girdiğimizde level 7 için parolayı elde etmiş oluyoruz.
 
+>> natas7:7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
 
-
+#### Level 7
