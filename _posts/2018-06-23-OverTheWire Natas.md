@@ -103,4 +103,25 @@ if($key != "") {
  >> natas:nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
  
  #### Level 10
- 
+
+ Level 9 ile çok benzer bir senaryo.Fakat "For security reasons, we now filter on certain characters" şeklinde bir mesaj bırakılmış.
+ {% highlight php %}
+<?
+$key = "";
+
+if(array_key_exists("needle", $_REQUEST)) {
+    $key = $_REQUEST["needle"];
+}
+
+if($key != "") {
+    if(preg_match('/[;|&]/',$key)) {
+        print "Input contains an illegal character!";
+    } else {
+        passthru("grep -i $key dictionary.txt");
+    }
+}
+?>
+Linux sistemler için iki komutu birbirinden ayırabilecek ";","|" gibi karakterler filtrelenmiş. Burda atlanmaması gereken nokta grep komutunun dosya okuyabileceği.Yani /etc/natas_webpass/natas11 dosyasını grep ile okuyacağız.
+"a /etc/natas_webpass/natas11 #" şeklinde bir input girdiğimizde, passthru fonksiyonu içerisinde ki ifade
+"grep -i a /etc/natas_webpass/natas11 # dictionary.txt" şeklini alıyor.Yani /etc/natas_webpass/natas11 dosyasında içerisinde a veya A harfi geçen satırları getiriyor.Parola içerisinde a harfi mevcutsa, parolaya ulaşmış olacağız. A için başarısız oluyor, c harfi için aynı payloadı yazdığımızda level 11 için parolayı elde ediyoruz.
+>> natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
