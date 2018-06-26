@@ -15,13 +15,13 @@ natas0:natas0 username passwordü ile giriş yapıyoruz.Bize verilen hint "You c
 
 >> natas1:gtVrDuiDfck831PqWsLEZy5gyDz1clto
 
- <a name=”level1”> 
+ <a name=”level1”> </a>
     
 #### Level 1
 "You can find the password for the next level on this page, but rightclicking has been blocked!"
 Kaynak kodu incelemek için rightclick yerine, F12 Developer Tools kullanıyoruz.
 >> natas2:ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
-</a>
+
 
 #### Level 2
 "There is nothing on this page."
@@ -110,7 +110,7 @@ if($key != "") {
  >> natas:nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
 
 
-     <a name=”level10”> 
+     <a name=”level10”> </a>
      
  #### Level 10
 
@@ -137,4 +137,4 @@ Linux sistemler için iki komutu birbirinden ayırabilecek ";","|" gibi karakter
 "grep -i a /etc/natas_webpass/natas11 # dictionary.txt" şeklini alıyor.Yani /etc/natas_webpass/natas11 dosyasında içerisinde a veya A harfi geçen satırları getiriyor.Parola içerisinde a harfi mevcutsa, parolaya ulaşmış olacağız. A için başarısız oluyor, c harfi için aynı payloadı yazdığımızda level 11 için parolayı elde ediyoruz.
 >> natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
 
-</a>
+
