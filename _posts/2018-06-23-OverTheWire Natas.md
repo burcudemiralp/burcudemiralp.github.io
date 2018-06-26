@@ -35,3 +35,5 @@ Bu açıklamadan TTP headerları ile ilgilenmemiz gerektiğini anlıyoruz.İste�
 >>natas5:iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
 
 #### Level 5
+"Access disallowed. You are not logged in" 
+Burp ile isteği daha ayrıntılı incel
