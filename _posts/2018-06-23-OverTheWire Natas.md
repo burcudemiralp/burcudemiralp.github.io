@@ -42,7 +42,7 @@ Bu açıklamadan HTTP headerları ile ilgilenmemiz gerektiğini anlıyoruz."Refr
 "Access disallowed. You are not logged in" 
 Burp ile isteği daha ayrıntılı incelediğimizde cookie başlığında bulunan "loggedin" değerini 1 yaptığımızda level 6 için parolayı elde ediyoruz.
 <figure>
-<img src="/assets/img/natas/natas51.png">
+<img src="/assets/img/natas/natas51">
 </figure>
 <figure>
 <img src="/assets/img/natas/natas52.png">
@@ -55,3 +55,8 @@ Basit bir form bizi karşılıyor.Önceki levellerden farklı olarak server tara
 >> natas7:7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
 
 #### Level 7
+
+Home ve About sayfalarına götüren iki link mevcut.Linklerin birine tıkladığımızda, get isteği  ile page parametresiyle alınan değer sayfa içerisine include ediliyor. LFI zafiyeti sayesinde /etc/natas_webpass/natas8 dosyasını page parametresine verdiğimizde level 8 için parolayı elde diyoruz.
+>> natas8:DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
+
+#### Level 8
