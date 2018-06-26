@@ -77,10 +77,7 @@ if(array_key_exists("submit", $_POST)) {
 ?>
 {% endhighlight %}
 
-POST isteği ile alınan değer, sırasıyla base64_encode(),strrev(),bin2hex() fonksiyonlarına tabi tutulması sonucu elde edilen değerin  $encodedSecret değişkenine eşit olması halinde natas9 için parolayı elde edebileceğiz.
-{% highlight php %}
-<?
-$encodedSecret = "3d3d516343746d4d6d6c315669563362";
-echo base64_decode(strrev(hex2bin($encodedSecret));
-?>
-{% endhighlight % }
+POST isteği ile alınan değer, sırasıyla base64_encode(),strrev(),bin2hex() fonksiyonlarına tabi tutulması sonucu elde edilen değerin  $encodedSecret değişkenine eşit olması halinde natas9 için parolayı elde edebileceğiz.$encodedString değişkenine sırasıyla hex2bin(),strrev(),base64_decode() fonksiyonlarını uyguladığımızda oubWYf2kBq değerini elde ediyoruz.
+>> natas9:W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
+
+#### Level 10
