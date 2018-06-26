@@ -95,6 +95,7 @@ if($key != "") {
     passthru("grep -i $key dictionary.txt");
 }
 ?>
+{% endhighlight %}
 İstemciden alınan değer $key değişkenine atanıyor ve bu değişken doğrudan passthru fonksiyonu içerisindeki ifadeye yerleştiriliyor.Passthru, system fonksiyonu gibi sistem komutları çalıştırıyor. Yani kod "Command Injection" zafiyeti barındırıyor. 
 
 "; cat /etc/natas_webpass/natas10" # " şeklinde bir input girdiğimizde,passthru fonksiyonu içerisinde ki ifade
@@ -121,6 +122,7 @@ if($key != "") {
     }
 }
 ?>
+{% endhighlight %}
 Linux sistemler için iki komutu birbirinden ayırabilecek ";","|" gibi karakterler filtrelenmiş. Burda atlanmaması gereken nokta grep komutunun dosya okuyabileceği.Yani /etc/natas_webpass/natas11 dosyasını grep ile okuyacağız.
 "a /etc/natas_webpass/natas11 #" şeklinde bir input girdiğimizde, passthru fonksiyonu içerisinde ki ifade
 "grep -i a /etc/natas_webpass/natas11 # dictionary.txt" şeklini alıyor.Yani /etc/natas_webpass/natas11 dosyasında içerisinde a veya A harfi geçen satırları getiriyor.Parola içerisinde a harfi mevcutsa, parolaya ulaşmış olacağız. A için başarısız oluyor, c harfi için aynı payloadı yazdığımızda level 11 için parolayı elde ediyoruz.
