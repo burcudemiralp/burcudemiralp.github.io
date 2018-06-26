@@ -206,5 +206,52 @@ Her şey iyi hoş fakat şifrelemede kullanılan keyi bilmiyoruz.Biraz araştır
 
 ``` 
     plaintext XOR key        = ciphertext
-    plaintext XOR ciphertext = plaintext
+    plaintext XOR ciphertext = key
 ```
+Burada plaintext'i "array( "showpassword"=>"no", "bgcolor"=>"#ffffff")" ve ciphertext'i yani cookie değerini biliyoruz.İki değeri xor_encyrpt() fonksiyonu ile şifrelediğimizde keyi elde etmiş olacağız.
+{% highlight php %}
+<?php
+ $key = json_encode(array( "showpassword"=>"no", "bgcolor"=>"#ffffff"));
+ $text = base64_decode('ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=');
+ $outText = '';
+
+  // Iterate through each character
+  for($i=0;$i<strlen($text);$i++) {
+  $outText .= $text[$i] ^ $key[$i % strlen($key)];
+         }
+ echo $outText;
+?>
+{% endhighlight %}
+Burdan "qw8J" keyine ulaşıyoruz. Geriye istediğimiz cookie değerini bu key ile şifrelemek kalıyor.
+{% highlight php %
+<?php
+
+
+        function xor_encrypt($in) {
+        $key = 'qw8J';
+        $text = $in;
+        $outText = '';
+
+        // Iterate through each character
+        for($i=0;$i<strlen($text);$i++) {
+        $outText .= $text[$i] ^ $key[$i % strlen($key)];
+        }
+
+        return $outText;
+        }
+
+
+        echo  base64_encode(xor_encrypt(json_encode(array( "showpassword"=>"yes", "bgcolor"=>"#ffffff"))));
+
+?>
+{% endhighlight %}
+Bu scriptin çalıştırılması sonucu "ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4FGnBTVF4sFxFeLFMK" cookie değerini elde ediyoruz.
+<figure>
+<img src="/assets/img/natas/natas114.png">
+</figure>
+<figure>
+<img src="/assets/img/natas/natas115.png">
+</figure>
+>> natas12:EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
+
+#### Level 12
