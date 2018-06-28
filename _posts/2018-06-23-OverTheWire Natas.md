@@ -307,21 +307,10 @@ Dosya yükleyebileceğimiz bir ekran karşılıyor bizi.
 
 Yüklediğim dosyanın ismi ve uzantısından bağımsız olarak kaydedildi,jpg formatında olmadığı için  yüklediği adrese gittiğimde dosyaya erişemedim.
 
-Yine kaynak koduna erişim mümkün.
 
  {% highlight php %}
 <?
-  function genRandomString() { 
-    $length = 10; 
-    $characters = "0123456789abcdefghijklmnopqrstuvwxyz"; 
-    $string = "";     
 
-    for ($p = 0; $p < $length; $p++) { 
-        $string .= $characters[mt_rand(0, strlen($characters)-1)]; 
-    } 
-
-    return $string; 
-} 
 
 function makeRandomPath($dir, $ext) { 
     do { 
@@ -352,3 +341,26 @@ if(array_key_exists("filename", $_POST)) {
 ?>
 {% endhighlight %}
 
+Kaynak koda göz attığımızda, dosyaların upload/dizini altına, random bir string ile kaydedildiğini görüyoruz.Dosya uzantısıda  post isteğindeki "filename" parametresinden belirleniyor.Dosyanın kaydedileceği path belirlendikten sonra, eğer boyutu 1000 byte dan büyük değilse hedef dizine kaydediliyor.Bununla birlikte hedef dizin ekrana bastırılıyor.
+
+php uzantılı bir dosya kaydedebilmek için post isteğinde ki "filename" parametresini düzenlememiz gerekiyor.
+
+
+```
+ $_FILES karşıdan yüklenen tüm dosyaların bilgisini içerir.
+ 
+ $_FILES['kullanici_dosyasi']['tmp_name'] Yüklenen dosyanın sunucuda saklandığı sıradaki geçici dosya adıdır.
+
+```
+
+<figure>
+<img src="/assets/img/natas/natas124.png">
+</figure>
+
+
+<figure>
+<img src="/assets/img/natas/natas125.png">
+</figure>
+İlgili dizine gittiğimizde level 13'e ait parolayı öğreniyoruz.
+
+>> natas13:EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
