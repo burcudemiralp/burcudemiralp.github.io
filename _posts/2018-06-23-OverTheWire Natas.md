@@ -412,4 +412,5 @@ Kod SQLi zafiyeti barındıyor. `" or 1  # ` şeklinde bir payload girdiğimde,
  
  >> natas15:AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
  
+ 
  #### Level 15
