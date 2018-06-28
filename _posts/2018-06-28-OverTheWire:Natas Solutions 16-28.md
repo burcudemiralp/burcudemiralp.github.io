@@ -153,14 +153,6 @@ for id in range(1,640):
 
 {% endhighlight %}
 
-<figure>
-<img src="/assets/img/natas/natas183.png">
-</figure>
-
-<figure>
-<img src="/assets/img/natas/natas184.png">
-</figure>
-
 >> natas19:4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs
 
 #### Level 19
