@@ -288,3 +288,67 @@ Bu scriptin çalıştırılması sonucu "ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4
 >> natas12:EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
 
 #### Level 12
+
+Dosya yükleyebileceğimiz bir ekran karşılıyor bizi.
+
+<figure>
+<img src="/assets/img/natas/natas121.png">
+</figure>
+
+.php uzantılı bir dosya atmayı deniyorum.
+
+<figure>
+<img src="/assets/img/natas/natas122.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas123.png">
+</figure>
+
+Yüklediğim dosyanın ismi ve uzantısından bağımsız olarak kaydedildi,jpg formatında olmadığı için  yüklediği adrese gittiğimde dosyaya erişemedim.
+
+Yine kaynak koduna erişim mümkün.
+
+ {% highlight php %}
+<?
+  function genRandomString() { 
+    $length = 10; 
+    $characters = "0123456789abcdefghijklmnopqrstuvwxyz"; 
+    $string = "";     
+
+    for ($p = 0; $p < $length; $p++) { 
+        $string .= $characters[mt_rand(0, strlen($characters)-1)]; 
+    } 
+
+    return $string; 
+} 
+
+function makeRandomPath($dir, $ext) { 
+    do { 
+    $path = $dir."/".genRandomString().".".$ext; 
+    } while(file_exists($path)); 
+    return $path; 
+} 
+
+function makeRandomPathFromFilename($dir, $fn) { 
+    $ext = pathinfo($fn, PATHINFO_EXTENSION); 
+    return makeRandomPath($dir, $ext); 
+} 
+
+if(array_key_exists("filename", $_POST)) { 
+    $target_path = makeRandomPathFromFilename("upload", $_POST["filename"]); 
+
+
+        if(filesize($_FILES['uploadedfile']['tmp_name']) > 1000) { 
+        echo "File is too big"; 
+    } else { 
+        if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) { 
+            echo "The file <a href=\"$target_path\">$target_path</a> has been uploaded"; 
+        } else{ 
+            echo "There was an error uploading the file, please try again!"; 
+        } 
+    } 
+} else {
+?>
+{% endhighlight %}
+
