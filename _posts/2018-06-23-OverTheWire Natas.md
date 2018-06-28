@@ -279,3 +279,18 @@ Burdan "qw8J" keyine ulaşıyoruz. Geriye istediğimiz cookie değerini bu key i
     
 ?>
 {% endhighlight %}
+
+Bu scriptin çalıştırılması sonucu "ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4FGnBTVF4sFxFeLFMK" cookie değerini elde ediyoruz.
+
+
+<figure>
+<img src="/assets/img/natas/natas114.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas115.png">
+</figure>
+
+>> natas12:EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
+
+#### Level 12
