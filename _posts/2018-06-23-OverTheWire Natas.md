@@ -310,8 +310,6 @@ Yüklediğim dosyanın ismi ve uzantısından bağımsız olarak kaydedildi,jpg 
 
  {% highlight php %}
 <?
-
-
 function makeRandomPath($dir, $ext) { 
     do { 
     $path = $dir."/".genRandomString().".".$ext; 
