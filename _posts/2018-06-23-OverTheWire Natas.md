@@ -404,9 +404,9 @@ Bizi bir login ekranı karşılıyor.
 <figure>
 <img src="/assets/img/natas/natas142.png">
 </figure>
-Kod SQLi zafiyeti barındıyor. ` " or 1  #  ` şeklinde bir payload girdiğimde,
+Kod SQLi zafiyeti barındıyor. `" or 1  # ` şeklinde bir payload girdiğimde,
 
- $query = "SELECT * from users where username="`" or 1  # `" and password=" "; bu şekilde bir sorgu çalışmış olacak. 
+ $query = "SELECT * from users where username=" " or 1  # " and password=" "; bu şekilde bir sorgu çalışmış olacak. 
  
  username=" " or 1 ifadesi her zaman 1'e eşit olacağından sorgu tüm satırları döndürür.
  
