@@ -352,12 +352,12 @@ php uzantılı bir dosya kaydedebilmek için post isteğinde ki "filename" param
 ```
 
 <figure>
-<img src="/assets/img/natas/natas124.png">
+<img src="/assets/img/natas/natas126.png">
 </figure>
 
 
 <figure>
-<img src="/assets/img/natas/natas125.png">
+<img src="/assets/img/natas/natas127.png">
 </figure>
 İlgili dizine gittiğimizde level 13'e ait parolayı öğreniyoruz.
 
