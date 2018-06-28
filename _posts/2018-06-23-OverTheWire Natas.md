@@ -361,4 +361,4 @@ php uzantılı bir dosya kaydedebilmek için post isteğinde ki "filename" param
 </figure>
 İlgili dizine gittiğimizde level 13'e ait parolayı öğreniyoruz.
 
->> natas13:EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
+>> natas13:jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
