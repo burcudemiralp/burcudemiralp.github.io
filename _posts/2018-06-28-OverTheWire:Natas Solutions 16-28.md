@@ -119,7 +119,7 @@ Cookie başlığında  PHPSESSID değeri varsa , session başlatılıyor. Ardın
 PHPSESSID değeri yok ise, yeni bir session yaratılıyor.Burada createID() şeklinde bir fonksiyon çağırılmış.
 {% highlight php %}
 <?
-function createID($user) { /* {{{ */ 
+function createID($user) { 
     global $maxid; 
     return rand(1, $maxid); 
 }
