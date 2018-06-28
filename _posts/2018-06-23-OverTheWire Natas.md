@@ -362,3 +362,30 @@ php uzantılı bir dosya kaydedebilmek için post isteğinde ki "filename" param
 İlgili dizine gittiğimizde level 13'e ait parolayı öğreniyoruz.
 
 >> natas13:jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
+
+For security reasons, we now only accept image files!
+
+Bir önceki ile oldukça benzer bir kod çalışıyor.Farklı olarak bu satır eklenmiş.
+
+<figure>
+<img src="/assets/img/natas/natas131.png">
+</figure>
+
+```
+exif_imagetype() işlevi bir resmin ilk baytlarındaki dosya imzasını okur.Doğru imza bulunduğu takdirde uygun sabitin değeri döndürülür, aksi takdirde FALSE döner.
+
+```
+
+Yani php dosyasının file signature bitlerini, png formatıyla değiştirirsek bu fonksiyonu bypass etmiş oluruz.
+<figure>
+<img src="/assets/img/natas/natas132.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas133.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas134.png">
+</figure>
+
