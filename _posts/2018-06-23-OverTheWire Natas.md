@@ -8,31 +8,20 @@ comments: false
 
 Natas, sunucu taraflı web güvenlik temellerini öğretmek amacıyla hazırlanmış, basit düzeyden baya ileriye kadar seviyelendirilmiş bir challenge diyebiliriz.Toplamda 32 bölümden oluşuyor ve her bölüme bu url "http://natasX.natas.labs.overthewire.org" üzerinden erişiyoruz.Daha ayrıntılı bilgiye [buradan](http://overthewire.org/wargames/natas/) ulaşabilirsiniz.
 
-[Level 0](#level-0)
+```
+[Level 0](#level-0)|[Level 1](#level-1)
 
-[Level 1](#level-1)
+[Level 2](#level-2)|[Level 3](#level-3)
 
-[Level 2](#level-2)
+[Level 4](#level-4)|[Level 5](#level-5)
 
-[Level 3](#level-3)
+[Level 6](#level-6)|[Level 7](#level-7)
 
-[Level 4](#level-4)
+[Level 8](#level-8)|[Level 9](#level-9)
 
-[Level 5](#level-5)
+[Level 10](#level-10)|[Level 11](#level-11)
 
-[Level 6](#level-6)
-
-[Level 7](#level-7)
-
-[Level 8](#level-8)
-
-[Level 9](#level-9)
-
-[Level 10](#level-10)
-
-[Level 11](#level-11)
-
-
+```
 #### Level 0
 natas0:natas0 username passwordü ile giriş yapıyoruz.Bize verilen hint "You can find the password for the next level on this page." şeklinde.Kaynak kodu inceliyoruz.
 
