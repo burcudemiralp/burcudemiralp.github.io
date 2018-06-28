@@ -2,7 +2,7 @@
 layout: post
 title: "OverTheWire:Natas Solutions 16-"
 date: 2018-06-28
-excerpt: "26 Jun 2018"
+excerpt: "28 Jun 2018"
 comments: false
 ---
 #### Level 16
