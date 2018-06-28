@@ -11,7 +11,7 @@ For security reasons, we now filter even more on certain characters.
 
 
 <figure>
-<img src="/assets/img/natas/natas165.png">
+<img src="/assets/img/natas/level165.png">
 </figure>
 
 Level 10'a çok benzemekle birlikte, extra olarak; istemciden alınan değer çift tırnaklar içerisinde passhtru fonksiyonunun içerisine yerleştirilmiş.Yani Level 10'daki gibi `a /etc/natas_webpass/natas11 #` bir payload girmem durumunda,
