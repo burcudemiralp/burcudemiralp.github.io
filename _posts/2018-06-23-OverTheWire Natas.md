@@ -193,3 +193,14 @@ Genel bir fikir sahibi olmak adına fonksiyonları inceliyoruz.
 
 Eğer cookie başlığında "data"  mevcut ise, bu değer base64_decode(),xor_encyrpt(),json_decode() işlemlerinden geçtikten sonra $data değişkenine atanıyor. Data değerinin bulunmaması durumunda  defaultdata değişkeni kullanılmaya devam ediyor.
 
+Daha sonra çağırılan saveData fonksiyonunda;
+
+ {% highlight php %}
+<?
+  function saveData($d) {
+    setcookie("data", base64_encode(xor_encrypt(json_encode($d))));
+    }
+     
+?>
+{% endhighlight %}
+
