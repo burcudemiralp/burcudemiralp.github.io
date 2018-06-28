@@ -30,12 +30,15 @@ natas0:natas0 username password'ü ile giriş yapıyoruz.Bize verilen hint "You 
     
 #### Level 1
 "You can find the password for the next level on this page, but rightclicking has been blocked!"
+
+
 Kaynak kodu incelemek için rightclick yerine, F12 Developer Tools kullanıyoruz.
 >> natas2:ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
 
 
 #### Level 2
 "There is nothing on this page."
+
 Kaynak kodu incelediğimizde files/pixel.png şeklinde bir path ile karşılaşıyoruz. files/ dizinine gittiğimizde "Directory Indexing" zafiyeti sayesinde users.txt dosyasına erişiyoruz.
 >> natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
 
