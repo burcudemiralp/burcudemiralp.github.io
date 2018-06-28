@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OverTheWire:Natas Solutions 0-15"
+title: "OverTheWire:Natas Solutions 16-"
 date: 2018-06-28
 excerpt: "26 Jun 2018"
 comments: false
@@ -49,4 +49,6 @@ Payload olarak $(cat /etc/natas_webpass/natas17) girdiğimizde bu komutun çıkt
 
 Demek ki parola a harfi ile başlamıyor, yani grep ^a /etc/natas_webpass/natas17 komutunun çıktısı yok. Eğer ki a harfi ile başlasaydı bu komutun çıktısı natas17'ye ait parola olacaktı.Dolayısıyla ;
 
-grep -i " " dictionary.txt burada çift tırnaklar arasında natas17 parolası olmuş olucaktı ve bu komutun çıktısı boş olucaktı.
+grep -i " " dictionary.txt ifadesinde çift tırnaklar arasına natas17'e ait parola gelicekti ve dictionary.txt dosyasında böyle bir satır olmadığı için çıktı boş olucaktı.
+
+
