@@ -236,3 +236,9 @@ Xor_encrypt fonksiyonu nasıl çalışıyor buna bakıyoruz.
 {% endhighlight %}
 
 Her şey iyi hoş fakat şifrelemede kullanılan keyi bilmiyoruz.Biraz araştırma sonucu aşağıdaki denkleme ulaşıyoruz.
+
+
+``` 
+    plaintext XOR key        = ciphertext
+    plaintext XOR ciphertext = key
+```
