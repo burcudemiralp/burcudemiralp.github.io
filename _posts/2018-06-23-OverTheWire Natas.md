@@ -204,3 +204,10 @@ Daha sonra çağırılan saveData fonksiyonunda;
 ?>
 {% endhighlight %}
 
+Data değişkeni json_encode(),xor_encrypt() ve base64_encode() işlemlerinden geçtikten sonra cookie başlığına ekleniyor.
+
+Bizi ilgilendiren kısım ise burası.
+
+<figure>
+<img src="/assets/img/natas/natas113.png">
+</figure>
