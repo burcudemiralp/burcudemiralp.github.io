@@ -189,3 +189,7 @@ Genel bir fikir sahibi olmak adına fonksiyonları inceliyoruz.
       }
 ?>
 {% endhighlight %}
+
+
+Eğer cookie başlığında "data"  mevcut ise, bu değer base64_decode(),xor_encyrpt(),json_decode() işlemlerinden geçtikten sonra $data değişkenine atanıyor. Data değerinin bulunmaması durumunda  defaultdata değişkeni kullanılmaya devam ediyor.
+
