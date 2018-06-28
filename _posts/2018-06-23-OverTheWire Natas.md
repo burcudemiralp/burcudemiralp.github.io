@@ -258,3 +258,24 @@ Burada plaintext'i "array( "showpassword"=>"no", "bgcolor"=>"#ffffff")" ve ciphe
      echo $outText;
 ?>
 {% endhighlight %}
+
+Burdan "qw8J" keyine ulaşıyoruz. Geriye istediğimiz cookie değerini bu key ile şifrelemek kalıyor.
+
+ {% highlight php %}
+<?
+        function xor_encrypt($in) {
+        $key = 'qw8J';
+        $text = $in;
+        $outText = '';
+
+        // Iterate through each character
+        for($i=0;$i<strlen($text);$i++) {
+        $outText .= $text[$i] ^ $key[$i % strlen($key)];
+        }
+        return $outText;
+        }
+
+        echo  base64_encode(xor_encrypt(json_encode(array( "showpassword"=>"yes", "bgcolor"=>"#ffffff"))));
+    
+?>
+{% endhighlight %}
