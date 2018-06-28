@@ -215,3 +215,19 @@ Bizi ilgilendiren kısım ise burası.
 
 Data değişkeninde "showpassword" değeri "yes" e eşitse, level 12 için parola ekrana bastırılıyor.Yapmamız gereken cookie değerini düzenleyip "showpassword" değerini "yes" e eşitlemek.
 Cookie yapısını biliyoruz : array( "showpassword"=>"no", "bgcolor"=>"#ffffff"). Bu yapıyı gerektiği gibi encode edebilirsek istediğimizi elde etmiş olacağız.Bunun için saveData fonksiyonunda ki sıralamayı takip etmemiz gerekiyor.xor_encrypt fonksiyonu nasıl çalışıyor buna bakıyoruz.
+ {% highlight php %}
+<?
+      function xor_encrypt($in) {
+    $key = '<censored>';
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i<strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+    }
+?>
+{% endhighlight %}
