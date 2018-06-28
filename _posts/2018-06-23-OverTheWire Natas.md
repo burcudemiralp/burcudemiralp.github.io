@@ -242,3 +242,6 @@ Her şey iyi hoş fakat şifrelemede kullanılan keyi bilmiyoruz.Biraz araştır
     plaintext XOR key        = ciphertext
     plaintext XOR ciphertext = key
 ```
+
+
+Burada plaintext'i "array( "showpassword"=>"no", "bgcolor"=>"#ffffff")" ve ciphertext'i yani cookie değerini biliyoruz.İki değeri xor_encyrpt() fonksiyonu ile şifrelediğimizde keyi elde etmiş olacağız.
