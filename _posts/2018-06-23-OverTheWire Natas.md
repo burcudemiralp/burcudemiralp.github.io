@@ -374,7 +374,7 @@ Bir önceki ile oldukça benzer bir kod çalışıyor.Farklı olarak bu satır e
 </figure>
 
 ```
-exif_imagetype() işlevi bir resmin ilk baytlarındaki dosya imzasını okur.Doğru imza bulunduğu takdirde uygun sabitin değeri döndürülür, aksi takdirde FALSE döner.
+exif_imagetype() fonksiyonu bir resmin ilk baytlarındaki dosya imzasını okur.Doğru imza bulunduğu takdirde uygun sabitin değeri döndürülür, aksi takdirde FALSE döner.
 
 ```
 
@@ -394,3 +394,22 @@ Yani php dosyasının file signature bitlerini, png formatıyla değiştirirsek 
 >> natas14:Lg96M10TdfaPyVBkJdjymbllQ5L6qdl1
 
 #### Level 14
+
+Bizi bir login ekranı karşılıyor.
+
+<figure>
+<img src="/assets/img/natas/natas141.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas142.png">
+</figure>
+Kod SQLi zafiyeti barındıyor. ` " or 1  #  ` şeklinde bir payload girdiğimde,
+
+ $query = "SELECT * from users where username="`" or 1  # `" and password=" "; bu şekilde bir sorgu çalışmış olacak. 
+ 
+ username=" " or 1 ifadesi her zaman 1'e eşit olacağından sorgu tüm satırları döndürür.
+ 
+ >> natas15:AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
+ 
+ #### Level 15
