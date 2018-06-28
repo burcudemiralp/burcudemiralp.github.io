@@ -23,7 +23,7 @@ Natas, sunucu taraflı web güvenlik temellerini öğretmek amacıyla hazırlanm
 
 ```
 #### Level 0
-natas0:natas0 username passwordü ile giriş yapıyoruz.Bize verilen hint "You can find the password for the next level on this page." şeklinde.Kaynak kodu inceliyoruz.
+natas0:natas0 username password'ü ile giriş yapıyoruz.Bize verilen hint "You can find the password for the next level on this page." şeklinde.Kaynak kodu inceliyoruz.
 
 >> natas1:gtVrDuiDfck831PqWsLEZy5gyDz1clto
 
