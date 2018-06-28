@@ -363,6 +363,8 @@ php uzantılı bir dosya kaydedebilmek için post isteğinde ki "filename" param
 
 >> natas13:jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
 
+#### Level 13
+
 For security reasons, we now only accept image files!
 
 Bir önceki ile oldukça benzer bir kod çalışıyor.Farklı olarak bu satır eklenmiş.
@@ -389,3 +391,6 @@ Yani php dosyasının file signature bitlerini, png formatıyla değiştirirsek 
 <img src="/assets/img/natas/natas134.png">
 </figure>
 
+>> natas14:Lg96M10TdfaPyVBkJdjymbllQ5L6qdl1
+
+#### Level 14
