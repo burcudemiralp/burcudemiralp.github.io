@@ -60,6 +60,7 @@ Bu açıklamadan HTTP headerları ile ilgilenmemiz gerektiğini anlıyoruz."Refr
 
 #### Level 5
 "Access disallowed. You are not logged in" 
+
 Burp ile isteği daha ayrıntılı incelediğimizde cookie başlığında bulunan "loggedin" değerini 1 yaptığımızda level 6 için parolayı elde ediyoruz.
 <figure>
 <img src="/assets/img/natas/natas51">
@@ -70,13 +71,13 @@ Burp ile isteği daha ayrıntılı incelediğimizde cookie başlığında buluna
 >>natas6:aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
 
 #### Level 6
-Basit bir form bizi karşılıyor.Önceki levellerden farklı olarak server tarafında çalışan kodları da görmemiz mümkün. Kodu incelediğimizde include komutu ile includes/secret.inc sayfasının bu koda dahil edildiğini görüyoruz.Sayfaya gittiğimizde secret değişkeninin burada tanımlanmış olduğunu görüyoruz.Değişkenin değerini input olarak girdiğimizde level 7 için parolayı elde etmiş oluyoruz.
+Basit bir form bizi karşılıyor.Önceki levellerden farklı olarak server tarafında çalışan kodları da görmemiz mümkün. Kodu incelediğimizde include komutu ile includes/secret.inc sayfasının bu sayfaya dahil edildiğini ve  secret değişkeninin secret.ini sayfasında  tanımlanmış olduğunu görüyoruz.Değişkenin değerini input olarak girdiğimizde level 7 için parolayı elde etmiş oluyoruz.
 
 >> natas7:7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
 
 #### Level 7
 
-Home ve About sayfalarına götüren iki link mevcut.Linklerin birine tıkladığımızda, get isteği  ile page parametresiyle alınan değer sayfa içerisine include ediliyor. LFI zafiyeti sayesinde /etc/natas_webpass/natas8 dosyasını page parametresine verdiğimizde level 8 için parolayı elde diyoruz.
+Home ve About sayfalarına götüren iki link mevcut.Linklerin birine tıkladığımızda, page parametresiyle alınan değer sayfa içerisine include ediliyor. LFI zafiyeti sayesinde /etc/natas_webpass/natas8 dosyasını page parametresine verdiğimizde level 8 için parolayı elde diyoruz.
 >> natas8:DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe
 
 #### Level 8
@@ -206,7 +207,9 @@ Bizi ilgilendiren kısım ise burası.
 
 Data değişkeninde "showpassword" değeri "yes" e eşitse, level 12 için parola ekrana bastırılıyor.Yapmamız gereken cookie değerini düzenleyip "showpassword" değerini "yes" e eşitlemek.
 
-Cookie yapısını biliyoruz : array( "showpassword"=>"no", "bgcolor"=>"#ffffff"). Bu yapıyı gerektiği gibi encode edebilirsek istediğimizi elde etmiş olacağız.Bunun için saveData fonksiyonunda ki sıralamayı takip etmemiz gerekiyor.
+Cookie yapısını biliyoruz : array( "showpassword"=>"no", "bgcolor"=>"#ffffff").
+
+Bu yapıyı gerektiği gibi encode edebilirsek istediğimizi elde etmiş olacağız.Bunun için saveData fonksiyonunda ki sıralamayı takip etmemiz gerekiyor.
 
 Xor_encrypt fonksiyonu nasıl çalışıyor buna bakıyoruz.
  {% highlight php %}
