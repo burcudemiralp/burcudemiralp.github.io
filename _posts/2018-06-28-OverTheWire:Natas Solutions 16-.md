@@ -22,6 +22,7 @@ Bu durumu bypass edebilmek için "command substition"  denilen şeyi yapacağız
 
 ``` 
 Command Substition
+
   Bir komutun çıktısını, bir değişkende saklama veya başka bir komut içinde kullanma manasına gelir.Basit bir örnekle;
   
   cur_dir=$(pwd)
@@ -37,7 +38,7 @@ Payload olarak $(cat /etc/natas_webpass/natas17) girdiğimizde bu komutun çıkt
 
 "Hacker" kelimesi ile arama yaptığımızda  çıktı bu şekilde.
 <figure>
-<img src="/assets/img/natas/natas161.png">
+<img src="/assets/img/natas/natas162.png">
 </figure>
 
 "Hacker$(grep ^a /etc/natas_webpass/natas17)"  şeklinde bir input girdiğimde çıktı yine aynı.
