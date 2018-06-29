@@ -341,3 +341,51 @@ name burcu \nadmin 1.
 >>natas21:IFekPyrQXftziDEsUr3x21sYuahypdgJ
 
 #### Level 21
+
+<figure>
+<img src="/assets/img/natas/natas211.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas212.png">
+</figure>
+
+Level 22'ye ait parolayı öğrenebilmek için admin keyinin değerini 1 yapmamız gerekiyor.
+
+http://natas21-experimenter.natas.labs.overthewire.org sayfasına gidiyoruz.
+
+<figure>
+<img src="/assets/img/natas/natas213.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas214.png">
+</figure>
+
+Giden istekteki değişken ve değerleri session değişkeni içerisine key:value çifleri olarak atanıyor.
+
+<figure>
+<img src="/assets/img/natas/natas215.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas216.png">
+</figure>
+
+Bu sayfada, session değişkeni içerisinde ki admin keyinin değerini 1 yaptık. 
+
+Note: this website is colocated with http://natas21.natas.labs.overthewire.org mesajından anlıyoruz ki sessionlar iki domain arasında  paylaşılıyor. Buradaki PHPSESSID değerini ana sayfada kullanıyoruz.
+
+<figure>
+<img src="/assets/img/natas/natas217.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas218.png">
+</figure>
+
+>> natas22:chG9fbe1Tq2eWVMgjYYD1MsfIvN461kJ
+
+#### Level 22
+
+
