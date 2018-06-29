@@ -409,7 +409,7 @@ Note: this website is colocated with http://natas21.natas.labs.overthewire.org m
 </figure>
 
 <figure>
-<img src="/assets/img/natas/natas232.png">
+<img src="/assets/img/natas/natas238.png">
 </figure>
 
 ````
