@@ -182,6 +182,7 @@ Diğer sayfadan farklı olarak session id'lerin sıralı olmadığını söylenm
 
 Tüm sessionlarda ortak olan 2d ifadesi. Bununla birlikte  0-9 arasında rakamlar , a-f ile arasında karakterler kullanılmış. Session id hex formatında olabilir. Dönüştürmeyi denediğimizde ;
 
+------------|-------------------------|----------------
 burcu:123456|33382d6275726375         |38-burcu
 ------------|-------------------------|----------------
 admin:admin |3538372d61646d696e       |587-admin
