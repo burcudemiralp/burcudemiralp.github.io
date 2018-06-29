@@ -309,7 +309,8 @@ myread fonksiyonunda mywrite fonksiyonu ile dosyaya yazılmış session bilgiler
 
 data değişkenine alınan dosya içeriği "\n" belirteci ile , ardından da " " ile  ayrılıyor ve sonra session  değişkeni içerisine kaydediliyor.Yani ;
 
-``
+{% highlight  %}
+
 İçeriği :
 
 login true
@@ -319,6 +320,9 @@ user guess
 pass guess  olan bir dosya session değişkenine  bu şekilde kaydolacaktır.
 
 $_SESSION["login"]="true";
+
 $_SESSION["user"]="guess";
+
 $_SESSION["pass"]="guess";  
-``
+
+{% endhighlight %}
