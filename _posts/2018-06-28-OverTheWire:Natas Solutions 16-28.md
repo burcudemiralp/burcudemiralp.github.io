@@ -575,3 +575,29 @@ User-agent injection atak yaparak, yazdığımız kodun çıktısını log dosya
 >>natas26:oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T
 
 #### Level 26
+
+
+<figure>
+<img src="/assets/img/natas/natas261.png">
+</figure>
+
+Bu bölümde PHP Object Injection atak gerçekleştirerek level 27' ye ait parolayı öğreneceğiz.
+
+````
+Bu zafiyetin oluşabilmesi ve exploit edilebilmesi için;
+    -Kullanıcıdan alınan inputun unserialize methoduna gönderilmesi
+    -Yazılım genelinde herhangi bir sınıfın --destruct methodunun bulunması
+    -Destruct methodunun, ait olduğu classın sınıf değişkenlerini herhangi bir nedenle yerel diske kayıt ediyor olması
+    -Bu kayıt edilen dosyanın bulunduğu dizinin web üzerinden erişilebilir olması
+                    [Kaynak](https://www.mehmetince.net/php-object-injection-saldirilari-ve-korunmasi/)
+````
+Kullanıcıdan alınan cookie değeri unserialize metoduna veriliyor.
+<figure>
+<img src="/assets/img/natas/natas262.png">
+</figure>
+Logger sınıfının destruct methodu mevcut ve değişkenler bir dosyaya kaydediliyor.
+<figure>
+<img src="/assets/img/natas/natas263.png">
+</figure>
+
+Exploiti için;
