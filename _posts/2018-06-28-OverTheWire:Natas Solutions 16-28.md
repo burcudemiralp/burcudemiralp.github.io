@@ -114,9 +114,9 @@ for i in range(32):
 <img src="/assets/img/natas/natas182.png">
 </figure>
 
-Cookie başlığında  PHPSESSID değeri varsa , session başlatılıyor. Ardından print_credentials fonksiyonu çağrılıyor. Eğer '$-SESSION' içerisinde ki admin değeri 1' eşitse level 19'a ait parola ekrana bastırılıyor.
+Cookie başlığında  PHPSESSID değeri varsa , session başlatılıyor. Ardından print_credentials fonksiyonu çağrılıyor. Eğer SESSION içerisinde ki admin değeri 1' eşitse level 19'a ait parola ekrana bastırılıyor.Giden istekte PHPSESSID değeri yok ise, yeni bir session yaratılıyor.
 
-PHPSESSID değeri yok ise, yeni bir session yaratılıyor.Burada createID() şeklinde bir fonksiyon çağırılmış.
+Burada createID şeklinde bir fonksiyon çağırılmış.
 {% highlight php %}
 <?
 function createID($user) { 
