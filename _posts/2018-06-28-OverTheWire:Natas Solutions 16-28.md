@@ -326,7 +326,7 @@ Bizim girdiğimiz input da SESSION değişkeni içerisinde name keyine atanıyor
 
 name burcu \nadmin 1.
 
-\n ve " " belirteçleri ile ayrıldıktan sonra $_SESSION["name"]=burcu,$_SESSION["admin"]=1 olarak SESSION değişkenine kaydedilecek.
+\n ve " " belirteçleri ile ayrıldıktan sonra $_SESSION["name"]="burcu",$_SESSION["admin"]="1" olarak SESSION değişkenine kaydedilecek.
 
 <figure>
 <img src="/assets/img/natas/natas204.png">
