@@ -418,7 +418,7 @@ Strstr fonksiyonu bir string içerisinde bir karakter veya karakter grubu arar.A
         world!
 ````
 
-Yani girdiğimiz parola içerisinde "iloveyou" stringini barındırmalı ve bununla birlikte integer değeri ondan büyük olmalıdır.
+Yani girdiğimiz parola içerisinde "iloveyou" stringini barındırmalı ve bununla birlikte tamsayı değeri 10'dan büyük olmalı.
 
 <figure>
 <img src="/assets/img/natas/natas233.png">
@@ -426,6 +426,7 @@ Yani girdiğimiz parola içerisinde "iloveyou" stringini barındırmalı ve bunu
 
 ````
 intval fonksiyonu değişkenin tamsayı değerini döndürür.
+
 ````
 
 >> natas24:OsRmXFguozKpTZZ5X14zNO43379LZveg
