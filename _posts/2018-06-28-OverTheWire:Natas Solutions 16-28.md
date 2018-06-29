@@ -260,8 +260,6 @@ function mywrite($sid, $data) {
 
 {% endhighlight %}
 
-N["pass"] = "admin"; şeklinde ki oturum bilgileri
-
 Bu fonksiyonla birlikte session bilgileri bir dosyaya yazılıyor.$_SESSION değikeni içerisindeki değerler $key=>value çifleri olarak ayrılıp her biri data değişkenine ardındanda session bilgilerinin tutulduğu dosyaya "$key $value \n" şeklinde yazılıyor. Yani;
 
 $_SESSION["login"] = "true";
