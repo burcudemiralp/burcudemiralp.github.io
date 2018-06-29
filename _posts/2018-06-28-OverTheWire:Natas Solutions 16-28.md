@@ -335,3 +335,21 @@ $_SESSION["pass"]="guess";
 
 {% endhighlight %}
 
+Bizim girdiğimiz input da SESSION değişkeni içerisinde name keyine atanıyor.Girdiğimiz name ile birlikte \nadmin 1 şeklinde bir key:value çifti girsek dosyanında en son hali şu şekilde olucak;
+
+name burcu \nadmin 1.
+
+\n ve " " belirteçleri ile ayrıldıktan sonra $_SESSION["name"]=burcu,$_SESSION["admin"]=1 olarak SESSION değişkenine kaydedilecek.
+
+<figure>
+<img src="/assets/img/natas/natas204.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas205.png">
+</figure>
+
+
+>>natas21:IFekPyrQXftziDEsUr3x21sYuahypdgJ
+
+#### Level 21
