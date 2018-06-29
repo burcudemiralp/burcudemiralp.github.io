@@ -262,18 +262,55 @@ function mywrite($sid, $data) {
 
 Bu fonksiyonla birlikte session bilgileri bir dosyaya yazılıyor.SESSION değikeni içerisindeki değerler key=>value çifleri olarak ayrılıp her biri data değişkenine ardındanda session bilgilerinin tutulduğu dosyaya "key value \n" şeklinde yazılıyor. Yani;
 
+`$_SESSION["login"] = "true";
+ $_SESSION["user"] = "admin";
+ $_SESSION["pass"] = "123456"; bu sessiona ait dosyanın son hali;
+ login true
+ user admin
+ pass 123456 olacaktır.`
+
+{% highlight php %}
+
+<?
+function myread($sid) {  
+    debug("MYREAD $sid");  
+    if(strspn($sid, "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM-") != strlen($sid)) { 
+    debug("Invalid SID");  
+        return ""; 
+    } 
+    $filename = session_save_path() . "/" . "mysess_" . $sid; 
+    if(!file_exists($filename)) { 
+        debug("Session file doesn't exist"); 
+        return ""; 
+    } 
+    debug("Reading from ". $filename); 
+    $data = file_get_contents($filename); 
+    $_SESSION = array(); 
+    foreach(explode("\n", $data) as $line) { 
+        debug("Read [$line]"); 
+    $parts = explode(" ", $line, 2); 
+    if($parts[0] != "") $_SESSION[$parts[0]] = $parts[1]; 
+    } 
+    return session_encode(); 
+} 
+?>
+{% endhighlight %}
+
+myread fonksiyonunda mywrite fonksiyonu ile dosyaya yazılmış session bilgileri okunuyor.Forma şu şekilde;
+
+data değişkenine alınan dosya içeriği "\n" belirteci ile , ardından da " " ile  ayrılıyor ve sonra session  değişkeni içerisine kaydediliyor.Yani ;
+
 ``
-$_SESSION["login"] = "true";
-
-$_SESSION["user"] = "admin";
-
-$_SESSION["pass"] = "123456"; bu sessiona ait dosyanın son hali;
+İçeriği :
 
 login true
 
-user admin
+user guess
 
-pass 123456 olacaktır.
+pass guess  olan bir dosya bu şekilde 
+
+$_SESSION["login"]="true";
+$_SESSION["user"]="guess";
+$_SESSION["pass"]="guess"; bu şekilde ses
+
 ``
-
-
