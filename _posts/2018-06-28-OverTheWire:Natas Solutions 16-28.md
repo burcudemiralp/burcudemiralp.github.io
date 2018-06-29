@@ -171,7 +171,7 @@ Diğer sayfadan farklı olarak session id'lerin sıralı olmadığını söylenm
 <img src="/assets/img/natas/natas193.png">
 </figure>
 <figure>
-<img src="/assets/img/natas/natas198.png">
+<img src="/assets/img/natas/haha.png">
 </figure>
 <figure>
 <img src="/assets/img/natas/natas195.png">
@@ -214,3 +214,7 @@ for id in range(650):
 >> natas20:eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF
 
 #### Level 20
+
+<figure>
+<img src="/assets/img/natas/natas201.png">
+</figure>
