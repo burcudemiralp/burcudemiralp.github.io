@@ -171,7 +171,7 @@ Diğer sayfadan farklı olarak session id'lerin sıralı olmadığını söylenm
 <img src="/assets/img/natas/natas193.png">
 </figure>
 <figure>
-<img src="/assets/img/natas/natas194.png">
+<img src="/assets/img/natas/natas198.png">
 </figure>
 <figure>
 <img src="/assets/img/natas/natas195.png">
@@ -187,7 +187,7 @@ Tüm sessionlarda ortak olan 2d ifadesi. Bununla birlikte  0-9 arasında rakamla
 -------------|-------------------------|---------------
 burcu:123456 |33382d6275726375         |38-burcu
 -------------|-------------------------|----------------
-admin:admin  |3538372d61646d696e       |587-admin
+admin:admin  |3233342d61646d696e       |234-admin
 -------------|-------------------------|----------------
 a:           |3239312d61               |291-a
 
