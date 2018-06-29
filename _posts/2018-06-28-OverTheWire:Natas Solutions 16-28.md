@@ -231,6 +231,7 @@ Yapmamız gereken SESSION değişkeni içerisindeki admin anahtarının değerin
 
 ```
 session_set_save_handler() fonksiyonu , bir oturum ile  alakalı verileri almak ve saklamak için oturum başlatılmasından, oturum sonlandırılmasına kadar ki tüm olaylarda tetiklenecek fonksiyonları belirtir. Sırası ile open(),read(),write() fonksiyonları çalıştırılır.
+
 ```
 
 {% highlight php %}
@@ -257,7 +258,6 @@ function mywrite($sid, $data) {
     chmod($filename, 0600); 
 } 
 ?>
-
 {% endhighlight %}
 
 Bu fonksiyonla birlikte session bilgileri bir dosyaya yazılıyor.SESSION değikeni içerisindeki değerler key=>value çifleri olarak ayrılıp her biri data değişkenine ardındanda session bilgilerinin tutulduğu dosyaya "key value \n" şeklinde yazılıyor. Yani;
@@ -280,7 +280,6 @@ $_SESSION["login"] = "true";
  pass 123456 olacaktır.
  
 ````
-
 
 {% highlight php %}
 
@@ -321,6 +320,7 @@ login true
 user guess
 
 pass guess 
+
 ````
 olan bir dosya session değişkenine  bu şekilde kaydolacaktır.
 
@@ -333,7 +333,6 @@ $_SESSION["pass"]="guess";
 
 ````
 
-{% endhighlight %}
 
 Bizim girdiğimiz input da SESSION değişkeni içerisinde name keyine atanıyor.Girdiğimiz name ile birlikte \nadmin 1 şeklinde bir key:value çifti girsek dosyanında en son hali şu şekilde olucak;
 
