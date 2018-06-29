@@ -432,3 +432,39 @@ intval fonksiyonu değişkenin tamsayı değerini döndürür.
 >> natas24:OsRmXFguozKpTZZ5X14zNO43379LZveg
 
 #### Level 24
+
+<figure>
+<img src="/assets/img/natas/natas241.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas242.png">
+</figure>
+
+strcmp fonksiyonunun nasıl çalıştığına bakalım.
+
+```
+int strcmp ( string $d1 , string $d2 )
+    if $d1>$d2
+        return 1;
+    if $d1<$d2
+        return -1;
+    if $d1==d2
+        return 0;
+  Bu durumlar dışında, fonksiyona verilen parametrelerden birisi string değilse fonksiyon yine 0 döndürür.
+  
+  ```
+  Bizde string göndermek yerine bir array göndereceğiz.
+  
+<figure>
+<img src="/assets/img/natas/natas243.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas244.png">
+</figure>
+
+>> natas25:6X7YwACaYYssHVY05cFq83hRktl4c
+
+#### Level 25
+  
