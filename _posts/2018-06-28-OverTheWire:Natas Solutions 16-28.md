@@ -538,7 +538,7 @@ Seçtiğimiz dile göre o dile ait sayfa include ediliyor.
 
 İlk başta setLanguage fonksiyonu çağırılıyor. Include edilecek sayfanın pathi safeinclude fonksiyonuna gönderilmiş.
 
-Fonksiyonda directory traversal ataklarına karşı bazıönemler alınmış. Girilen inputta "../"ifadesi bulunması halinde  replace edilerek önlenmenye çalışılmış.Bununla birlikte logReuest fonksiyonu çağırılarak log tutulmuş.
+Fonksiyonda directory traversal ataklarına karşı bazı önlemler alınmış. Girilen inputta "../" ifadesi bulunması halinde  bu ifadeler replace edilmiş.Bununla birlikte logReuest fonksiyonu çağırılarak log tutulmuş.
 
 strstr fonksiyonunu şu şekilde bypass edebiliriz.
 
@@ -558,7 +558,7 @@ Fakat hemen ardından "natas_webpass" stringi de filtrelenmiş.Yani bu dosyayı 
 
 Log dosyasını okuyabildik, log dosyasına user-agent bilgisi de eklenmiş.
 
-User-agent injection atak yaparak, yazdığımız kodun çıktısını log dosyasında görecceğiz.
+User-agent injection atak yaparak, yazdığımız kodun çıktısını log dosyasında göreceğiz.
 
 <figure>
 <img src="/assets/img/natas/natas255.png">
