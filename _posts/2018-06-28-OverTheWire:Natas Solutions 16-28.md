@@ -262,7 +262,9 @@ function mywrite($sid, $data) {
 
 Bu fonksiyonla birlikte session bilgileri bir dosyaya yazılıyor.SESSION değikeni içerisindeki değerler key=>value çifleri olarak ayrılıp her biri data değişkenine ardındanda session bilgilerinin tutulduğu dosyaya "key value \n" şeklinde yazılıyor. Yani;
 
-`$_SESSION["login"] = "true";
+{% highlight  %}
+
+$_SESSION["login"] = "true";
 
  $_SESSION["user"] = "admin";
  
@@ -272,7 +274,9 @@ Bu fonksiyonla birlikte session bilgileri bir dosyaya yazılıyor.SESSION değik
  
  user admin
  
- pass 123456 olacaktır.`
+ pass 123456 olacaktır.
+
+{% endhighlight %}
 
 {% highlight php %}
 
@@ -312,10 +316,9 @@ login true
 
 user guess
 
-pass guess  olan bir dosya bu şekilde 
+pass guess  olan bir dosya session değişkenine  bu şekilde kaydolacaktır.
 
 $_SESSION["login"]="true";
 $_SESSION["user"]="guess";
-$_SESSION["pass"]="guess"; bu şekilde ses
-
+$_SESSION["pass"]="guess";  
 ``
