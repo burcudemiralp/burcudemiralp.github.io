@@ -426,7 +426,6 @@ Yani girdiğimiz parola içerisinde "iloveyou" stringini barındırmalı ve bunu
 
 ````
 intval fonksiyonu değişkenin tamsayı değerini döndürür.
-
 ````
 
 >> natas24:OsRmXFguozKpTZZ5X14zNO43379LZveg
@@ -468,3 +467,111 @@ int strcmp ( string $d1 , string $d2 )
 
 #### Level 25
   
+<figure>
+<img src="/assets/img/natas/natas252.png">
+</figure>
+
+Seçtiğimiz dile göre o dile ait sayfa include ediliyor.
+
+<figure>
+<img src="/assets/img/natas/natas251.png">
+</figure>
+
+
+{% highlight php %}
+
+<?php
+    // cheers and <3 to malvina
+    // - morla
+
+    function setLanguage(){
+        /* language setup */
+        if(array_key_exists("lang",$_REQUEST))
+            if(safeinclude("language/" . $_REQUEST["lang"] ))
+                return 1;
+        safeinclude("language/en"); 
+    }
+    
+    function safeinclude($filename){
+        // check for directory traversal
+        if(strstr($filename,"../")){
+            logRequest("Directory traversal attempt! fixing request.");
+            $filename=str_replace("../","",$filename);
+        }
+        // dont let ppl steal our passwords
+        if(strstr($filename,"natas_webpass")){
+            logRequest("Illegal file access detected! Aborting!");
+            exit(-1);
+        }
+        // add more checks...
+
+        if (file_exists($filename)) { 
+            include($filename);
+            return 1;
+        }
+        return 0;
+    }
+    
+    function listFiles($path){
+        $listoffiles=array();
+        if ($handle = opendir($path))
+            while (false !== ($file = readdir($handle)))
+                if ($file != "." && $file != "..")
+                    $listoffiles[]=$file;
+        
+        closedir($handle);
+        return $listoffiles;
+    } 
+    
+    function logRequest($message){
+        $log="[". date("d.m.Y H::i:s",time()) ."]";
+        $log=$log . " " . $_SERVER['HTTP_USER_AGENT'];
+        $log=$log . " \"" . $message ."\"\n"; 
+        $fd=fopen("/var/www/natas/natas25/logs/natas25_" . session_id() .".log","a");
+        fwrite($fd,$log);
+        fclose($fd);
+    }
+?>
+
+?>
+{% endhighlight %}
+
+İlk başta setLanguage fonksiyonu çağırılıyor. Include edilecek sayfanın pathi safeinclude fonksiyonuna gönderilmiş.
+
+Fonksiyonda directory traversal ataklarına karşı bazıönemler alınmış. Girilen inputta "../"ifadesi bulunması halinde  replace edilerek önlenmenye çalışılmış.Bununla birlikte logReuest fonksiyonu çağırılarak log tutulmuş.
+
+strstr fonksiyonunu şu şekilde bypass edebiliriz.
+
+<figure>
+<img src="/assets/img/natas/natas253.png">
+</figure>
+
+Fakat hemen ardından "natas_webpass" stringi de filtrelenmiş.Yani bu dosyayı çağırabilmemiz mümkün değil.
+
+<figure>
+<img src="/assets/img/natas/natas253.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas254.png">
+</figure>
+
+Log dosyasını okuyabildik, log dosyasına user-agent bilgisi de eklenmiş.
+
+User-agent injection atak yaparak, yazdığımız kodun çıktısını log dosyasında görecceğiz.
+
+<figure>
+<img src="/assets/img/natas/natas255.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas256.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas257.png">
+</figure>
+
+>>natas26:oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T
+
+#### Level 26
