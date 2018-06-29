@@ -362,7 +362,7 @@ http://natas21-experimenter.natas.labs.overthewire.org sayfasına gidiyoruz.
 <img src="/assets/img/natas/natas214.png">
 </figure>
 
-Giden istekteki değişken ve değerleri session değişkeni içerisine key:value çifleri olarak atanıyor.
+Giden istekteki değişken ve değerleri session değişkeni içerisine key:value çiftleri olarak atanıyor.İsteğe admin değişkenini ekliyoruz.
 
 <figure>
 <img src="/assets/img/natas/natas215.png">
@@ -381,7 +381,7 @@ Note: this website is colocated with http://natas21.natas.labs.overthewire.org m
 </figure>
 
 <figure>
-<img src="/assets/img/natas/natas218.png">
+<img src="/assets/img/natas/natas219.png">
 </figure>
 
 >> natas22:chG9fbe1Tq2eWVMgjYYD1MsfIvN461kJ
