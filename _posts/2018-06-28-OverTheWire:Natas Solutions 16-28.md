@@ -116,7 +116,7 @@ for i in range(32):
 
 Cookie başlığında  PHPSESSID değeri varsa , session başlatılıyor. Ardından print_credentials fonksiyonu çağrılıyor. Eğer SESSION içerisinde ki admin değeri 1' eşitse level 19'a ait parola ekrana bastırılıyor.Giden istekte PHPSESSID değeri yok ise, yeni bir session yaratılıyor.
 
-Burada createID şeklinde bir fonksiyon çağırılmış.
+Bu kısımda createID adında bir fonksiyon çağırılmış.
 {% highlight php %}
 <?
 function createID($user) { 
@@ -156,3 +156,26 @@ for id in range(1,640):
 >> natas19:4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs
 
 #### Level 19
+
+This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+
+Diğer sayfadan farklı olarak session id'lerin sıralı olmadığını söylenmiş. Burp ile birkaç farklı username:password ile istekte bulunuyorum.
+
+<figure>
+<img src="/assets/img/natas/natas191.png">
+</figure>
+<figure>
+<img src="/assets/img/natas/natas192.png">
+</figure>
+<figure>
+<img src="/assets/img/natas/natas193.png">
+</figure>
+<figure>
+<img src="/assets/img/natas/natas194.png">
+</figure>
+<figure>
+<img src="/assets/img/natas/natas195.png">
+</figure>
+<figure>
+<img src="/assets/img/natas/natas196.png">
+</figure>
