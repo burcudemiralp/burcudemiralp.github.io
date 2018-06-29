@@ -306,7 +306,7 @@ myread fonksiyonunda mywrite fonksiyonu ile dosyaya yazılmış session bilgiler
 
 data değişkenine alınan dosya içeriği "\n" belirteci ile , ardından da " " ile  ayrılıyor ve sonra session  değişkeni içerisine kaydediliyor.Yani ;
 
-İçeriği :
+İçeriği
 
 ````
 login true
