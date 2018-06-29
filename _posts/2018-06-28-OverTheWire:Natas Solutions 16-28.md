@@ -189,7 +189,7 @@ admin:admin |       3538372d61646d696e|       587-admin
 a:          |       3239312d61        |       291-a
 
 
-- karakterinden öncesi muhtemelen bir önceki soruda verildiği gibi 1,640 arasında random olarak üretiliyor.
+"-" karakterinden öncesi muhtemelen bir önceki soruda verildiği gibi 1,640 arasında random olarak üretiliyor.
 
 {% highlight python %}
 
