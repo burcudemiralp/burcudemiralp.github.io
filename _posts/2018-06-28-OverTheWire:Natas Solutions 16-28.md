@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OverTheWire:Natas Solutions 16-"
+title: "OverTheWire:Natas Solutions 16-28"
 date: 2018-06-28
 excerpt: "28 Jun 2018"
 comments: false
@@ -80,7 +80,7 @@ Level 15'in devamı niteliğinde.
 
 Çıktı veren kısımlar yorum satırı haline getirilmiş. Time Based SQL Injection ile parolayı elde etmeyi deniyoruz.
 
-natas18 " and password LIKE BINARY "a%" and sleep(5) şeklinde bir payload girdiğimde natas18 kullanıcısına ait parolanın a ile başlaması halinde 3 saniyelik bir bekleme olucak.
+natas18 " and password LIKE BINARY "a%" and sleep(3) şeklinde bir payload girdiğimde natas18 kullanıcısına ait parolanın a ile başlaması halinde 3 saniyelik bir bekleme olucak.
 
 Benzer bir script çalıştırıyoruz.
 
