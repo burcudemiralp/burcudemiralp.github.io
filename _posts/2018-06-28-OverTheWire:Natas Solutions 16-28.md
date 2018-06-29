@@ -216,5 +216,63 @@ for id in range(650):
 #### Level 20
 
 <figure>
+<img src="/assets/img/natas/natas2020.png">
+</figure>
+
+<figure>
 <img src="/assets/img/natas/natas201.png">
 </figure>
+
+Yapmamız gereken SESSION değişkeni içerisindeki admin anahtarının değerini 1' eşitlemek.
+
+<figure>
+<img src="/assets/img/natas/natas202.png">
+</figure>
+
+```
+session_set_save_handler() fonksiyonu , bir oturum ile  alakalı verileri almak ve saklamak için oturum başlatılmasından, oturum sonlandırılmasına kadar ki tüm olaylarda tetiklenecek fonksiyonları belirtir. Sırası ile open(),read(),write() fonksiyonları çalıştırılır.
+```
+
+{% highlight php %}
+
+<?
+function mywrite($sid, $data) {  
+    // $data contains the serialized version of $_SESSION 
+    // but our encoding is better 
+    debug("MYWRITE $sid $data");  
+    // make sure the sid is alnum only!! 
+    if(strspn($sid, "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM-") != strlen($sid)) { 
+    debug("Invalid SID");  
+        return; 
+    } 
+    $filename = session_save_path() . "/" . "mysess_" . $sid; 
+    $data = ""; 
+    debug("Saving in ". $filename); 
+    ksort($_SESSION); 
+    foreach($_SESSION as $key => $value) { 
+        debug("$key => $value"); 
+        $data .= "$key $value\n"; 
+    } 
+    file_put_contents($filename, $data); 
+    chmod($filename, 0600); 
+} 
+?>
+
+{% endhighlight %}
+
+N["pass"] = "admin"; şeklinde ki oturum bilgileri
+
+Bu fonksiyonla birlikte session bilgileri bir dosyaya yazılıyor.$_SESSION değikeni içerisindeki değerler $key=>value çifleri olarak ayrılıp her biri data değişkenine ardındanda session bilgilerinin tutulduğu dosyaya "$key $value \n" şeklinde yazılıyor. Yani;
+
+$_SESSION["login"] = "true";
+
+$_SESSION["user"] = "admin";
+
+$_SESSION["pass"] = "123456"; bu sessiona ait dosyanın son hali;
+
+login true
+
+user admin
+
+pass 123456 olacaktır.
+
