@@ -404,3 +404,30 @@ Note: this website is colocated with http://natas21.natas.labs.overthewire.org m
 
 #### Level 23
 
+<figure>
+<img src="/assets/img/natas/natas231.png">
+</figure>
+
+<figure>
+<img src="/assets/img/natas/natas232.png">
+</figure>
+
+````
+Strstr fonksiyonu bir string içerisinde bir karakter veya karakter grubu arar.Aranan karakter dizisi bulunamazsa false, bulunursa stringin ilk veya son bölümü döner.
+    echo strstr("Hello world!", "w");
+        world!
+````
+
+Yani girdiğimiz parola içerisinde "iloveyou" stringini barındırmalı ve bununla birlikte integer değeri ondan büyük olmalıdır.
+
+<figure>
+<img src="/assets/img/natas/natas233.png">
+</figure>
+
+````
+intval fonksiyonu değişkenin tamsayı değerini döndürür.
+````
+
+>> natas24:OsRmXFguozKpTZZ5X14zNO43379LZveg
+
+#### Level 24
