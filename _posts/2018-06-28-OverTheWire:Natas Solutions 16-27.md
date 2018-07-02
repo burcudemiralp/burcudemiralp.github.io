@@ -749,8 +749,10 @@ function createUser($link, $usr, $pass){
 {% endhighlight %}
 
 SQli ataklarına karşı mysql_real_escape_string fonksiyonu ile önlem alınmış. Her ne kadar bypass etmeye çalışsamda başarılı olamadım.
+
     ````
     mysql_real_escape_string fonksiyonu  stringler içerisindeki özel karakterlerin başına escape karakteri koyar, kulanıcıdan alınan parametre direk sql sorgusuna yerleştirilmeden önce bu fonksiyondan geçirilir.
+    
     ````
     
     
