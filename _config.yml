@@ -4,7 +4,7 @@ bio:                'Infosec Blog'
 #description:        "Moon is a minimal, one column jekyll theme for your blog."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/bb.png'
+logo:               'assets/img/bash.jpeg'
 background:         'assets/img/gray.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
