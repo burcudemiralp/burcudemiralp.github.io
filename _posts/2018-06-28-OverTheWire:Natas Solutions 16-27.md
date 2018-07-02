@@ -708,7 +708,7 @@ function validUser($link,$usr){
         } 
     } 
     return False; 
-} 
+ } 
 
 
 function dumpData($link,$usr){ 
@@ -745,7 +745,8 @@ function createUser($link, $usr, $pass){
 
  ?>
 
-{% endhighlight % }
+
+{% endhighlight %}
 
 SQli ataklarına karşı mysql_real_escape_string fonksiyonu ile önlem alınmış. Her ne kadar bypass etmeye çalışsamda başarılı olamadım.
     ````
