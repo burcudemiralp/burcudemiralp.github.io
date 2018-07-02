@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OverTheWire:Natas Solutions 16-28"
+title: "OverTheWire:Natas Solutions 16-27"
 date: 2018-06-28
 excerpt: "28 Jun 2018"
 comments: false
