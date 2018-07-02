@@ -768,7 +768,7 @@ Bize lazım olan natas28 kullanıcına ait parola.
 <img src="/assets/img/natas/natas274.png">
 </figure>
 
-User ve pass için max 64 char boyutunda yer ayrılmış. natas28+" ".57+A şeklinde bir username girdiğimizde , önce validUser fonksiyonu çağrılacak.Böyle bir kullanıcı olmadığı için false dönecek. Bu sebepten ötürü createUser fonksiyonu çağrılacak. Max 64 char boyutunda yer ayrıldığı için 64 karaktersen sonrası kesilecek. Yani A harfi. Geriye natas28+" ".57 kalmış olucak.Boşluklar temizlendiği için, sisteme parolasını bildiğimiz bir natas28 kullanıcısı eklemiş olduk.
+User ve pass için max 64 char boyutunda yer ayrılmış. natas28+" ".57+A şeklinde bir username girdiğimizde , önce validUser fonksiyonu çağrılacak.Böyle bir kullanıcı olmadığı için false dönecek. Bu sebepten ötürü createUser fonksiyonu çağrılacak. Max 64 char boyutunda yer ayrıldığı için 64 karaktersen sonrası kesilecek. Yani A harfi. Geriye natas28+" ".57 kalmış olucak.Boşluklar temizlendiği için, sisteme parolasını bildiğimiz bir natas28 kullanıcısı eklemiş olacağız.
 
  <figure>
 <img src="/assets/img/natas/natas275.png">
