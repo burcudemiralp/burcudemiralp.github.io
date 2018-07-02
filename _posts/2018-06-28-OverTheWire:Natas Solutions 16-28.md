@@ -660,3 +660,127 @@ img/burju.php adresine gidiyoruz.
 >> natas27:55TBjpPZUUJgVP5b3BnbG6ON9uDPVzCJ
 
 #### Level 27 
+
+<figure>
+<img src="/assets/img/natas/natas271.png">
+</figure>
+
+
+{% highlight php %}
+ <?php
+   <? 
+
+// morla / 10111 
+// database gets cleared every 5 min  
+
+
+/* 
+CREATE TABLE `users` ( 
+  `username` varchar(64) DEFAULT NULL, 
+  `password` varchar(64) DEFAULT NULL 
+); 
+*/ 
+
+
+function checkCredentials($link,$usr,$pass){ 
+  
+    $user=mysql_real_escape_string($usr); 
+    $password=mysql_real_escape_string($pass); 
+     
+    $query = "SELECT username from users where username='$user' and password='$password' "; 
+    $res = mysql_query($query, $link); 
+    if(mysql_num_rows($res) > 0){ 
+        return True; 
+    } 
+    return False; 
+} 
+
+
+function validUser($link,$usr){ 
+     
+    $user=mysql_real_escape_string($usr); 
+     
+    $query = "SELECT * from users where username='$user'"; 
+    $res = mysql_query($query, $link); 
+    if($res) { 
+        if(mysql_num_rows($res) > 0) { 
+            return True; 
+        } 
+    } 
+    return False; 
+} 
+
+
+function dumpData($link,$usr){ 
+     
+    $user=mysql_real_escape_string($usr); 
+     
+    $query = "SELECT * from users where username='$user'"; 
+    $res = mysql_query($query, $link); 
+    if($res) { 
+        if(mysql_num_rows($res) > 0) { 
+            while ($row = mysql_fetch_assoc($res)) { 
+                // thanks to Gobo for reporting this bug!   
+                //return print_r($row); 
+                return print_r($row,true); 
+            } 
+        } 
+    } 
+    return False; 
+} 
+
+
+function createUser($link, $usr, $pass){ 
+
+    $user=mysql_real_escape_string($usr); 
+    $password=mysql_real_escape_string($pass); 
+     
+    $query = "INSERT INTO users (username,password) values ('$user','$password')"; 
+    $res = mysql_query($query, $link); 
+    if(mysql_affected_rows() > 0){ 
+        return True; 
+    } 
+    return False; 
+} 
+
+ ?>
+
+{% endhighlight % }
+
+SQli ataklarına karşı mysql_real_escape_string fonksiyonu ile önlem alınmış. Her ne kadar bypass etmeye çalışsamda başarılı olamadım.
+    ````
+    mysql_real_escape_string fonksiyonu  stringler içerisindeki özel karakterlerin başına escape karakteri koyar, kulanıcıdan alınan parametre direk sql sorgusuna yerleştirilmeden önce bu fonksiyondan geçirilir.
+    ````
+    
+    
+Bize lazım olan natas28 kullanıcına ait parola.
+
+<figure>
+<img src="/assets/img/natas/natas273.png">
+</figure>
+
+ dumpData fonksiyonu parametre olarak yalnızca username alıyor. Yani sistemde parolasını bildiğimiz bir natas28 kullancısı oluşturabilmemiz dahilinde asıl natas28 kullanıcısının parolasını öğrenebileceğiz.
+ 
+ <figure>
+<img src="/assets/img/natas/natas274.png">
+</figure>
+
+User ve pass için max 64 char boyutunda yer ayrılmış. natas28+" ".57+A şeklinde bir username girdiğimizde , önce validUser fonksiyonu çağrılacak.Böyle bir kullanıcı olmadığı için false dönecek. Bu sebepten ötürü createUser fonksiyonu çağrılacak. Max 64 char boyutunda yer ayrıldığı için 64 karaktersen sonrası kesilecek. Yani A harfi. Geriye natas28+" ".57 kalmış olucak.Boşluklar temizlendiği için, sisteme parolasını bildiğimiz bir natas28 kullanıcısı eklemiş olduk.
+
+ <figure>
+<img src="/assets/img/natas/natas275.png">
+</figure>
+
+ <figure>
+<img src="/assets/img/natas/natas276.png">
+</figure>
+
+ <figure>
+<img src="/assets/img/natas/natas277.png">
+</figure>
+
+ <figure>
+<img src="/assets/img/natas/natas278.png">
+</figure>
+
+>> natas28:JWwR438wkgTsNKBbcJoowyysdM82YjeF
