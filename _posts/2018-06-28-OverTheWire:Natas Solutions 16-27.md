@@ -667,8 +667,8 @@ img/burju.php adresine gidiyoruz.
 
 
 {% highlight php %}
- <?php
-   <? 
+
+ <? 
 
 // morla / 10111 
 // database gets cleared every 5 min  
