@@ -554,13 +554,13 @@ Fakat hemen ardından "natas_webpass" stringi de filtrelenmiş.Yani bu dosyayı 
 <img src="/assets/img/natas/natas254.png">
 </figure>
 
-Log dosyasını okuyabildik, log dosyasına user-agent bilgisi de eklenmiş.
-
-User-agent injection atak yaparak, yazdığımız kodun çıktısını log dosyasında göreceğiz.
-
 <figure>
 <img src="/assets/img/natas/natas255.png">
 </figure>
+
+Log dosyasını okuyabildik, log dosyasına user-agent bilgisi de eklenmiş.
+
+User-agent injection atak yaparak, yazdığımız kodun çıktısını log dosyasında göreceğiz.
 
 <figure>
 <img src="/assets/img/natas/natas256.png">
