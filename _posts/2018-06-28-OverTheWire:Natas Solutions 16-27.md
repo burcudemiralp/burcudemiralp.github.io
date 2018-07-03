@@ -591,7 +591,7 @@ Bu zafiyetin oluşabilmesi ve exploit edilebilmesi için;
                     
 ````
 
-Daha detaylı bir bilgi için: https://www.mehmetince.net/php-object-injection-saldirilari-ve-korunmasi/
+Daha detaylı bir bilgi için: <a href="https://www.mehmetince.net/php-object-injection-saldirilari-ve-korunmasi/">
 
 Kullanıcıdan alınan cookie değeri unserialize metoduna veriliyor.
 <figure>
