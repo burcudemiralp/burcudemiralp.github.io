@@ -14,7 +14,7 @@ Domain üzerindeki tüm kullanıcıların parola hashleri NTDS.dit dosyasında s
 
 Dosya kullanıcılar, gruplar, grup üyelikleri gibi Active Directory bilgilerini depolayan bir veritabanıdır.
 
-İşletim sistemi tarafından  kullanılan bir dosya olduğu için, doğrudan başka bir yere kopyalanması mümkün değildir
+İşletim sistemi tarafından  kullanılan bir dosya olduğu için, doğrudan başka bir yere kopyalanması mümkün değildir.
 
 Yalnızca Domain Controller üzerinde bulunur ve dosya yolu C:\Windows\NTDS\NTDS.dit şeklindedir.
 ````
@@ -22,4 +22,4 @@ Yalnızca Domain Controller üzerinde bulunur ve dosya yolu C:\Windows\NTDS\NTDS
 ````
 DSR, Domain Controller'lar arasında bilgi kopyalanmasını ve Active Directory yönetimini sağlar.
 ````
-
+Atağı gerçekleştirebilmek için, ilgili kullanıcı için domain üzerinde "Replicating Changes Permission" ayarlarının aktif edilmesi gerekmektedir.Varsayılan olarak Domain Admins, Enterprise Admins, Administrators grupları ve Domain Controller hesapları için bu izinler aktiftir.
