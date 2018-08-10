@@ -21,6 +21,5 @@ Yalnızca Domain Controller üzerinde bulunur ve dosya yolu C:\Windows\NTDS\NTDS
 
 ````
 DSR, Domain Controller'lar arasında bilgi kopyalanmasını ve Active Directory yönetimini sağlar.
-
 ````
 
