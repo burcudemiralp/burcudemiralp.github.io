@@ -22,7 +22,7 @@ Yalnızca Domain Controller üzerinde bulunur ve dosya yolu C:\Windows\NTDS\NTDS
 ````
 DSR, Domain Controller'lar arasında bilgi kopyalanmasını ve Active Directory yönetimini sağlar.
 ````
-Atağı gerçekleştirebilmek için, ilgili kullanıcı için domain üzerinde "Replicating Changes Permission" ayarlarının aktif edilmesi gerekmektedir.Varsayılan olarak Domain Admins, Enterprise Admins, Administrators grupları ve Domain Controller hesapları için bu izinler aktiftir.
+Atağı gerçekleştirebilmek için, ilgili kullanıcı için domain üzerinde "Replicating Changes Permission" ayarlarının aktif edilmesi gerekmektedir.Varsayılan olarak Domain Admins, Enterprise Admins, Administrators grupları ve Domain Controller hesapları için bu izinler aktiftir. Bu izinlere sahip olan herhangi bir domain kullanıcısı da bu atağı gerçekleştirebilir.
 
 <figure >
     <img src="/assets/img/r.jpg">
