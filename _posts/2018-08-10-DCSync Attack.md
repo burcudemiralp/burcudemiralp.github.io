@@ -40,3 +40,14 @@ DCSync mimikatz ve empire ile kullanmak mümkündür.
     <img src="/assets/img/desk2">
 </figure>
 
+Meterpreter shell üzerinde , DCSync çalıştırabilmek için kiwi modülü yüklenebilir.
+
+
+<figure >
+    <img src="/assets/img/desk3">
+</figure>
+
+<figure >
+    <img src="/assets/img/desk4">
+</figure>
+
