@@ -27,3 +27,16 @@ Atağı gerçekleştirebilmek için, ilgili kullanıcı için domain üzerinde "
 <figure >
     <img src="/assets/img/r.jpg">
 </figure>
+
+DCSync çalıştırıldığında öncelikle belirtilen domaine ait Domain Controller'ı bulur, ardından kullanıcılara ait bilgileri kopyalamak için (DRS protokolü aracılığıyla) Domain Controller' a istekte bulunur.
+
+DCSync mimikatz ve empire ile kullanmak mümkündür.
+
+<figure >
+    <img src="/assets/img/desk1.jpg">
+</figure>
+
+<figure >
+    <img src="/assets/img/desk2">
+</figure>
+
