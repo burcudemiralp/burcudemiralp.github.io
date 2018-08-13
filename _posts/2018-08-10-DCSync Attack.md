@@ -30,7 +30,7 @@ Atağı gerçekleştirebilmek için, ilgili kullanıcı için domain üzerinde "
 
 DCSync çalıştırıldığında öncelikle belirtilen domaine ait Domain Controller'ı bulur, ardından kullanıcılara ait bilgileri kopyalamak için (DRS protokolü aracılığıyla) Domain Controller' a istekte bulunur.
 
-DCSync mimikatz ve empire ile kullanmak mümkündür.
+DCSync atak için mimikatz veya empire kullanılabilir.
 
 <figure >
     <img src="/assets/img/desk1.jpg">
@@ -40,7 +40,7 @@ DCSync mimikatz ve empire ile kullanmak mümkündür.
     <img src="/assets/img/desk2">
 </figure>
 
-Meterpreter shell üzerinde , DCSync çalıştırabilmek için kiwi modülü yüklenebilir.
+Meterpreter shell üzerinde, DCSync için kiwi modülü yüklenebilir.
 
 
 <figure >
@@ -50,4 +50,4 @@ Meterpreter shell üzerinde , DCSync çalıştırabilmek için kiwi modülü yü
 <figure >
     <img src="/assets/img/desk4">
 </figure>
-
+ 
