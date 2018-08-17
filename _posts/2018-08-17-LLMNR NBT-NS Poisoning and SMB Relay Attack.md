@@ -48,7 +48,6 @@ Hatalı DNS sorgularının, dosya paylaşımı,yazıcı paylaşımı gibi SMB pr
 SMB (Server Message Block ) dosyaları, yazıcıları ve serial portları paylaşmak için kullanılan bir protokoldür. SMB server'lar ağ üzerindeki dosya sistemini ve diğer kaynakları istemciler için hazır hale getirirler.
 
 SMB sunucuları yetkilendirme için NTLMv2 Challenge/Response Authentication yöntemini kullanırlar. Süreç şu şekildedir:
-
     + İstemci sunucuya bir login isteği gönderir.(Type 1 Message)
     + Sunucu bir takım extra bilgilerle birlikte challenge denilen random bir string gönderir.(Type 2 Message)
     + İstemci kendi parolasına ait hash ile birlikte challenge'ı şifreler ve response olarak sunucuya gönderir.(Type 3 Message)
