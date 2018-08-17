@@ -34,3 +34,8 @@ Local network üzerinde bulunmayan klmn.local bilgisayarına ping atılmak isten
 
 #### LLMNR/NBT-BS Poisoning
 
+Ağa katılmış olan bir saldırgan gelen LLMNR ve NBT-NS isteklerini dinleyip, sahte cevaplar üreterek kurbana gönderir. Arp poisoning olayında olduğu gibi, cevapları doğrulayan bir mekanizma yoktur. Bu sebepten ötürü kurban aldığı cevapları doğru kabul eder. Bundan sonrası için trafik saldırgan üzerinden devam eder.
+
+<figure >
+    <img src="/assets/img/llmnr3.png">
+</figure>
