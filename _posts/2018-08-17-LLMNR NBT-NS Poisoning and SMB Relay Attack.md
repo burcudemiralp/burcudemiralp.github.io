@@ -40,3 +40,16 @@ Ağa katılmış olan bir saldırgan gelen LLMNR ve NBT-NS isteklerini dinleyip,
     <img src="/assets/img/llmnr3.png">
 </figure>
 
+#### LLMNR/NBT-BS Poisoning ile NTLMv2 Hash Elde Etme
+
+Hatalı DNS sorgularının, dosya paylaşımı,yazıcı paylaşımı gibi SMB protokolünün kullanıldığı durumlarda meydana gelmesi sonucu gerçekleştirilebilen bir ataktır. 
+````
+SMB (Server Message Block ) dosyaları, yazıcıları ve serial portları paylaşmak için kullanılan bir protokoldür. SMB server'lar ağ üzerindeki dosya sistemini ve diğer kaynakları istemciler için hazır hale getirirler.
+
+SMB sunucuları yetkilendirme için NTLMv2 Challenge/Response Authentication yöntemini kullanırlar.
+
+<figure >
+    <img src="/assets/img/ntlm2.png">
+</figure>
+
+````
