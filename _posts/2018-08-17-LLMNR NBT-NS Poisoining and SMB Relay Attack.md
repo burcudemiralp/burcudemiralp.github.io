@@ -5,7 +5,7 @@ date: 2018-08-17
 excerpt: "17 August 2018"
 comments: false
 ---
-#### LLMNR/NTB-NS Nedir?
+#### LLMNR/NBT-NS Nedir?
 Link Local Multicast Name Resolution(LLMNR) ve NetBIOS Name Service(NBT-NS), Windows işletim sistemlerinde isim çözümlenmesini ve iletişimi sağlayan iki bileşendir. DNS server üzerinde, sorguların başarısız olması durumunda, isim çözümlemeye LLMNR ve NBT-NS devam eder.
 
 Local network üzerinde bulunmayan klmn.local bilgisayarına ping atılmak istenirse, "klmn.local" adını çözümleyebilmek adına bu şekilde bir hiyerarşi takip edilecektir.
@@ -19,7 +19,7 @@ LLMNR DNS'e alternatif bir protokol değildir.DNS sorgularının başarısız ol
 
 NetBIOS ise local network üzerinde, sistemlerin birbirleri ile iletişime geçmek için kullandıkları bir API'dir, protokol değildir.
 
-#### LLMNR/NTB-BS Nasıl Çalışır ?
+#### LLMNR/NBT-BS Nasıl Çalışır ?
 
 Arp protokolünün işleyişine benzer bir mantıkla çalışırlar. Çözümlenmeye çalışılan isim için,LLMNR protokolü multicast(224.0.0.252)  NBT-NS ise broadcast yayın yaparak ağdaki cihazlara 
 <figure >
