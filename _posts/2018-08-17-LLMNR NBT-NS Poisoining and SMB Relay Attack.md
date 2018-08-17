@@ -14,4 +14,8 @@ LLMNR DNS'e alternatif bir protokol değildir.DNS sorgularının başarısız ol
 NetBIOS ise local network üzerinde, sistemlerin birbirleri ile iletişime geçmek için kullandıkları bir API'dir, protokol değildir.
 ````
 
-
+Local network üzerinde **bulunmayan** testlab.com bilgisayarına ping atılmak istenirse, "testlab.com" adını çözümleyebilmek adına bu şekilde bir hiyerarşi takip edilecektir.
+Öncelikle host dosyası(C:\Windows\System32\drivers\etc\hosts) kontrol edilir.
+Local DNS cache kontrolü yapılır. (ipconfig /displaydns ile öğrebilebilir)
+Ardından local network üzerinden bulunan DNS server'a DNS sorgusu gönderilir.
+En son olarakta LLMNR ve NTB-NS sorguları gönderilir.
