@@ -34,7 +34,7 @@ Local network üzerinde bulunmayan klmn.local bilgisayarına ping atılmak isten
 
 #### LLMNR/NBT-BS Poisoning
 
-Ağa katılmış olan bir saldırgan gelen LLMNR ve NBT-NS isteklerini dinleyip, sahte cevaplar üreterek hedefe gönderir. Arp poisoning olayında olduğu gibi, cevapları doğrulayan bir mekanizma yoktur. Bu sebepten ötürü hedef aldığı cevapları doğru kabul eder. Bundan sonrası için trafik saldırgan üzerinden devam eder.
+Ağa katılmış olan bir saldırgan gelen LLMNR ve NBT-NS isteklerini dinleyip, sahte cevaplar üreterek hedefe gönderir. Arp poisoning olayında olduğu gibi, cevapları doğrulayan bir mekanizma yoktur. Bu sebepten ötürü kurban aldığı cevapları doğru kabul eder. Bundan sonrası için trafik saldırgan üzerinden devam eder.
 
 <figure >
     <img src="/assets/img/llmnr3.png">
@@ -43,7 +43,6 @@ Ağa katılmış olan bir saldırgan gelen LLMNR ve NBT-NS isteklerini dinleyip,
 #### LLMNR/NBT-BS Poisoning ile NTLMv2 Hash Elde Etme
 
 Hatalı DNS sorgularının, dosya paylaşımı,yazıcı paylaşımı gibi SMB protokolünün kullanıldığı durumlarda meydana gelmesi sonucu gerçekleştirilebilen bir ataktır. 
-
 ```
 SMB (Server Message Block ) dosyaları, yazıcıları ve serial portları paylaşmak için kullanılan bir protokoldür. SMB server'lar ağ üzerindeki dosya sistemini ve diğer kaynakları istemciler için hazır hale getirirler.
 
@@ -54,5 +53,9 @@ SMB sunucuları yetkilendirme için NTLMv2 Challenge/Response Authentication yö
     + Sunucu gelen response'u decrypt eder.Çıktı gönderdiği challenge ile eşleşiyorsa istemciyi yetkilendirir.
 
 ````
+Saldırgan broadcast cevaplarına sahte cevaplar üretmekle birlikte, SMB server gibi davranır ve kurban oturum açabilmek için login isteği gönderir. Saldırgan bir challenge göndererek, kurbanın kendi parolası ile şifrelemesini ister. Response ulaştıktan sonra, kurbana hata mesajı döner.
 
+<figure >
+    <img src="/assets/img/ntlmv3.png">
+</figure>
 
