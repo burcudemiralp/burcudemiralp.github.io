@@ -15,7 +15,7 @@ Link Local Multicast Name Resolution(LLMNR) ve NetBIOS Name Service(NBT-NS), Win
 
 #### LLMNR/NBT-BS Nasıl Çalışır ?
 
-Arp protokolünün işleyişine benzer bir mantıkla çalışırlar. Çözümlenmeye çalışılan isim için LLMNR protokolü multicast(224.0.0.252), NBT-NS ise broadcast yayın yaparak ağdaki cihazlara istek paketi gönderir. 
+Arp protokolünün işleyişine benzer bir mantıkla çalışırlar. Çözümlenmeye çalışılan isim için LLMNR protokolü multicast(224.0.0.252), NBT-NS ise broadcast yayın yaparak ağdaki cihazlara istek paketi gönderir. Çözümlenmek istenen ada sahip olan bilgisayara isteğe yanıt verir.
 
 Local network üzerinde bulunmayan klmn.local bilgisayarına ping atılmak istenirse, "klmn.local" adını çözümleyebilmek adına bu şekilde bir hiyerarşi takip edilecektir.
 
