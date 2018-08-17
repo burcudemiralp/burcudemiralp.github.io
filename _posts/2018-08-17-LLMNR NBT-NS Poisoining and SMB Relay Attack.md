@@ -15,9 +15,9 @@ Local network üzerinde bulunmayan klmn.local bilgisayarına ping atılmak isten
 + Ardından local network üzerinden bulunan DNS server'a DNS sorgusu gönderilir.
 + En son olarakta LLMNR ve NTB-NS sorguları gönderilir.
 
-LLMNR DNS'e alternatif bir protokol değildir.DNS sorgularının başarısız olduğu durumlara karşın geliştirimiş bir çözümdür.
+>> LLMNR DNS'e alternatif bir protokol değildir.DNS sorgularının başarısız olduğu durumlara karşın geliştirimiş bir çözümdür.
 
-NetBIOS ise local network üzerinde, sistemlerin birbirleri ile iletişime geçmek için kullandıkları bir API'dir, protokol değildir.
+>> NetBIOS ise local network üzerinde, sistemlerin birbirleri ile iletişime geçmek için kullandıkları bir API'dir, protokol değildir.
 
 #### LLMNR/NBT-BS Nasıl Çalışır ?
 
