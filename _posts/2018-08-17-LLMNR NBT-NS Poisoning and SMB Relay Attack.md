@@ -50,7 +50,7 @@ SMB sunucuları yetkilendirme için NTLMv2 Challenge/Response Authentication yö
     + İstemci sunucuya bir login isteği gönderir.(Type 1 Message)
     + Sunucu bir takım extra bilgilerle birlikte challenge denilen random bir string gönderir.(Type 2 Message)
     + İstemci kendi parolasına ait hash ile birlikte challenge'ı şifreler ve response olarak sunucuya gönderir.(Type 3 Message)
-    + Sunucu gelen response'u decrypt eder.Çıktı gönderdiği challenge ile eşleşiyorsa istemciyi yetkilendirir.
+    + Sunucu gelen response'u decrypt eder.Çıktı, gönderdiği challenge ile eşleşiyorsa istemciyi yetkilendirir.
 
 ````
 Saldırgan broadcast cevaplarına sahte cevaplar üretmekle birlikte, SMB server gibi davranır ve kurban oturum açabilmek için login isteği gönderir. Saldırgan bir challenge göndererek, kurbanın kendi parolası ile şifrelemesini ister. Response ulaştıktan sonra, kurbana hata mesajı döner.
