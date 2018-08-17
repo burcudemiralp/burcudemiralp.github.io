@@ -21,7 +21,11 @@ Local network üzerinde bulunmayan klmn.local bilgisayarına ping atılmak isten
 
 #### LLMNR/NBT-BS Nasıl Çalışır ?
 
-Arp protokolünün işleyişine benzer bir mantıkla çalışırlar. Çözümlenmeye çalışılan isim için,LLMNR protokolü multicast(224.0.0.252)  NBT-NS ise broadcast yayın yaparak ağdaki cihazlara 
+Arp protokolünün işleyişine benzer bir mantıkla çalışırlar. Çözümlenmeye çalışılan isim için LLMNR protokolü multicast(224.0.0.252), NBT-NS ise broadcast yayın yaparak ağdaki cihazlara istek paketi gönderirler. 
 <figure >
     <img src="/assets/img/llmnr2.PNG">
 </figure>
+
++ Paket 4-6: Yapılan DNS sorgusu başarısız oluyor.
++ Paket 8-15: klmn.local ismini çözümleyebilmek için LLMNR protokolü aracılığıyla ağda multicast yayın yapılıyor.
++ Paket 18: klmn.local ismini çözümleyebilmek için NBT-NS  aracılığıyla ağda broadcast yayın yapılıyor.
