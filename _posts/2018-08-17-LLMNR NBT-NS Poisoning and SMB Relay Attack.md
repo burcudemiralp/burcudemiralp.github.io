@@ -53,7 +53,7 @@ SMB sunucuları yetkilendirme için NTLMv2 Challenge/Response Authentication yö
     + Sunucu gelen response'u decrypt eder.Çıktı, gönderdiği challenge ile eşleşiyorsa istemciyi yetkilendirir.
 
 ````
-Saldırgan broadcast paketlerine sahte cevaplar üretmekle birlikte, SMB server gibi davranır ve kurban oturum açabilmek için login isteği gönderir. Saldırgan bir challenge göndererek, kurbanın kendi parolası ile şifrelemesini ister. Response ulaştıktan sonra, kurbana hata mesajı döner.
+Saldırgan broadcast paketlerine sahte cevaplar üretmekle birlikte, SMB server gibi davranır ve kurban oturum açabilmek için login isteği gönderir. Saldırgan bir challenge göndererek, kurbanın kendi parola hashi ile şifrelemesini ister. Response ulaştıktan sonra, kurbana hata mesajı döner.
 
 <figure >
     <img src="/assets/img/aa.png">
