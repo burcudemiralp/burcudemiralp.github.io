@@ -56,6 +56,6 @@ SMB sunucuları yetkilendirme için NTLMv2 Challenge/Response Authentication yö
 Saldırgan broadcast cevaplarına sahte cevaplar üretmekle birlikte, SMB server gibi davranır ve kurban oturum açabilmek için login isteği gönderir. Saldırgan bir challenge göndererek, kurbanın kendi parolası ile şifrelemesini ister. Response ulaştıktan sonra, kurbana hata mesajı döner.
 
 <figure >
-    <img src="/assets/img/ntlmv3.png">
+    <img src="/assets/img/aa.png">
 </figure>
 
