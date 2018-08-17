@@ -21,3 +21,6 @@ LLMNR DNS'e alternatif bir protokol değildir.DNS sorgularının başarısız ol
 
 NetBIOS ise local network üzerinde, sistemlerin birbirleri ile iletişime geçmek için kullandıkları bir API'dir, protokol değildir.
 ```
+<figure >
+    <img src="/assets/img/llmnr1.PNG">
+</figure>
