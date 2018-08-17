@@ -43,13 +43,17 @@ Ağa katılmış olan bir saldırgan gelen LLMNR ve NBT-NS isteklerini dinleyip,
 #### LLMNR/NBT-BS Poisoning ile NTLMv2 Hash Elde Etme
 
 Hatalı DNS sorgularının, dosya paylaşımı,yazıcı paylaşımı gibi SMB protokolünün kullanıldığı durumlarda meydana gelmesi sonucu gerçekleştirilebilen bir ataktır. 
-````
+
+```
 SMB (Server Message Block ) dosyaları, yazıcıları ve serial portları paylaşmak için kullanılan bir protokoldür. SMB server'lar ağ üzerindeki dosya sistemini ve diğer kaynakları istemciler için hazır hale getirirler.
 
-SMB sunucuları yetkilendirme için NTLMv2 Challenge/Response Authentication yöntemini kullanırlar.
+SMB sunucuları yetkilendirme için NTLMv2 Challenge/Response Authentication yöntemini kullanırlar. Süreç şu şekildedir:
 
-<figure >
-    <img src="/assets/img/ntlm2.png">
-</figure>
++ İstemci sunucuya bir login isteği gönderir.(Type 1 Message)
++ Sunucu bir takım extra bilgilerle birlikte challenge denilen random bir string gönderir.(Type 2 Message)
++ İstemci kendi parolasına ait hash ile birlikte challenge'ı şifreler ve response olarak sunucuya gönderir.(Type 3 Message)
++ Sunucu gelen response'u decrypt eder.Çıktı gönderdiği challenge ile eşleşiyorsa istemciyi yetkilendirir.
 
 ````
+
+
