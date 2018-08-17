@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LLMNR/NBT-NS Poisoining and SMB Relay Attack"
+title: "LLMNR/NBT-NS Poisoning and SMB Relay Attack"
 date: 2018-08-17
 excerpt: "17 August 2018"
 comments: false
@@ -39,3 +39,4 @@ Ağa katılmış olan bir saldırgan gelen LLMNR ve NBT-NS isteklerini dinleyip,
 <figure >
     <img src="/assets/img/llmnr3.png">
 </figure>
+
