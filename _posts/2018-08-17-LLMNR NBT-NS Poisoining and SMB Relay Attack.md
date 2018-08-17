@@ -8,14 +8,13 @@ comments: false
 
 Link Local Multicast Name Resolution(LLMNR) ve NetBios Name Service(NBT-NS), Windows işletim sistemlerinde isim çözümlenmesini ve iletişimi sağlayan iki bileşendir. DNS server üzerinde, sorguların başarısız olması durumunda, isim çözümlemeye LLMNR ve NBT-NS devam eder.
 
-Local network üzerinde bulunmayan testlab.com bilgisayarına ping atılmak istenirse, "testlab.com" adını çözümleyebilmek adına bu şekilde bir hiyerarşi takip edilecektir.
+Local network üzerinde bulunmayan klmn.local bilgisayarına ping atılmak istenirse, "klmn.local" adını çözümleyebilmek adına bu şekilde bir hiyerarşi takip edilecektir.
 
-+ Öncelikle host dosyası(C:\Windows\System32\drivers\etc\hosts) kontrol edilir.
-+ Local DNS cache kontrolü yapılır. (ipconfig /displaydns ile öğrebilebilir)
++ Öncelikle host dosyası kontrol edilir.
++ Local DNS cache kontrolü yapılır. 
 + Ardından local network üzerinden bulunan DNS server'a DNS sorgusu gönderilir.
 + En son olarakta LLMNR ve NTB-NS sorguları gönderilir.
     
-   
 ```
 LLMNR DNS'e alternatif bir protokol değildir.DNS sorgularının başarısız olduğu durumlara karşın geliştirimiş bir çözümdür.
 
