@@ -28,7 +28,7 @@ Local network üzerinde bulunmayan klmn.local bilgisayarına ping atılmak isten
     <img src="/assets/img/llmnr2.PNG">
 </figure>
 
-+ Paket 4-6: klmnc.local ismi için DNS sorgusu yapılıyor ve başarısızlıkla sonuçlanıyor.
++ Paket 4-6: klmn.local ismi için DNS sorgusu yapılıyor ve başarısızlıkla sonuçlanıyor.
 + Paket 8-15: klmn.local ismini çözümleyebilmek için LLMNR protokolü aracılığıyla ağda multicast yayın yapılıyor.
 + Paket 18: klmn.local ismini çözümleyebilmek için NBT-NS  aracılığıyla ağda broadcast yayın yapılıyor.
 
