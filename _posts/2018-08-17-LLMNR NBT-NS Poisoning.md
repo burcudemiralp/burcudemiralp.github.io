@@ -80,7 +80,6 @@ Böylece isteği yapan kullanıcıya ait NTLMv2 hashi elde ediliyor.
     <img src="/assets/img/pp2.png">
 </figure>
 
-````
-Elde edilen hash NTLMv2 olduğu için doğrudan "Pass The Hash" ataklarında kullanılamaz. 
-````
+>> Elde edilen hash NTLMv2 olduğu için doğrudan "Pass The Hash" ataklarında kullanılamaz. 
+
 
