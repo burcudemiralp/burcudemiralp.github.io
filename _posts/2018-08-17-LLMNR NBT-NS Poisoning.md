@@ -60,12 +60,11 @@ Saldırgan broadcast paketlerine sahte cevaplar üretmekle birlikte, SMB server 
     <img src="/assets/img/aa.png">
 </figure>
 
-Atağı gerçekleştirmek için **Responder** aracı kullanılabilir.
+Atağı gerçekleştirmek için [Responder](https://github.com/SpiderLabs/Responder) aracı kullanılabilir.
 
 ````
 Responder LLMNR,NBT-NS  broadcast paketlerini yakalayabilen bir python scriptidir.
 Bununla birlikte sahte authentication sunucuları oluşturarak LLMNR ve NBT-NS poisoning gerçekleştirir
-Kurulum ve daha ayrıntılı bilgi için [bu linki](https://github.com/SpiderLabs/Responder) kullanabilirsiniz.
 ````
 Responder ile bir dinleme başlatılıyor. **-I parametresi** ile dinlemenin yapılacağı network arayüzü belirtiliyor.
 <figure >
