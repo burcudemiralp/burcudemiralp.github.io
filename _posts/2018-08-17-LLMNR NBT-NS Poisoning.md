@@ -69,6 +69,15 @@ Responder ile bir dinleme başlatıyoruz. -I parametresi ile dinlemenin yapılac
     <img src="/assets/img/3.png">
 </figure>
 
+Kurban domain üzerinde mevcut olmayan bir klasöre erişmeyi deniyor.
+
 <figure >
-    <img src="/assets/img/5.png">
+    <img src="/assets/img/pp1.png">
 </figure>
+
+İsteği yapan kullanıcıya ait NTLMv2 hashi elde ediliyor.
+<figure >
+    <img src="/assets/img/pp2.png">
+</figure>
+
+
