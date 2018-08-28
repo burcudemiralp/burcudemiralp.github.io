@@ -66,7 +66,7 @@ Atağı gerçekleştirmek için [Responder](https://github.com/SpiderLabs/Respon
 Responder LLMNR,NBT-NS  broadcast paketlerini yakalayabilen bir python scriptidir.
 Bununla birlikte sahte authentication sunucuları oluşturarak LLMNR ve NBT-NS poisoning gerçekleştirir
 ````
-Responder ile bir dinleme başlatılıyor. **-I parametresi** ile dinlemenin yapılacağı network arayüzü belirtiliyor.
+Responder ile bir dinleme başlatılıyor. -I parametresi ile dinlemenin yapılacağı network arayüzü belirtiliyor.
 <figure >
     <img src="/assets/img/3.png">
 </figure>
