@@ -88,7 +88,7 @@ Atak sırasında oluşan trafik şu şekilde:
     <img src="/assets/img/paket.png">
 </figure>
 
-+ Paket 1-7: testlab adı için isim sorgusu ve LLMNR poisoning
++ Paket 1-7: testlab için isim sorgusu ve LLMNR poisoning
 + Paket 8-11: TCP bağlantısının sağlanması ve SMB bağlantı isteği
 + Paket 12-17: Saldırganın hashi yakalamasıyla sonuçlanan NTLM challenge/response authentication işlemi(NTLM mesajları SMB paketleri içine gömülü)
 
