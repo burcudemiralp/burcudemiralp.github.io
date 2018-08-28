@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LLMNR/NBT-NS Poisoning and SMB Relay Attack"
+title: "LLMNR/NBT-NS Poisoning"
 date: 2018-08-17
 excerpt: "17 August 2018"
 comments: false
