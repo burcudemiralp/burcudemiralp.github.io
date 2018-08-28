@@ -69,7 +69,7 @@ Responder ile bir dinleme başlatıyoruz. -I parametresi ile dinlemenin yapılac
     <img src="/assets/img/3.png">
 </figure>
 
-Kurban domain üzerinde mevcut olmayan bir klasöre erişmeyi deniyor.
+Kullanıcı domain üzerinde mevcut olmayan bir klasöre erişmeyi deniyor.
 
 <figure >
     <img src="/assets/img/pp1.png">
