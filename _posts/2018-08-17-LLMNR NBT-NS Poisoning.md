@@ -70,5 +70,5 @@ Responder ile bir dinleme başlatıyoruz. -I parametresi ile dinlemenin yapılac
 </figure>
 
 <figure >
-    <img src="/assets/img/4.png">
+    <img src="/assets/img/5.png">
 </figure>
