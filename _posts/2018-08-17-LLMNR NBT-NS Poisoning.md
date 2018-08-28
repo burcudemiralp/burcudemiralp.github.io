@@ -75,9 +75,12 @@ Kullanıcı domain üzerinde mevcut olmayan bir klasöre erişmeyi deniyor.
     <img src="/assets/img/pp1.png">
 </figure>
 
-İsteği yapan kullanıcıya ait NTLMv2 hashi elde ediliyor.
+Böylece isteği yapan kullanıcıya ait NTLMv2 hashi elde ediliyor.
 <figure >
     <img src="/assets/img/pp2.png">
 </figure>
 
+````
+Elde edilen hash NTLMv2 olduğu için doğrudan "Pass The Hash" ataklarında kullanılamaz. 
+````
 
