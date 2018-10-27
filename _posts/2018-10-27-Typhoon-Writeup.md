@@ -37,3 +37,11 @@ Yetki yükseltebilmek adına ilk olarak çekirdek ve dağıtım versiyonlarını
 <figure >
     <img src="/assets/img/tayfun/6.png">
 </figure>
+3.13 çekirdek versiyonu için  CVE-2015-1328 kodlu local exploiti mevcut.[Exploit-db](https://www.exploit-db.com/exploits/37292/) adresindeki exploiti çalıştırıyoruz.   
+<figure >
+    <img src="/assets/img/tayfun/7.png">
+</figure>
+Böylece root yetkilerine erişmiş oluyoruz.
+<figure >
+    <img src="/assets/img/tayfun/bb.jpg">
+</figure>
