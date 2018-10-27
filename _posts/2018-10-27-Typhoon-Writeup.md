@@ -33,7 +33,11 @@ Tomcat uygulaması için default username:password ikililerinden ilk olarak tomc
     <img src="/assets/img/tayfun/4.png">
 </figure>
 War dosyasını upload ettikten sonra, 192.168.1.55:8080/bindshell/bindshell.jsp adresine giderek dosyayı tetikliyoruz.
-Böylece tomcat7 kullanıcısı ile sisteme erişim sağlıyoruz.
+Böylece tomcat7 kullanıcısı ile sisteme erişim sağlıyoruz. Ardından  shelli etkileşimli hale getiriyoruz.
 <figure >
     <img src="/assets/img/tayfun/5.png">
+</figure>
+Yetki yükseltebilmek adına ilk olarak çekirdek ve dağıtım versiyonlarını kontrol ediyoruz.
+<figure >
+    <img src="/assets/img/tayfun/6.png">
 </figure>
