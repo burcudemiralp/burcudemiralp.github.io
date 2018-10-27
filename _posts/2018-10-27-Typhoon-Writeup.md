@@ -5,14 +5,9 @@ date: 2018-10-27
 excerpt: "27 Oct 2018"
 comments: false
 ---
----
-layout: post
-title: "Typhoon Writeup"
-date: 2018-10-27
-excerpt: "27 Oct 2018"
-comments: false
----
-Typhoon, PRISMA CSI tarafından hazırlanan zafiyetli bir linux makinadır.Ayrıntılı bilgiye [bu](https://www.prismacsi.com/typhoon-vulnerable-vm/) linkten ulaşabilirsiniz.
+
+Typhoon, PRISMA CSI tarafından hazırlanan zafiyetli bir  makinadır. Ayrıntılı bilgiye [bu](https://www.prismacsi.com/typhoon-vulnerable-vm/) linkten ulaşabilirsiniz.
+
 Netdiscover aracı ile makinaya ait IP adresini 192.168.1.55 olarak buluyoruz.
 <figure >
     <img src="/assets/img/tayfun/1.png">
@@ -28,6 +23,7 @@ http://192.168.1.55:8080/ adresini ziyaret ettiğimizde tomcat default sayfası 
     <img src="/assets/img/tayfun/3.png">
 </figure>
 Tomcat uygulaması için default username:password ikililerinden ilk olarak tomcat:tomcat deniyoruz ve bingo! İçeride war dosyası yükleyebileceğimiz bir "file upload" kısmı var.
+
 İlk olarak bize bind shell verecek olan bir war dosyası oluşturuyoruz.
 <figure >
     <img src="/assets/img/tayfun/4.png">
