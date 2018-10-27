@@ -18,7 +18,7 @@ Ardından basit bir nmap taraması ile açık portları ve üzerinde çalışan 
 </figure>
 Üzerinde çalışan çok sayıda servis mevcut. 8080 portundan başlamayı tercih ediyorum.
 
-http://192.168.1.55:8080/ adresini ziyaret ettiğimizde tomcat default sayfası bizi karşılıyor.Buradan servisin konfigüre edilmediğine dair bir çıkarımda bulunmak mümkün. Bu sebepten gitmeyi denediğimiz ilk dizin "manager" oluyor. 
+http://192.168.1.55:8080/ adresini ziyaret ettiğimizde bizi tomcat default sayfası  karşılıyor. Buradan servisin konfigüre edilmediğine dair bir çıkarımda bulunmak mümkün. Bu sebepten gitmeyi denediğimiz ilk dizin "manager" oluyor. 
 <figure >
     <img src="/assets/img/tayfun/3.png">
 </figure>
