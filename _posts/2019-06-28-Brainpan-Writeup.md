@@ -38,7 +38,11 @@ Hedef makina ile 9999 portu üzerinden bağlantı kuruyoruz.
     <img src="/assets/img/brainpan4.png">
 </figure>
 
-Uygulamanın kullanıcıdan input alıyor olması ve ve statik analizde karşılaşılan strcpy gibi fonksiyonlar ilk olarak buffer overflow zafiyetini hatırlatıyor. Daha ayrıntılı incelemeye Windows 7 işletim sistemi üzerinde devam ediyoruz. 
+Uygulamanın kullanıcıdan input alıyor olması ve ve statik analizde karşılaşılan strcpy gibi fonksiyonlar ilk olarak buffer overflow zafiyetini hatırlatıyor. Daha ayrıntılı incelemeye Windows 7 işletim sistemi üzerinde devam ediyoruz. İncelemeye başlamadan önce buffer overflow zafiyetinin ne olduğu, nasıl exploit edildiğine değinelim.
+
+<figure >
+    <img src="/assets/img/bof1.png">
+</figure>
 
 Uygulamayı Immunity Debugger içerisinde açıp, çalıştırıyoruz. 
 
@@ -47,4 +51,11 @@ Uygulamayı Immunity Debugger içerisinde açıp, çalıştırıyoruz.
 </figure>
 
 
+
+
+
+
+{% highlight python %}
+
+{% endhighlight %}
 
