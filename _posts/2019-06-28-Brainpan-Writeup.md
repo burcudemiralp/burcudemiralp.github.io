@@ -26,9 +26,13 @@ Fuzzing sonucu keşfettiğimiz bin/ dizinini ziyaret ediyoruz.
     <img src="/assets/img/brainpan3.png">
 </figure>
 
-Daha sonra incelemek üzere exe dosyasını indiriyoruz. 
+Dosyayı indirip Windows işletim sistemi üzerinde çalıştırdığımızda, 9999. port üzerinden dinleme yaptığını görüyoruz. Hedef makinanın 9999. portu üzerinde çalışan uygulamanın brainpan.exe olma ihtimali yüksek. 
 
-9999 portunda çalışan servis hakkında fikir sahibi olabilmek adına 9999 portu ile bağlantı kurmaya çalışıyoruz.
+<figure >
+    <img src="/assets/img/brainpan5.jpeg">
+</figure>
+
+Hedef makinanın 9999. portu ile bağlantı kurulduğunda, bizden bir parola girmemiz bekleniyor. 
 
 <figure >
     <img src="/assets/img/brainpan4.png">
