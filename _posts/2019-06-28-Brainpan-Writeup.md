@@ -32,9 +32,12 @@ Dosyayı indirip Windows işletim sistemi üzerinde çalıştırdığımızda, 9
     <img src="/assets/img/brainpan5.jpeg">
 </figure>
 
-Hedef makinanın 9999. portu ile bağlantı kurulduğunda, bizden bir parola girmemiz bekleniyor. 
+Hedef makina ile 9999 portu üzerinden bağlantı kuruyoruz.
 
 <figure >
     <img src="/assets/img/brainpan4.png">
 </figure>
+
+Uygulamanın kullanıcıdan input alıyor olması ve ve statik analizde karşılaşılan strcpy gibi fonksiyonlardan yola çıkarak uygulamada buffer overflow zafiyetinin olup olmadığını incelemeye koyuluyoruz.  
+
 
