@@ -20,5 +20,17 @@ Alışılmışın dışında 9999. ve 10000. portlar açık. HTTP servisine yön
     <img src="/assets/img/brainpan2.png">
 </figure>
 
+Fuzzing sonucu keşfettiğimiz bin/ dizinini ziyaret ediyoruz.
 
+<figure >
+    <img src="/assets/img/brainpan3.png">
+</figure>
+
+Daha sonra incelemek üzere exe dosyasını indiriyoruz. 
+
+9999 portunda çalışan servis hakkında fikir sahibi olabilmek adına 9999 portu ile bağlantı kurmaya çalışıyoruz.
+
+<figure >
+    <img src="/assets/img/brainpan4.png">
+</figure>
 
