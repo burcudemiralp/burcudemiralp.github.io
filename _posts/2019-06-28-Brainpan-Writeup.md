@@ -38,6 +38,13 @@ Hedef makina ile 9999 portu üzerinden bağlantı kuruyoruz.
     <img src="/assets/img/brainpan4.png">
 </figure>
 
-Uygulamanın kullanıcıdan input alıyor olması ve ve statik analizde karşılaşılan strcpy gibi fonksiyonlardan yola çıkarak uygulamada buffer overflow zafiyetinin olup olmadığını incelemeye koyuluyoruz.  
+Uygulamanın kullanıcıdan input alıyor olması ve ve statik analizde karşılaşılan strcpy gibi fonksiyonlar ilk olarak buffer overflow zafiyetini hatırlatıyor. Daha ayrıntılı incelemeye Windows 7 işletim sistemi üzerinde devam ediyoruz. 
+
+Uygulamayı Immunity Debugger içerisinde açıp, çalıştırıyoruz. 
+
+<figure >
+    <img src="/assets/img/brainpan6.PNG">
+</figure>
+
 
 
