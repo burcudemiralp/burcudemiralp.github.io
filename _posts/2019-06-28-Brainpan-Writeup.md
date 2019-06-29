@@ -81,7 +81,7 @@ Burdan sonra yapılması gerekenler sırasıyla şu şekilde:
 
 Overflow'un gerçekleştiği sınırı bulmak için, 1000 adet A göndermek yerine 1000 byte boyutunda bir pattern gönderiyoruz. Daha sonra EIP üzerine yazılan değerden yola çıkarak buffer boyutunu öğrenmiş oluyoruz. Bunun için metasploit içerisinde bulunan pattern_create ve pattern_offset scriptlerini kullanacağız.
 
-1000 byte boyutundaki patternimizi oluşturuyoruz.
+1000 byte boyutunda ki patternimizi oluşturuyoruz.
 
 <figure >
     <img src="/assets/img/brainpan8.png">
@@ -141,3 +141,4 @@ s.send(buffer)
 
 EIP üzerine 42424242 değeri yazıldı. Anlıyoruz ki offset hesabımız doğru. Bir diğer kontrol ettiğimiz şey de stack'e atlamadan önce arada kaç karakterin kaybolduğuydu. Ama görüyoruz ki BBBB karakterlerinden sonra yazdığımız karakter dizisi aynen basılmış. Yani herhangi bir kayıp yok. 
 
+Sıra geldi bizi stack'e yönlendirecek olan adresi bulmaya. Bunun için Immunity Debugger üzerinde View 
