@@ -310,3 +310,43 @@ s.send(buffer)
 <figure >
     <img src="/assets/img/brainpan16.png">
 </figure>
+
+Buffer overflow kısmının sonuna geldik. Burdan sonra yetkilerimizi root haklarına yükseltmek için uğraşıyoruz.
+
+Aldığımız shellin çok kullanışlı olmaması sebebiyle, eli yüzü daha düzgün olan meterpreter shell'e geçiyoruz.
+
+<figure >
+    <img src="/assets/img/brainpan17.png">
+</figure>
+
+<figure >
+    <img src="/assets/img/brainpan18.png">
+</figure>
+
+Burdan sonra ilk olarak çekirdek versiyonunu kontrol ediyoruz.
+
+<figure >
+    <img src="/assets/img/brainpan19.png">
+</figure>
+
+Bu çekirdek versiyonu için birden fazla exploit mevcut. Ama ilk olarak genelde şaşmayan 
+ [Dirty Cow](https://www.exploit-db.com/exploits/40839) exploitini deneyeceğiz ki içeride gcc yok.
+
+<figure >
+    <img src="/assets/img/brainpan20.png">
+</figure>
+
+Bu sebeple kendi hostumuzda derleyip hedef makinaya gönderiyoruz. 
+
+<figure >
+    <img src="/assets/img/brainpan21.png">
+</figure>
+
+<figure >
+    <img src="/assets/img/brainpan22.png">
+</figure>
+
+ 
+<figure >
+    <img src="/assets/img/brainpan23.png">
+</figure>
