@@ -346,7 +346,12 @@ Bu sebeple kendi hostumuzda derleyip hedef makinaya gönderiyoruz.
     <img src="/assets/img/brainpan22.png">
 </figure>
 
+Exploit başarılı olduğu taktirde, sistemde root haklarına sahip firefart adında bir kullanıcı oluşturuyor. 
  
 <figure >
     <img src="/assets/img/brainpan23.png">
 </figure>
+
+Hedef makinamızda da başarılı oldu. Böylece root haklarına sahip bir kullanıcıya geçiş yaptık. 
+
+Uzun ve yorucu bir yazı oldu :) Yeni bir writeup'da görüşmek üzere ! 
