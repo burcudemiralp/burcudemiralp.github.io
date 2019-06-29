@@ -141,4 +141,4 @@ s.send(buffer)
 
 EIP üzerine 42424242 değeri yazıldı. Anlıyoruz ki offset hesabımız doğru. Bir diğer kontrol ettiğimiz şey de stack'e atlamadan önce arada kaç karakterin kaybolduğuydu. Ama görüyoruz ki BBBB karakterlerinden sonra yazdığımız karakter dizisi aynen basılmış. Yani herhangi bir kayıp yok. 
 
-Sıra geldi bizi stack'e yönlendirecek olan adresi bulmaya. Bunun için Immunity Debugger üzerinde View 
+Sıra geldi bizi stack'e yönlendirecek olan adresi bulmaya. Bunun için Immunity Debugger üzerinde View > Executable Modules men
