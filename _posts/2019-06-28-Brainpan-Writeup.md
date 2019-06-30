@@ -47,7 +47,7 @@ Uygulamayı Immunity Debugger içerisinde açıp, çalıştırıyoruz.
     <img src="/assets/img/brainpan6.PNG">
 </figure>
 
-Öncelikle bir overflow olup olmadığı tespit ediyoruz. Bunun için başlangıç olarak 1000 karakter boyutunda bir input gönderiyoruz.
+Öncelikle bir overflow olup olmadığını tespit ediyoruz. Bunun için başlangıç olarak 1000 karakter boyutunda bir input gönderiyoruz.
 
 {% highlight python %}
 
