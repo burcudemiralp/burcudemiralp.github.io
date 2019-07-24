@@ -79,6 +79,11 @@ Burdan sonra yapılması gerekenler sırasıyla şu şekilde:
 + Kodumuzun yürütülmesine engel olan karakterleri (badchar) belirlemek.
 + Stack'e uygun shellcode'u yerleştirmek.
 
+<figure >
+    <img src="/assets/img/bof.jpg">
+</figure>
+
+
 Overflow'un gerçekleştiği sınırı bulmak için, 1000 adet A göndermek yerine 1000 byte boyutunda bir pattern gönderiyoruz. Daha sonra EIP üzerine yazılan değerden yola çıkarak buffer boyutunu öğrenmiş oluyoruz. Bunun için metasploit içerisinde bulunan pattern_create ve pattern_offset scriptlerini kullanacağız.
 
 1000 byte boyutunda ki patternimizi oluşturuyoruz.
